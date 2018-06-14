@@ -1,0 +1,52 @@
+html {
+    height: 100%;
+}
+
+.demo-body {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.demo-content {
+    display: flex;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.demo-main {
+    padding: 16px;
+    width: 100%;
+}
+
+.demo-typography--section {
+    margin: 24px;
+    padding: 24px;
+}
+
+.demo-theme__text-styles {
+    display: inline-flex;
+    box-sizing: border-box;
+    padding: 8px;
+    border: 1px solid #f0f0f0;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+@media(min-width: 768px) {
+  .demo-theme__text-styles {
+    flex-direction: row;
+  }
+}
+
+.demo-theme__text-styles > span {
+    padding: 0 2px;
+}
+
+.doc-img-start {
+  width: 90%;
+}
