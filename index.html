@@ -1,6 +1,76 @@
-<html>
-<head></head>
-<body>
-Opla CE Documentation TODO
-</body>
+<!DOCTYPE html>
+<html class="mdc-typography">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Opla.ai documentation</title>
+    <link rel="stylesheet"
+      href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+
+    <style>
+      :root {
+        --mdc-theme-primary: #0e4ead;
+      }
+    </style>
+  </head>
+<body class="mdc-typography demo-body">
+    <header class="mdc-toolbar mdc-toolbar--fixed">
+      <div class="mdc-toolbar__row">
+        <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+          <span class="mdc-toolbar__title catalog-title">Opla.ai documentation</span>
+        </section>
+      </div>
+    </header>
+
+    <div class="demo-content mdc-toolbar-fixed-adjust">
+      <nav class="mdc-permanent-drawer">
+        <div class="mdc-list-group">
+          <nav class="mdc-list">
+            <a class="mdc-list-item mdc-permanent-drawer--selected" href="#">
+              Introduction
+            </a>
+            <a class="mdc-list-item" href="start.html">
+              Getting started
+            </a>
+            <a class="mdc-list-item" href="first.html">
+              Your first chatbot
+            </a>
+            <a class="mdc-list-item" href="#">
+              Glossary
+            </a>
+            <a class="mdc-list-item" href="#">
+              Settings
+            </a>
+          </nav>
+        </div>
+      </nav>
+      <main class="demo-main">
+        <div class="demo-theme__text-styles mdc-theme--accent-bg mdc-typography mdc-typography--body2">
+          <span class="mdc-theme--text-icon-on-accent material-icons">info</span>
+          <span class="mdc-theme--text-primary-on-accent">Version 0 : first release</span>
+        </div>
+        <section class="demo-typography--section mdc-typography">
+          <h1 class="mdc-typography--display1">Your own virtual assistant</h1>
+          <p class="mdc-typography--body1">Create your own assistant. Opla.ai is a powerful opensource platform for chatbot creation.</p>
+        </section>
+        <section class="demo-typography--section mdc-typography">
+          <h2 class="mdc-typography--title mdc-typography--adjust-margin">Open</h2>
+          <p class="mdc-typography--body1">You could install Opla.ai where you want. You may code your plugin and extension to enhance the experience.</p>
+        </section>
+        <section class="demo-typography--section mdc-typography">
+          <h2 class="mdc-typography--title mdc-typography--adjust-margin">Connected</h2>
+          <p class="mdc-typography--body1">You could connect it to many messaging providers. And you could add new ones by creating a plugin.</p>
+        </section>
+        <section class="demo-typography--section mdc-typography">
+          <h2 class="mdc-typography--title mdc-typography--adjust-margin">Beyond Natural Language Processing (NLP)</h2>
+          <p class="mdc-typography--body1">To understand sentences, we provide a free simple NLP engine. But as we are open you could bind your bot to any NLP tool you want. 
+            And change / test as you want. To do so we provide a graphical metalanguage to communicate with any NLP engine.  </p>
+        </section> 
+      </main>
+    </div>
+  </body>
 </html>
