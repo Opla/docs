@@ -1,4 +1,6 @@
 # docs
 Documentation for Opla.ai
 
-new test 03
+
+First and foremost, install Opla following these steps :
+https://github.com/Opla/opla/tree/master/docker
