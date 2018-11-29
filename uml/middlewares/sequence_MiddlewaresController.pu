@@ -1,0 +1,159 @@
+@startuml MiddlewaresController
+title MiddlewaresController sequence diagram
+
+boundary API
+control AdminRoutes
+control PluginsController
+control ":MiddlewaresController" as MC
+collections ":MiddlewaresController.middlewares" as middlewares
+entity Middleware
+database DataBase
+control MainController
+
+== Initialization ==
+create MC
+MainController -> MC: new MC\n("Middlewares", this, "system")
+create PluginsController
+MainController -> PluginsController: new PluginsController("Plugins", this)
+
+create middlewares
+MC -> middlewares: create an empty \nmiddlewares{}' property
+== System ==
+
+group Open
+  ]-> MC: open()
+  MC -> DataBase: getMiddlewares()
+  MC <-- DataBase: middlewares
+  loop middlewares
+    MC -> MC: attachLocally(middleware)
+  end
+end
+
+group Close
+  ]-> MC: close()
+  MC -> MC: reset 'middlewares{}' property
+  
+end
+
+group List
+  ]-> MC: list(options)
+  MC -> DataBase: getMiddlewares(options);
+  MC <-- DataBase: middlewares {properties} list
+  ]<-- MC: middlewares {properties} list
+end
+
+group attach/register a middleware
+  ]-> MC: attach(middleware{properties + onDispatch})
+  opt middleware id already in local
+    MC -> middlewares: delete middlewares[id]
+  end
+  opt middleware has no id
+    MC -> DataBase: generateId(48)
+  end
+  MC -> PluginsController: onMiddlewareRegister(middleware)
+  ref over PluginsController: PluginsController Documentation
+  MC <-- PluginsController: middleware
+  MC -> DataBase: register(middleware, id)
+  MC <-- DataBase: middleware
+  MC -> MC: <b>? m.onDispatch = middleware.onDispatch ?</b>
+  MC -> MC: attachLocally
+  ref over MC: Group **Attach a middleware locally**
+  ]<- MC: middleware
+end
+
+' newpage
+
+group Attach a middleware locally
+]-> MC: attachLocally(middleware)
+MC -> middlewares: add middleware
+MC -> MC: dispatch("setMiddleware"...)
+]<- MC: middleware
+end
+
+group Remove a middleware
+  ]-> MC: remove(middleware)
+  MC -> PluginsController: onMiddlewareUnregister(middleware);
+  MC -> DataBase: unregister(id)
+  MC <-- DataBase: result
+  MC -> MC: removeLocally(middleware);
+  ref over MC: Group **Remove a middleware locally**
+  MC -> MC: dispatch("removeMiddleware"...)
+  ]<- MC: result
+end
+
+group Remove a middleware by Id
+  ]-> MC: removeById(middlewareId)
+  MC -> MC: getMiddlewareById(middlewareId)
+  ref over MC: Group **Get a middleware by Id**
+  MC <-- MC: middleware
+  alt middleware exist
+    MC -> MC: remove(middleware)
+    ref over MC: Group **Remove a middleware**
+    ]<- MC: result
+
+  else middleware doesnt exist
+    ]<- MC: error message
+  end
+end
+
+group Remove a middleware locally
+  ]-> MC: removeLocally(middlewareId)
+  alt middlewares[id] exist
+    MC -> middlewares: delete middleware 
+    ]<- MC: True
+  else middlewares[id] doesnt exist
+    ]<- MC: False
+  end
+end
+
+group dispatchEvent
+end
+
+group Get middlewares by bot/origin Id
+  ]-> MC: getMiddlewaresByBotId({botId, includeCommon})
+  MC -> MC: list({origin: botId})
+  opt includeCommon true
+    MC -> MC: list({origin: null})
+  end
+  
+  ]<- MC: [...botMiddlewares, ...commonMiddlewares]
+end
+
+' newpage
+
+== API ==
+group Get middlewares, filter options
+  API -> AdminRoutes: getMiddlewares(context)
+  AdminRoutes -> MC: list(options)
+  ref over MC: Group **List**
+  AdminRoutes <-- MC: middlewares
+  API <-- AdminRoutes: middlewares
+end
+
+group Register a middleware
+  API -> AdminRoutes: registerMiddleware(context)
+  AdminRoutes -> MC: register(params)
+  ref over MC: Group **attach/register a middleware**
+  AdminRoutes <-- MC: middleware
+  API <-- AdminRoutes: middleware
+end
+
+group Unregister a middleware
+  API -> AdminRoutes: unregisterMiddleware(context)
+  AdminRoutes -> MC: unregister(params)
+  MC -> MC: getMiddlewareById(middlewareId)
+  MC -> middlewares: get middleware[id]
+  opt middleware exist
+    MC -> MC: remove(middleware)
+  end
+  alt result true
+    AdminRoutes <-- MC: {result: "ok"}
+  else result false
+    AdminRoutes <-- MC: {errror: "can't delete..."}
+  end
+  
+  API <-- AdminRoutes: result message
+end
+
+footer Revision 1
+@enduml

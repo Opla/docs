@@ -1,0 +1,118 @@
+@startuml PluginsController
+title PluginsController sequence diagram
+boundary API
+control PluginsRoutes
+control PluginsController
+collections ":PluginsController.plugins" as plugins
+entity Plugin
+control MiddlewaresController
+control MainController
+
+== Initialization ==
+create MiddlewaresController
+MainController -> MiddlewaresController: new \nMiddlewaresController\n("Middlewares",\n this, "system")
+create PluginsController
+MainController -> PluginsController: new PluginsController("plugins", this)
+create plugins
+PluginsController ->plugins: create an \n empty \n 'plugins{}'\n property
+== System ==
+
+group Add plugin
+  ]-> PluginsController: add(plugin)
+  PluginsController -> plugins: Add plugin object to list
+end
+group Remove plugin
+  ]-> PluginsController: remove(plugin)
+  PluginsController -> plugins: Delete plugin object from list
+end
+group Get Plugins
+  ]-> PluginsController: getPlugins(options = {})
+  PluginsController -> plugins: get all plugins
+  PluginsController <-- plugins: plugins
+  note over PluginsController: filter plugins with options
+  ]<-- PluginsController: plugins
+
+end
+group Get plugin
+  ]-> PluginsController: getPlugin(name)
+  PluginsController -> plugins: get plugins[name]
+  PluginsController <-- plugins: plugin
+  ]<-- PluginsController: plugin
+end
+
+group Middleware register
+]-> MiddlewaresController: attach/register(middleware)
+ref over MiddlewaresController: Middlewares documentation
+MiddlewaresController -> PluginsController: onMiddlewareRegister(middleware)
+  activate PluginsController
+  PluginsController -> plugins: find one plugin with same\n name as middleware
+  PluginsController <-- plugins: a plugin with same name
+  PluginsController -> Plugin:onMiddlewareRegister(middleware)
+    activate Plugin
+    PluginsController <-- Plugin: middleware
+  deactivate Plugin
+  MiddlewaresController <-- PluginsController: middleware
+deactivate PluginsController
+end
+
+' newpage
+
+== API ==
+
+group Get bot's plugins
+API -> PluginsRoutes: getBotPlugins()
+PluginsRoutes -> PluginsController:apiGetPluginsByBotId(botId)
+activate PluginsController
+  PluginsController -> MiddlewaresController:getMiddlewaresByBotId({botId,includeCommom})
+  ref over MiddlewaresController: Middlewares documentation \n - Use Database
+  PluginsController <-- MiddlewaresController: middlewares with same origin as botId or origin null
+  PluginsController -> PluginsController: getPlugins()
+  ref over PluginsController: CF **Get Plugins**
+  loop plugins
+    note over PluginsController
+     find bot's Middleware with same name as plugin
+     return {...plugin.properties, middleware}
+    end note
+  end
+  
+
+  PluginsController --> PluginsRoutes: all plugins [{plugin.proterties \n + middleware data \n (if related middleware exist)}]
+deactivate PluginsController
+API <-- PluginsRoutes: plugins
+end
+
+group Register plugin
+API -> PluginsRoutes: registerPlugin()
+PluginsRoutes -> PluginsController:apiRegisterPlugin\n(body/pluginData)
+activate PluginsController
+  PluginsController -> PluginsController: getPlugin(pluginData.name)
+  ref over PluginsController: CF **Get plugin**
+  note left: find his local plugins instance list \n the plugin with same name.
+  PluginsController -> Plugin:getMiddlewareDefaultPropertie()
+  activate Plugin
+    PluginsController <-- Plugin:plugins's middleware default properties
+  deactivate Plugin
+  PluginsController -> MiddlewaresController:register(newMiddleware)
+  note left: newMiddleware is a merge between \n middleware default properties and \n plugin.middleware properties
+  ref over MiddlewaresController: Group <b>Middleware register</b> \n - Use Database
+  PluginsController <-- MiddlewaresController: middleware
+
+  PluginsController --> PluginsRoutes: registered plugin \n {...pluginData, middleware}
+deactivate PluginsController
+API <-- PluginsRoutes: plugin
+end
+
+group Delete plugin
+API -> PluginsRoutes: registerPlugin()
+PluginsRoutes -> PluginsController: apiDeletePluginByMiddlewareId\n(middlewareId)
+activate PluginsController
+  PluginsController -> MiddlewaresController: removeById(middlewareId)
+  ref over MiddlewaresController: Middlewares documentation \n - Use Database \n - Dispatch event
+  PluginsController <-- MiddlewaresController: True/False/Error message
+  PluginsRoutes <-- PluginsController: True/False/Error message
+deactivate PluginsController
+API <-- PluginsRoutes: True/False/Error message
+end
+
+footer Revision 2
+@enduml

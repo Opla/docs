@@ -1,0 +1,76 @@
+@startuml botPublish
+title bot publish sequence diagram
+
+boundary API
+control BotsRoutes
+control ExtensionsController
+control "BotsController" as BC
+database DataBase
+
+== Initialization ==
+create BC
+ExtensionsController -> BC: new BC\n("Bots", this, "bot")
+
+' create middlewares
+' BC -> middlewares: create an empty \nmiddlewares{}' property
+== System ==
+
+group Publish a bot
+  ]-> BC: publish(botId, publisher, channels, toVersion, fromVersion)
+  BC -> DataBase: getBot(botId, publisher.id)
+  BC <-- DataBase: bot
+  alt bot exist
+    BC -> DataBase: generateId(48)
+    BC <-- DataBase: generated versionId
+    note right BC: update bot publishedVersionId
+    BC -> DataBase: setBot(bot)
+    BC -> BC: dispatch(..., {botId, "publishBot", bot, version, publisher, channels})
+    BC -> DataBase: getIntents(botId, fromVersion)
+    BC <-- DataBase: intents
+    BC -> BC: duplicateIntents(botId, intents, versionId);
+    ]<-- BC: intents
+
+  else bot doesnt exist
+    ]<-- BC: error
+  end
+end
+
+group Duplicate Intents
+  ]-> BC: duplicateIntents(botId, fromIntents, versionId)
+  loop fromIntents
+    note right BC: remove id, notId and versionId from intent
+  end
+    BC -> BC: setIntents(botId, intents, versionId);
+    BC -> BC: getIntents(botId, versionId);
+    ]<-- BC: intents
+end
+
+group Set Intents
+  ]-> BC: setIntents(botId, intents, versionId)
+  BC -> DataBase: setIntents(botId, intents, versionId)
+  BC <-- DataBase: is
+  BC -> BC: dispatchIntentAction(botId, "setIntents", is)
+  ]<-- BC: is
+end
+
+group Get intents
+  ]-> BC: getIntents(botId, versionId)
+  BC -> DataBase: getIntents(botId, intents)
+  BC <-- DataBase: intents
+  ]<-- BC: intents
+end
+
+== API ==
+
+group publish a bot
+  API -> BotsRoutes: publish(context)
+  note right BotsRoutes: get channels, from and to \n from context body
+
+  BotsRoutes -> BC: publish(botId, me, channels, toVersion, fromVersion)
+  ref over BC: group **Publish a bot**
+  BotsRoutes <-- BC: intents
+  API <-- BotsRoutes: intents
+end
+
+footer Revision 1
+@enduml
