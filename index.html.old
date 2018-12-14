@@ -49,27 +49,7 @@
         </div>
       </nav>
       <main class="demo-main">
-        <div class="demo-theme__text-styles mdc-theme--accent-bg mdc-typography mdc-typography--body2">
-          <span class="mdc-theme--text-icon-on-accent material-icons">info</span>
-          <span class="mdc-theme--text-primary-on-accent">Version 0 : first release</span>
-        </div>
-        <section class="demo-typography--section mdc-typography">
-          <h1 class="mdc-typography--display1">Your own virtual assistant</h1>
-          <p class="mdc-typography--body1">Create your own assistant. Opla.ai is a powerful opensource platform for chatbot creation.</p>
-        </section>
-        <section class="demo-typography--section mdc-typography">
-          <h2 class="mdc-typography--title mdc-typography--adjust-margin">Open</h2>
-          <p class="mdc-typography--body1">You could install Opla.ai where you want. You may code your plugin and extension to enhance the experience.</p>
-        </section>
-        <section class="demo-typography--section mdc-typography">
-          <h2 class="mdc-typography--title mdc-typography--adjust-margin">Connected</h2>
-          <p class="mdc-typography--body1">You could connect it to many messaging providers. And you could add new ones by creating a plugin.</p>
-        </section>
-        <section class="demo-typography--section mdc-typography">
-          <h2 class="mdc-typography--title mdc-typography--adjust-margin">Beyond Natural Language Processing (NLP)</h2>
-          <p class="mdc-typography--body1">To understand sentences, we provide a free simple NLP engine. But as we are open you could bind your bot to any NLP tool you want. 
-            And change / test as you want. To do so we provide a graphical metalanguage to communicate with any NLP engine.  </p>
-        </section> 
+ 
       </main>
     </div>
   </body>
