@@ -1,5 +1,7 @@
 ---
-layout : default
+layout: default
+lang: en
+ref : page 3
 ---
 
 ### Documentation conventions

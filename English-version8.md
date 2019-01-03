@@ -1,5 +1,7 @@
 ---
-layout : default
+layout: default
+lang: en
+ref : page 8
 ---
 
 One can quite, and this is the case here, create two conversation patterns in the same bot. "Contact" will be created alongside with "Pizza".

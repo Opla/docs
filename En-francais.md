@@ -1,5 +1,7 @@
 ---
 layout: default
+lang: fr
+ref : page 1
 ---
 
 <div style="text-align:center" markdown="1">
@@ -31,7 +33,7 @@ Dans les Outputs se trouve un menu avec des items cliquables qui permettent de p
 ![image](/assets/images/output-options.png)
 
 
-[En Anglais](./index.html)                                            
+                                            
 
 <div style = "text-align:center" markdown="1">
 <a href="#" class="previous">&laquo; Previous</a>

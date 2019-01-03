@@ -1,5 +1,7 @@
 ---
-layout : default
+layout: default
+lang: en
+ref : page 7
 ---
 
 ## Schéma 2 : Contact

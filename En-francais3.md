@@ -1,5 +1,7 @@
 ---
-layout : default
+layout: default
+lang: fr
+ref : page 3
 ---
 
 ### Conventions d'écriture

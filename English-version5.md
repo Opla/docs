@@ -1,5 +1,7 @@
 ---
-layout : default
+layout: default
+lang: en
+ref : page 5
 ---
 
 The start screen looks like this :

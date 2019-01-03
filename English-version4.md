@@ -1,7 +1,8 @@
 ---
-layout : default
+layout: default
+lang: en
+ref : page 4
 ---
-
 ## Scheme 1: Pizzas!
 
 We will write the following example

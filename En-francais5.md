@@ -1,5 +1,7 @@
 ---
-layout : default
+layout: default
+lang: fr
+ref : page 5
 ---
 
 L'écran de départ ressemble à ceci :

@@ -1,6 +1,8 @@
 ---
 title: Opla.ai documentation 
 layout: default
+lang : en
+ref : index
 ---
 
 __Version 0 : first release__

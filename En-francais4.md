@@ -1,7 +1,8 @@
 ---
-layout : default
+layout: default
+lang: fr
+ref : page 4
 ---
-
 ## Schéma 1: Pizzas!
 
 Nous allons suivre le schéma suivant: 

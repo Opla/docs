@@ -1,5 +1,7 @@
 ---
-layout : default
+layout: default
+lang: fr
+ref : page 8
 ---
 
 On peut tout à fait, et c'est le cas ici, créer deux schémas de conversation dans le même bot. On va créer la conversation "Contact" parallèlement à la conversation "Pizza".
