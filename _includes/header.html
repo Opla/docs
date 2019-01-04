@@ -1,17 +1,22 @@
 <header class="mdc-toolbar mdc-toolbar--fixed" style="background-color: #e74f4f;">
 
-  <ul>{% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
-{% for page in pages %}
-{% if page.lang %}
-  <li>
-
-    <a href="{{ page.url }}" class="{{ page.lang }}">{{ page.lang }}</a>
-  </li>
-{% endif %}
-{% endfor %} </ul>  
+   
   <div class="mdc-toolbar__row">
+      <ul>{% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
+          {% for page in pages %}
+          {% if page.lang %}
+            <li>
+          
+              <a href="{{ page.url }}" class="{{ page.lang }}">{{ page.lang }}</a>
+            </li>
+          {% endif %}
+          {% endfor %} </ul> 
     <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
       <span class="mdc-toolbar__title catalog-title">Opla.ai documentation</span>
+      {% assign Compteur = 0 %}
+      {% assign counter = 0 %}
+      {% assign NewVar = (page.url || truncate: 12, '' ) %} 
+      <a href="{{NewVar}}{% decrement counter %}.html" > Previous</a> <a href="{{NewVar}}{% increment counter %}.html" > Next</a>
     </section>
   </div>
 </header>
