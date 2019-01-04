@@ -64,8 +64,3 @@ When creating a new intent, suppress the "I don't understand" line in Outputs. T
 When an intent is modified, one must first click the "+" sign on end of line, and then a blue capital SAVE button appears to the right of the Intent's name in Intent screen, on which one must click to save changes. 
 
 
-
-<div style = "text-align:center" markdown="1">
-<a href="English-version1.html" class="previous">&laquo; Previous</a>
-<a href="English-version3.html" class="next">Next &raquo;</a>
-</div>

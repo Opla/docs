@@ -155,8 +155,3 @@ Quel est votre mail?<br>
 Nous avons dorénavant fini de paramétrer le schéma 2!
 
 
-<div style = "text-align:center" markdown="1">
-<a href="En-francais7.html" class="previous">&laquo; Previous</a>
-<a href="En-francais9.html" class="next">Next &raquo;</a>
-</div>
-

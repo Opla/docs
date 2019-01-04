@@ -35,7 +35,3 @@ Dans les Outputs se trouve un menu avec des items cliquables qui permettent de p
 
                                             
 
-<div style = "text-align:center" markdown="1">
-<a href="#" class="previous">&laquo; Previous</a>
-<a href="En-francais2.html" class="next">Next &raquo;</a>
-</div>

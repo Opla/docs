@@ -113,8 +113,4 @@ Félicitations, vous avez écrit votre première branche de schéma conversation
 
 
 
-<div style = "text-align:center" markdown="1">
-<a href="En-francais4.html" class="previous">&laquo; Previous</a>
-<a href="En-francais6.html" class="next">Next &raquo;</a>
-</div>
 

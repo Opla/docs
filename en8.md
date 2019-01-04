@@ -23,11 +23,11 @@ Click on plus sign and SAVE;
 <div style="float:left" markdown="1">
 
  ![image](/assets/images/assignment.png) 
-</div> On va insérer une variable. Il faut écrire la valeur de la variable à l'intérieur du carré qui résulte de la pression sur le bouton insert variable assignment.<br>
+</div> We will insert a variable. The value of the variable must be written inside the square resulting from pressing the insert variable assignment button.<br>
 
 
-<br>#Oui<br>
-Input : Oui<br>
+<br>#Yes<br>
+Input : yes<br>
 Output :<br>
 action = getphoneyesno <br>
 What is your phone number? ![image](/assets/images/phonenbr.png)<br>
@@ -154,9 +154,4 @@ What is your e-mail adress?
 
 We are now done setting up diagram number 2!
 
-
-<div style = "text-align:center" markdown="1">
-<a href="English-version7.html" class="previous">&laquo; Previous</a>
-<a href="English-version9.html" class="next">Next &raquo;</a>
-</div>
 

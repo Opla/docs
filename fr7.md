@@ -12,8 +12,5 @@ Ce schéma met en pratique la saisie et l'exploitation de variables données par
 ![image](/assets/images/Schema-contact-fr.png)
 
 
-<div style = "text-align:center" markdown="1">
-<a href="En-francais6.html" class="previous">&laquo; Previous</a>
-<a href="En-francais8.html" class="next">Next &raquo;</a>
-</div>
+
 

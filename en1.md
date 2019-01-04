@@ -33,9 +33,3 @@ In the outputs lies a menu with clikable items to set the interface up, we are g
 ![image](/assets/images/output-options.png)
 
 
-[In French](./site/En-francais.html)                                            
-
-<div style = "text-align:center" markdown="1">
-<a href="#" class="previous">&laquo; Previous</a>
-<a href="English-version2.html" class="next">Next &raquo;</a>
-</div>

@@ -14,8 +14,4 @@ This diagram exerts input and use of variables given in by the user. To the ques
 ![image](/assets/images/Schema-contact.png)
 
 
-<div style = "text-align:center" markdown="1">
-<a href="English-version6.html" class="previous">&laquo; Previous</a>
-<a href="English-version8.html" class="next">Next &raquo;</a>
-</div>
 

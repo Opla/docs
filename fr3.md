@@ -27,9 +27,5 @@ Donne à l'écran :
 
 
 
-<div style = "text-align:center" markdown="1">
-<a href="En-francais2.html" class="previous">&laquo; Previous</a>
-<a href="En-francais4.html" class="next">Next &raquo;</a>
-</div>
 
 

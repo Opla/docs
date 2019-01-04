@@ -64,7 +64,3 @@ Quand on ouvre un nouvel intent, dans les outputs, supprimer la ligne "I don't u
 Quand on modifie un intent, un bouton SAVE apparaît sur lequel in convient de cliquer pour sauvegarder les changements. Cliquer sur "+" en bout de ligne de l'output, puis sur Save.
 
 
-<div style = "text-align:center" markdown="1">
-<a href="En-francais.html" class="previous">&laquo; Previous</a>
-<a href="En-francais3.html" class="next">Next &raquo;</a>
-</div>

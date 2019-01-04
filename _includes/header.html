@@ -15,21 +15,19 @@
       <span class="mdc-toolbar__title catalog-title">Opla.ai documentation</span>
 
 
-      {{ page.lang | append: "-" | append: page.ref }}
-
-      page ref :
-       {{page.ref}}
-       page plus 1 : 
-       {{ page.ref |  plus: 1 }}
-       page minus 1 :
-       {{ page.ref |  minus: 1 }}
-       {{page.lang | append: page.ref}}
+      
 
       
 
-       <a href = "{{page.lang}}{{page.ref | minus: 1}}.html"> Previous </a> <a href = "{{page.lang}}{{page.ref | plus: 1}}.html"> Next </a>
+
+      {% assign Var2Char = page.url | slice: 1, 2 %}
+      {% if Var2Char == "en" and "fr" %}
+      <a href = "{{page.lang}}{{page.ref | minus: 1}}.html"> &laquo; Previous...    </a> <a href = "{{page.lang}}{{page.ref | plus: 1}}.html">  Next &raquo; </a>
+      {% endif %}
+
        
       
+       
 
         </a>
 

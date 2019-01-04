@@ -48,8 +48,3 @@ Here we go, our first conversation is set up! Let's then study another example, 
 
 
 
-<div style = "text-align:center" markdown="1">
-<a href="English-version5.html" class="previous">&laquo; Previous</a>
-<a href="English-version7.html" class="next">Next &raquo;</a>
-</div>
-
