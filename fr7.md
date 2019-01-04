@@ -1,7 +1,7 @@
 ---
 layout: default
 lang: fr
-ref : page 7
+ref : 7
 ---
 
 ## Schéma 2 : Contact

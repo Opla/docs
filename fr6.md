@@ -1,7 +1,7 @@
 ---
 layout: default
 lang: fr
-ref : page 6
+ref : 6
 ---
     #Non 
     Input : non 

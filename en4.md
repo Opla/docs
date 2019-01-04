@@ -1,7 +1,7 @@
 ---
 layout: default
 lang: en
-ref : page 4
+ref : 4
 ---
 ## Scheme 1: Pizzas!
 

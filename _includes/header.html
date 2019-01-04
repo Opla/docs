@@ -13,10 +13,29 @@
           {% endfor %} </ul> 
     <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
       <span class="mdc-toolbar__title catalog-title">Opla.ai documentation</span>
-      {% assign Compteur = 0 %}
-      {% assign counter = 0 %}
-      {% assign NewVar = (page.url || truncate: 12, '' ) %} 
-      <a href="{{NewVar}}{% decrement counter %}.html" > Previous</a> <a href="{{NewVar}}{% increment counter %}.html" > Next</a>
+
+
+      {{ page.lang | append: "-" | append: page.ref }}
+
+      page ref :
+       {{page.ref}}
+       page plus 1 : 
+       {{ page.ref |  plus: 1 }}
+       page minus 1 :
+       {{ page.ref |  minus: 1 }}
+       {{page.lang | append: page.ref}}
+
+      
+
+       <a href = "{{page.lang}}{{page.ref | minus: 1}}.html"> Previous </a> <a href = "{{page.lang}}{{page.ref | plus: 1}}.html"> Next </a>
+       
+      
+
+        </a>
+
+      
+
+     
     </section>
   </div>
 </header>

@@ -1,7 +1,7 @@
 ---
 layout: default
 lang: en
-ref : page 6
+ref : 6
 ---
 Same thing with creating new intent #No, one should rename the intent to No, delete default parameters, click on SAVE, and insert the following :
     

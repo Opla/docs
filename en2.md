@@ -1,7 +1,7 @@
 ---
 layout: default
 lang: en
-ref : page 2
+ref : 2
 ---
 <div style="float:left;width:5%" markdown="1">
 
@@ -32,7 +32,7 @@ The syntax of the action code to be entered will be &#60;action = name_of_action
 </div>
     3. Button :
 
-Creates a button that will be clickable by the user and which will allow to standardize the inputs. One can create a Aes, No, or any desired input button.
+Creates a button that will be clickable by the user and which will allow to standardize the inputs. One can create a Yes, No, or any desired input button.
 
 
 

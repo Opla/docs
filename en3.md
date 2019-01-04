@@ -1,7 +1,7 @@
 ---
 layout: default
 lang: en
-ref : page 3
+ref : 3
 ---
 
 ### Documentation conventions

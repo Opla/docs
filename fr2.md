@@ -1,7 +1,7 @@
 ---
 layout: default
 lang: fr
-ref : page 2
+ref : 2
 ---
 <div style="float:left;width:5%" markdown="1">
 

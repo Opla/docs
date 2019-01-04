@@ -1,11 +1,11 @@
 ---
 layout: default
 lang: fr
-ref : page 0
+ref : 0
 ---
 # Chatbot
 
-C'est un ensemble d'Intents dont les paramétrages d'Inputs et d'Outputs (entrées et sorties) créent une conversation
+Un Chatbot est un programme ; c'est un ensemble d'Intents dont les paramétrages d'Inputs et d'Outputs (entrées et sorties) créent une conversation
 
 
 # Builder
