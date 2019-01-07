@@ -3,64 +3,25 @@ layout: default
 lang: en
 ref : 2
 ---
-<div style="float:left;width:5%" markdown="1">
 
- ![image](/assets/images/assignment.png) 
-</div>
+### Documentation conventions
 
-    1. insert variable assignment :
- 
-This button will enable getting information from the user and stocking it for further display, still using this button.
+Intents names will be preceded by a sharp key #, buttons ![image](/assets/images/category.png) will be written in square brackets, code lines ![image](/assets/images/chevrons.png)  will be written between chevrons. Variables will be copy-pasted.
 
 
+#### Example : 
+
+    #Hello
+    Input: 
+    Hello
+    Output:Would you like a sweet pizza? [Yes] [No] <action=sweetyesno>
 
 
-<div style="float:left;width:5%" markdown="1">
+![image](/assets/images/would-you-like-a-sweet-pizza.png) 
 
- ![image](/assets/images/chevrons.png) 
-</div>
-    2. Insert code :
+Shows on screen:
 
-The syntax of the action code to be entered will be &#60;action = name_of_action&#62;. This is the line of code that will allow the bot to follow the thread of a conversation. This goes in the outputs. 
+![image](assets\images\would-you-like-a-sweet-pizza-total.png)
 
-
-
-
-<div style="float:left;width:5%" markdown="1">
-
- ![image](/assets/images/category.png) 
-</div>
-    3. Button :
-
-Creates a button that will be clickable by the user and which will allow to standardize the inputs. One can create a Yes, No, or any desired input button.
-
-
-
-<div style="float:left;width:5%" markdown="1">
-
- ![image](/assets/images/trash.png) 
-</div>
-    4. Trash :
-
-This button is to remove any of the three buttons above in Outputs, which must be done by first removing the internal text and then clicking the button, then the trash.
-
-
-
-### Adding a conditional
-
-
-![image](/assets/images/conditional-in-output-options.png)
-
-<div style="float:left;width:5%" markdown="1">
-
- ![image](/assets/images/device_hub.png) 
-</div>
-    5. Conditional
-
-When creating a new intent, suppress the "I don't understand" line in Outputs. Then appears a three pointed stars called a conditional. This star is seen as long as outputs do not contain non conditional outputs. Its' code content should be the same as the action code ![image](/assets/images/chevrons.png) in logical order of conversation. <br><br>
-
-**Please note that the interface is not input case sensitive**
-
-When an intent is modified, one must first click the "+" sign on end of line, and then a blue capital SAVE button appears to the right of the Intent's name in Intent screen, on which one must click to save changes. 
-
+the code written in chevrons does not appear in the playground console, it is used to direct the discussion. The robot identifies the lines of codes equal to the conditional ones and thus follows the thread of the discussion, a little like the ends of a piece of puzzle.
 

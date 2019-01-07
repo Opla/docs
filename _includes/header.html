@@ -21,8 +21,11 @@
 
 
       {% assign Var2Char = page.url | slice: 1, 2 %}
-      {% if Var2Char == "en" and "fr" %}
-      <a href = "{{page.lang}}{{page.ref | minus: 1}}.html"> &laquo; Previous...    </a> <a href = "{{page.lang}}{{page.ref | plus: 1}}.html">  Next &raquo; </a>
+      {% if Var2Char == page.lang %}
+      {% assign PageMinus = page.ref | minus : 1 %}
+      {% assign PagePlus = page.ref | plus : 1 %}
+
+      <a href = "{{page.lang}}{{PageMinus | modulo : 8 }}.html"> &laquo; Previous...    </a> <a href = "{{page.lang}}{{PagePlus | modulo : 8 }}.html">  Next &raquo; </a>
       {% endif %}
 
        
