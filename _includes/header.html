@@ -5,34 +5,24 @@
       <ul>{% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
           {% for page in pages %}
           {% if page.lang %}
-            <li>
-          
-              <a href="{{ page.url }}" class="{{ page.lang }}">{{ page.lang }}</a>
-            </li>
+         <li>
+            <a href="{{ page.url }}" class="{{ page.lang }}">{{ page.lang }}</a>
+        </li>
           {% endif %}
-          {% endfor %} </ul> 
+          {% endfor %} 
+      </ul> 
     <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
-      <span class="mdc-toolbar__title catalog-title">Opla.ai documentation</span>
-
-
-      
-
-      
-
+      <span class="mdc-toolbar__title catalog-title"> Opla.ai documentation </span>
 
       {% assign Var2Char = page.url | slice: 1, 2 %}
       {% if Var2Char == page.lang %}
       {% assign PageMinus = page.ref | minus : 1 %}
       {% assign PagePlus = page.ref | plus : 1 %}
 
-      <a href = "{{page.lang}}{{PageMinus | modulo : 8 }}.html"> &laquo; Previous...    </a> <a href = "{{page.lang}}{{PagePlus | modulo : 8 }}.html">  Next &raquo; </a>
+      <a href = "{{page.lang}}{{PageMinus | modulo : 8 }}.html"> &laquo; Previous...    </a> 
+      <a href = "{{page.lang}}{{PagePlus | modulo : 8 }}.html">  Next &raquo; </a>
       {% endif %}
 
-       
-      
-       
-
-        </a>
 
       
 
