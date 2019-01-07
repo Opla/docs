@@ -28,13 +28,16 @@
         Votre premier chatbot 
        {% endif %}
       </a>
+
+      
+      {% if page.lang == "en" %}
       <a class="mdc-list-item" href="glossary.html">
-              {% if page.lang == "en" %}
-        Glossary
+        Glossary </a>
         {% else %}
-        Glossaire 
+      <a class="mdc-list-item" href="glossaire.html">
+        Glossaire </a>
        {% endif %}
-      </a>
+      
       <a class="mdc-list-item" href="#">
         
         {% if page.lang == "en" %}
@@ -43,12 +46,14 @@
         Configuration
        {% endif %}
       </a>
-      <a class="mdc-list-item" href="en0.html">
+      <!--<a class="mdc-list-item" href="en0.html">-->
         
         {% if page.lang == "en" %}
-        Parametering examples
+        <a class="mdc-list-item" href="en0.html">
+        Parametering examples </a>
         {% else %}
-        Exemples de paramétrages 
+        <a class="mdc-list-item" href="fr0.html">
+        Exemples de paramétrages </a>
        {% endif %}
       </a>
     </nav>
