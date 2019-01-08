@@ -1,60 +1,58 @@
-
-
 <nav class="mdc-permanent-drawer">
   <div class="mdc-list-group">
     <nav class="mdc-list" style="width: 256px;">
       <a class="mdc-list-item mdc-permanent-drawer--selected" href="index.html">
-       {% if page.lang == "en" %}
-       Introduction
-       {% else %}
+        {% if page.lang == "en" %}
         Introduction
-      {% endif %}
-      
+        {% else %}
+        Introduction
+        {% endif %}
+
       </a>
       <a class="mdc-list-item" href="start.html">
-        
+
         {% if page.lang == "en" %}
         Getting started
         {% else %}
-         Pour commencer
-       {% endif %}
+        Pour commencer
+        {% endif %}
 
       </a>
       <a class="mdc-list-item" href="first.html">
-        
+
         {% if page.lang == "en" %}
         Your first chatbot
         {% else %}
-        Votre premier chatbot 
-       {% endif %}
+        Votre premier chatbot
+        {% endif %}
       </a>
 
-      
+
       {% if page.lang == "en" %}
       <a class="mdc-list-item" href="glossary.html">
         Glossary </a>
-        {% else %}
+      {% else %}
       <a class="mdc-list-item" href="glossaire.html">
         Glossaire </a>
-       {% endif %}
-      
+      {% endif %}
+
       <a class="mdc-list-item" href="#">
-        
+
         {% if page.lang == "en" %}
         Settings
         {% else %}
         Configuration
-       {% endif %}
+        {% endif %}
       </a>
       <!--<a class="mdc-list-item" href="en0.html">-->
-        
-        {% if page.lang == "en" %}
-        <a class="mdc-list-item" href="en0.html">
+
+      {% if page.lang == "en" %}
+      <a class="mdc-list-item" href="en0.html">
         Parametering examples </a>
-        {% else %}
-        <a class="mdc-list-item" href="fr0.html">
+      {% else %}
+      <a class="mdc-list-item" href="fr0.html">
         Exemples de paramétrages </a>
-       {% endif %}
+      {% endif %}
       </a>
     </nav>
   </div>
