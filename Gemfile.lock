@@ -12,6 +12,7 @@ GEM
     ffi (1.9.25-x64-mingw32)
     forwardable-extended (2.6.0)
     http_parser.rb (0.6.0)
+    http_parser.rb (0.6.0-java)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
     jekyll (3.8.5)
@@ -78,4 +79,4 @@ DEPENDENCIES
   wdm (~> 0.1.0)
 
 BUNDLED WITH
-   1.17.2
+   2.0.1

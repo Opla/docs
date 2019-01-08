@@ -1,0 +1,49 @@
+// Toolbar style
+//
+
+.TopAppBar {
+  grid-area: header;
+  background-color: $brand-primary;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.TopAppBar-row {
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: 64px;
+}
+
+.TopAppBar-section {
+  display: inline-flex;
+  flex: 1 1 auto;
+  align-items: center;
+  min-width: 0;
+  padding: 8px 12px;
+  z-index: 1;
+  justify-content: flex-start;
+  order: -1;
+}
+
+.TopAppBar-title {
+  font-family: $font-family-default;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-size: 1.25rem;
+  line-height: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.0125em;
+  text-decoration: inherit;
+  text-transform: inherit;
+  padding-left: 20px;
+  padding-right: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  z-index: 1;
+}

@@ -1,0 +1,22 @@
+// Layout style
+//
+
+// Layout
+.Layout {
+  display: grid;
+}
+
+.Layout_topBarFixedAndSidebarLeftFixed {
+  grid-template-columns: 320px 1fr;
+  grid-template-rows: 64px 1fr;
+  grid-template-areas:
+    "header header"
+    "nav  main";
+  height: 100%;
+}
+
+// LayouItem
+.LayoutItem_scrollable {
+    overflow-x: hidden;
+    overflow-y: auto
+}

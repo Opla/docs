@@ -1,29 +1,20 @@
 <!DOCTYPE html>
 <html class="mdc-typography">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>{{ page.title }}</title>
-    <link rel="stylesheet"
-      href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
-    <link rel="stylesheet" href="assets/css/index.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
 
-    <style>
-      :root {
-        --mdc-theme-primary: #0e4ead;
-      }
-    </style>
-  </head>
-<body class="mdc-typography demo-body">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body class="Layout Layout_topBarFixedAndSidebarLeftFixed">
   {% include header.html %}
-    <div class="demo-content mdc-toolbar-fixed-adjust">
-      {% include menu.html %}
-      <main class="demo-main">
-        {{ content }} 
-      </main>
-    </div>
-  </body>
+  {% include menu.html nav=site.data.menu %}
+  <main class="LayoutItem_scrollable">
+    {{ content }}
+  </main>
+</body>
+
 </html>

@@ -57,3 +57,19 @@
     </nav>
   </div>
 </nav>
+
+<hr />
+
+{% assign navurl = page.url | remove: 'index.html' %}
+<nav class="NavigationSidebar LayoutItem_scrollable">
+    <ul class="NavigationSidebar-list">
+        {% for item in include.nav %}
+        <li class="NavigationSidebar-listItem">
+            <a class="NavigationSidebar-link{% if item.url == page.url %} NavigationSidebar-link_isActive{% endif %}"
+                href="{{ item.url }}">
+                {{ item.title }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</nav>

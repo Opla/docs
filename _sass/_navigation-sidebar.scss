@@ -1,0 +1,52 @@
+// Navigation sidebar style
+//
+
+.NavigationSidebar {
+  grid-area: nav;
+}
+
+.NavigationSidebar-list {
+  list-style-type: none;
+}
+
+.NavigationSidebar-link {
+  text-decoration: none;
+  color: $grey-lightest;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 30px;
+  display: block;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.15s ease-in;
+
+  &:before {
+    transition: all 0.15s ease-in;
+    font-family: "oplaicons";
+    content: "\ea3c";
+    position: absolute;
+    left: -20px;
+    opacity: 0;
+  }
+
+  &:hover {
+    transform: translateX(20px);
+
+    &:before {
+      opacity: 1;
+    }
+  }
+}
+
+.NavigationSidebar-link_isActive {
+  color: $brand-secondary;
+  transform: translateX(20px);
+
+  &:before {
+    opacity: 1;
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
