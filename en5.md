@@ -12,7 +12,7 @@ Same thing with creating new intent #No, one should rename the intent to No, del
     All chocolate pizza!<br>
 
 
- ![image](assets/images/all-chocolate-pizza.png)
+ ![image]({{site.images_path}}all-chocolate-pizza.png)
 
 Do not forget to click SAVE before testing the conversation in the Playground.
 

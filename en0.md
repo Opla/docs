@@ -2,11 +2,13 @@
 layout: default
 lang: en
 ref : 0
+
 ---
+
 
 <div style="text-align:center" markdown="1">
 
- ![image](/assets/images/opla-avatar.png) 
+ ![image]({{site.images_path}}opla-avatar.png) 
 </div>
 
 
@@ -19,7 +21,7 @@ Opla delivers an open source bot, which whomever can integrate and parameter as 
 is as shown:
 
 <div style = "text-align:center" markdown="1">
-![image](/assets/images/builder-en.png)
+![image]({{site.images_path}}builder-en.png)
 </div>
 
 It is divided into three parts : 
@@ -30,6 +32,6 @@ It is divided into three parts :
 
 In the outputs lies a menu with clikable items to set the interface up, we are going to explain some of them :
 
-![image](/assets/images/output-options.png)
+![image]({{site.images_path}}output-options.png)
 
 

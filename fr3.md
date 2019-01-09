@@ -7,7 +7,7 @@ ref : 3
 
 Nous allons suivre le schéma suivant: 
 
-![image](assets/images/image22.png)
+![image]({{site.images_path}}image22.png)
 
 
 

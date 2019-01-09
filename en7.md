@@ -14,7 +14,7 @@ Note: An intent often has one or two inputs for several different outputs.
     Would you like to give out your phone number ?
     <action = getphoneyesno>[Yes][No]
 
-![image](/assets/images/Contact-getphoneyesno-en.png)
+![image](/{{site.images_path}}Contact-getphoneyesno-en.png)
 
 
 Click on plus sign and SAVE;
@@ -22,7 +22,7 @@ Click on plus sign and SAVE;
 
 <div style="float:left" markdown="1">
 
- ![image](/assets/images/assignment.png) 
+ ![image](/{{site.images_path}}assignment.png) 
 </div> We will insert a variable. The value of the variable must be written inside the square resulting from pressing the insert variable assignment button.<br>
 
 
@@ -30,10 +30,10 @@ Click on plus sign and SAVE;
 Input : yes<br>
 Output :<br>
 action = getphoneyesno <br>
-What is your phone number? ![image](/assets/images/phonenbr.png)<br>
+What is your phone number? ![image](/{{site.images_path}}phonenbr.png)<br>
 <action=confirmphonenbr>
 
-![images](/assets/images/yes-confirmphonenbr.png)
+![images](/{{site.images_path}}yes-confirmphonenbr.png)
 
 click on plus sign and SAVE.
 
@@ -44,42 +44,42 @@ create an intent #Any:
 
 Click on new intent, rename in #Any, and delete default outputs and inputs clicking on the end of line minus sign. ("intent" for input and "I don't understand" for output)
 
-![image](assets/images/any-empty.png)
+![image]({{site.images_path}}any-empty.png)
 
 Then click on insert block any in #Any inputs :
 
-![images](assets/images/any-block-input.png)
+![images]({{site.images_path}}any-block-input.png)
 
 
-![images](assets/images/at-any-in-input.png)
+![images]({{site.images_path}}at-any-in-input.png)
 
 
-the #Any intent is meant to stock any user inputted value in a variable ![image](/assets/images/assignment.png) ,insert variable assignment.
+the #Any intent is meant to stock any user inputted value in a variable ![image](/{{site.images_path}}assignment.png) ,insert variable assignment.
 
 then the output :
 
 
 #Any<br>
-input : ![image](assets/images/at-any.png)<br>
+input : ![image]({{site.images_path}}at-any.png)<br>
 Output:<br>
 action = confirmphonenbr<br>
-![image](assets/images/phonenbr.png) is your phone number, right?<br>
+![image]({{site.images_path}}phonenbr.png) is your phone number, right?<br>
 <action=phonenbrconfirmed>[Yes][No]<br>
 
-![image](/assets/images/Any-phonenbrconfirmed-en.png)
+![image](/{{site.images_path}}Any-phonenbrconfirmed-en.png)
 
 Click SAVE after modifying the intent,
 
 
 #Yes<br>
 action=phonenbrconfirmed<br>
-What is your mail? ![image](assets/images/mail.png)<action=confirmmail><br>
+What is your mail? ![image]({{site.images_path}}mail.png)<action=confirmmail><br>
 
-![image](/assets/images/Yes-confirmmail.png)
+![image](/{{site.images_path}}Yes-confirmmail.png)
 
 #Any<br>
 action=confirmmail<br>
-![image](assets/images/mail.png) is your mail, right?<br>
+![image]({{site.images_path}}mail.png) is your mail, right?<br>
 <action=mailconfirmed>[Yes][No]<br>
 
 
@@ -96,14 +96,14 @@ Now we'll deal with the no going directly to e-mail
 Input : No<br>
 Output:
 action = getphoneyesno<br>
-What is your e-mail? ![image](/assets/images/mail.png)<action=confirmmail2><br>
+What is your e-mail? ![image](/{{site.images_path}}mail.png)<action=confirmmail2><br>
 
 We need to rewrite that step in order to ask for the e-mail. We add index 2 to make a difference with the first branch. 
 
 #Any<br>
 Output:<br>
 action=confirmmail?<br>
-![image](/assets/images/mail.png) is your mail, right?<br>
+![image](/{{site.images_path}}mail.png) is your mail, right?<br>
 <action=mailconfirmed2>[Yes][No]<br>
 
 #Yes<br>
@@ -123,7 +123,7 @@ We will add the two "No" loops : the arrow takes them up one step ; we will take
 
 #Any<br>
 <span style="background-color: #FFFF00"> action=confirmphonenbr </span>
-![image](\assets\images\phonenbr.png) is your phone number, right?<br>
+![image]({{site.images_path}}phonenbr.png) is your phone number, right?<br>
 <span style="background-color:lightblue">&lt;action = phonenbrconfirmed&gt; </span>[Yes][No]<br><br>
  ) - rewritten as a reminder
 
@@ -132,7 +132,7 @@ We will add the two "No" loops : the arrow takes them up one step ; we will take
 
 #Non<br>
 <span style="background-color:lightblue">action = phonenbrconfirmed </span><br>
-What is your phone number? ![image](/assets/images/phonenbr.png)
+What is your phone number? ![image](/{{site.images_path}}phonenbr.png)
 <span style="background-color: #FFFF00"> <action=confirmphonenbr> </span>
 
 likewise, on mail we will write a "No" between mailconfirmed et confirmmail
@@ -140,7 +140,7 @@ likewise, on mail we will write a "No" between mailconfirmed et confirmmail
 (<br>
     #Any<br>
 <span style="background-color: lightseagreen">action = confirmmail</span><br>
-![image](/assets/images/mail.png) is your e-mail adress, right?
+![image](/{{site.images_path}}mail.png) is your e-mail adress, right?
 <span style="background-color: lightcoral">&lt;action=mailconfirmed&gt;[Oui][Non]</span><br>
 
 ) rewritten as a reminder<br><br>
@@ -149,7 +149,7 @@ likewise, on mail we will write a "No" between mailconfirmed et confirmmail
 #No<br>
 <span style="background-color: lightcoral">action= mailconfirmed</span><br>
 What is your e-mail adress?
-![image](/assets/images/mail.png)  <span style="background-color: lightseagreen"><!--(mail=*)-->&lt;action=confirmmail&gt;</span>
+![image](/{{site.images_path}}mail.png)  <span style="background-color: lightseagreen"><!--(mail=*)-->&lt;action=confirmmail&gt;</span>
 
 
 We are now done setting up diagram number 2!

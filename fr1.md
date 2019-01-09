@@ -5,7 +5,7 @@ ref : 1
 ---
 <div style="float:left;width:5%" markdown="1">
 
- ![image](/assets/images/assignment.png) 
+ ![image]({{site.images_path}}assignment.png) 
 </div>
 
     1. insert variable assignment :
@@ -17,7 +17,7 @@ ref : 1
 
 <div style="float:left;width:5%" markdown="1">
 
- ![image](/assets/images/chevrons.png) 
+ ![image]({{site.images_path}}chevrons.png) 
 </div>
     2. Insert code :
 
@@ -28,7 +28,7 @@ La syntaxe du code d'action à saisir sera &#60;action = name_of_action&#62; . I
 
 <div style="float:left;width:5%" markdown="1">
 
- ![image](/assets/images/category.png) 
+ ![image]({{site.images_path}}category.png) 
 </div>
     3. Button :
 
@@ -38,7 +38,7 @@ Permet de créer un bouton qui va être cliquable par l'utilisateur et qui donc 
 
 <div style="float:left;width:5%" markdown="1">
 
- ![image](/assets/images/trash.png) 
+ ![image]({{site.images_path}}trash.png) 
 </div>
     4. Trash :
 
@@ -49,11 +49,11 @@ Ce bouton sert à supprimer un des trois items cliquables énoncés ci-dessus. I
 ### Ajout d'une conditionnelle
 
 
-![image](/assets/images/conditional-in-output-options.png)
+![image]({{site.images_path}}conditional-in-output-options.png)
 
 <div style="float:left;width:5%" markdown="1">
 
- ![image](/assets/images/device_hub.png) 
+ ![image]({{site.images_path}}device_hub.png) 
 </div>
     5. Conditionnelle 
 
