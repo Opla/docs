@@ -16,6 +16,10 @@
 }
 
 // LayouItem
+.LayoutItem {
+  padding: $main-gutters;
+}
+
 .LayoutItem_scrollable {
     overflow-x: hidden;
     overflow-y: auto

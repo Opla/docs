@@ -29,14 +29,12 @@ h2 {
   line-height: 40px;
 }
 
-// icon part
-@font-face {
-  font-family: "oplaicons";
-  src: url("../fonts/oplaicons.eot?xbjp2q");
-  src: url("../fonts/oplaicons.eot?xbjp2q#iefix") format("embedded-opentype"),
-    url("../fonts/oplaicons.ttf?xbjp2q") format("truetype"),
-    url("../fonts/oplaicons.woff?xbjp2q") format("woff"),
-    url("../fonts/oplaicons.svg?xbjp2q#oplaicons") format("svg");
-  font-weight: normal;
-  font-style: normal;
+a {
+  color: $brand-secondary;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
 }

@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html class="mdc-typography">
+<html>
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>{{ page.title }}</title>
-  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body class="Layout Layout_topBarFixedAndSidebarLeftFixed">
   {% include header.html %}
   {% include menu.html nav=site.data.menu %}
-  <main class="LayoutItem_scrollable">
+  <main class="LayoutItem LayoutItem_scrollable">
     {{ content }}
   </main>
 </body>
