@@ -20,7 +20,7 @@
 
   <ul class="NavigationSidebar-list">
     {% for item in include.nav[page.lang] %}
-    {% assign backslash-itemurl = "" | append: item.currentindex %}
+    {% assign backslash-itemurl = "/" | append: item.url %}
     <li class="NavigationSidebar-listItem">
       <a class="NavigationSidebar-link{% if backslash-itemurl == page.url %} NavigationSidebar-link_isActive{% endif %}"
         href="{{item.url}}">
