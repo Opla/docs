@@ -23,7 +23,7 @@ Click on the pencil to the right of the intents column to rename the intent
 
 ![image]({{site.images_path}}rename-intent-click.png)
 
-![image]({{site.images.path}}rename-intent-hello.png)
+![image]({{site.images_path}}rename-intent-hello.png)
 
 
 In the intent one must write the following
@@ -34,7 +34,7 @@ In the intent one must write the following
 
 
 
-![image]({{site.images_path}}would-you-like-a-sweet-pizza.png) 
+![image]({{site.images_path}}would-you-like-a-sweet-pizza.png)
 
 
 which on screen shows :
@@ -81,7 +81,7 @@ Then we will enter the text of the Yes intent's output :<br>
 
     #Yes
     Input : Yes
-    Output : 
+    Output :
     action=sweetyesno
     Would you like apples on it?
     [Yes][No]<action = applesyesno>
@@ -113,7 +113,7 @@ Add the second output, ending the all-yes side of the diagram.
 
 After having clicked SAVE, we can test out the conversation in the playground to see if the dialogue unfolds correctly.
 
-The conversation should look something like this : 
+The conversation should look something like this :
 
 ![image]{{site.images_path}}Playground-sweet-pizza.png)
 
@@ -121,6 +121,3 @@ The conversation should look something like this :
 
 
 Congratulations, you have written your first branch of conversation! Now we will add the intent No to complete the diagram.
-
-
-

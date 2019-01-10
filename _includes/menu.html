@@ -20,9 +20,12 @@
 
   <ul class="NavigationSidebar-list">
     {% for item in include.nav[page.lang] %}
-    {% assign backslash-itemurl = "/" | append: item.url %}
+    {% assign backslash-itemurl = "/" | append: item.url  %}
+    {% if item.url contains "index" %}
+    {% assign backslash-itemurl = "/" %}
+    {% endif %}
     <li class="NavigationSidebar-listItem">
-      <a class="NavigationSidebar-link{% if backslash-itemurl == page.url %} NavigationSidebar-link_isActive{% endif %}"
+      <a class="NavigationSidebar-link{% if backslash-itemurl == page.url or item.url contains 'fr' or item.url contains 'en' %} NavigationSidebar-link_isActive{% endif %}"
         href="{{item.url}}">
         {{item.title}}
       </a>
@@ -48,7 +51,7 @@
     <li class="Pagination-item Pagination-item_link Pagination-item_next">
       <a href="{{page.lang}}{{PagePlus | modulo : 8 }}.html">
         Next
-        <span class="icon icon-caret-right" /></span>
+        <span class="icon icon-caret-right" />
       </a>
     </li>
   </ul>
