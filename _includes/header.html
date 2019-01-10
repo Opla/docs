@@ -6,7 +6,7 @@
       {% for page in pages %}
       {% if page.lang %}
       <li>
-        <a href="{{ page.url }}" class="{{ page.lang }}">{{ page.lang }}</a>
+        <a href="{{page.url|remove_first: '/' }}" class="{{ page.lang }}">{{ page.lang }}</a>
       </li>
       {% endif %}
       {% endfor %}
