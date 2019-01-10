@@ -14,7 +14,7 @@ Note: An intent often has one or two inputs for several different outputs.
     Would you like to give out your phone number ?
     <action = getphoneyesno>[Yes][No]
 
-![image](/{{site.images_path}}Contact-getphoneyesno-en.png)
+![image]({{site.images_path}}Contact-getphoneyesno-en.png)
 
 
 Click on plus sign and SAVE;
@@ -22,7 +22,7 @@ Click on plus sign and SAVE;
 
 <div style="float:left" markdown="1">
 
- ![image](/{{site.images_path}}assignment.png) 
+ ![image]({{site.images_path}}assignment.png) 
 </div> We will insert a variable. The value of the variable must be written inside the square resulting from pressing the insert variable assignment button.<br>
 
 
@@ -30,10 +30,10 @@ Click on plus sign and SAVE;
 Input : yes<br>
 Output :<br>
 action = getphoneyesno <br>
-What is your phone number? ![image](/{{site.images_path}}phonenbr.png)<br>
+What is your phone number? ![image]({{site.images_path}}phonenbr.png)<br>
 <action=confirmphonenbr>
 
-![images](/{{site.images_path}}yes-confirmphonenbr.png)
+![images]({{site.images_path}}yes-confirmphonenbr.png)
 
 click on plus sign and SAVE.
 
@@ -54,7 +54,7 @@ Then click on insert block any in #Any inputs :
 ![images]({{site.images_path}}at-any-in-input.png)
 
 
-the #Any intent is meant to stock any user inputted value in a variable ![image](/{{site.images_path}}assignment.png) ,insert variable assignment.
+the #Any intent is meant to stock any user inputted value in a variable ![image]({{site.images_path}}assignment.png) ,insert variable assignment.
 
 then the output :
 
@@ -66,7 +66,7 @@ action = confirmphonenbr<br>
 ![image]({{site.images_path}}phonenbr.png) is your phone number, right?<br>
 <action=phonenbrconfirmed>[Yes][No]<br>
 
-![image](/{{site.images_path}}Any-phonenbrconfirmed-en.png)
+![image]({{site.images_path}}Any-phonenbrconfirmed-en.png)
 
 Click SAVE after modifying the intent,
 
@@ -75,7 +75,7 @@ Click SAVE after modifying the intent,
 action=phonenbrconfirmed<br>
 What is your mail? ![image]({{site.images_path}}mail.png)<action=confirmmail><br>
 
-![image](/{{site.images_path}}Yes-confirmmail.png)
+![image]({{site.images_path}}Yes-confirmmail.png)
 
 #Any<br>
 action=confirmmail<br>

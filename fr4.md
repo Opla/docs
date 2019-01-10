@@ -67,7 +67,7 @@ Puis saisir le nouveau nom,
 
 Ensuite il faut entrer Oui dans la ligne d'inputs et supprimer les outputs éventuellement déjà présents en cliquant sur le moins sur leur ligne.
 
-![image](assets/images/supprimer-outputs.png)
+![image]({{site.images_path}}supprimer-outputs.png)
 
 
 Ensuite on va entrer le texte des outputs de l'intent Oui :<br>
@@ -94,7 +94,7 @@ On entre le code action=sweetyesno en cliquant sur la conditionnelle
 
 Ne pas oublier de cliquer sur le signe plus et sur SAVE à la fin de chaque modification d'intent
 
-![image](assets/images/save-pommesyesno.png)
+![image]({{site.images_path}}save-pommesyesno.png)
 
 
 Et pour le deuxième output, qui constitue la fin de la chaîne des "Oui"

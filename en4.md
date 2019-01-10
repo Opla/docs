@@ -23,7 +23,7 @@ Click on the pencil to the right of the intents column to rename the intent
 
 ![image]({{site.images_path}}rename-intent-click.png)
 
-![image](/assets/images/rename-intent-hello.png)
+![image](rename-intent-hello.png)
 
 
 In the intent one must write the following
@@ -99,7 +99,7 @@ action=sweetyesno must be entered clicking on the three pointed star called cond
 
 Never forget to click on the plus sign end of line and on SAVE on top each time an intent is modified.
 
-![image](assets/images/YES-save.png)
+![image]({{site.images_path}}YES-save.png)
 
 
 Add the second output, ending the all-yes side of the diagram.
