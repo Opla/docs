@@ -23,7 +23,7 @@ Click on the pencil to the right of the intents column to rename the intent
 
 ![image]({{site.images_path}}rename-intent-click.png)
 
-![image](rename-intent-hello.png)
+![image]({{site.images.path}}rename-intent-hello.png)
 
 
 In the intent one must write the following
