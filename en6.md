@@ -11,7 +11,7 @@ This diagram exerts input and use of variables given in by the user. To the ques
 
 
 
-![image](/assets/images/Schema-contact.png)
+![image]({{site.images_path}}Schema-contact.png)
 
 
 

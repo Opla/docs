@@ -6,7 +6,7 @@ ref : 2
 
 ### Conventions d'écriture
 
-Nous allons documenter les échanges de la manière suivante : les titres d'intents seront précédés d'un dièse #, les boutons ![image](/assets/images/category.png) seront écrits entre parenthèses droites, les lignes de codes ![image](/assets/images/chevrons.png)  seront écrites entre chevrons simples, et les variables entre parenthèses.
+Nous allons documenter les échanges de la manière suivante : les titres d'intents seront précédés d'un dièse #, les boutons ![image]({{site.images_path}}category.png) seront écrits entre parenthèses droites, les lignes de codes ![image]({{site.images_path}}chevrons.png)  seront écrites entre chevrons simples, et les variables entre parenthèses.
 
 
 #### Exemple : 
@@ -18,11 +18,11 @@ Nous allons documenter les échanges de la manière suivante : les titres d'inte
     output: Voulez-vous une pizza sucrée? [Oui] [Non] <action=sweetyesno>
 
 
-![image](/assets/images/voulez-vous-une-pizza-sucree.png) 
+![image]({{site.images_path}}voulez-vous-une-pizza-sucree.png) 
 
 Donne à l'écran :
 
-![image](assets\images\voulez-vous-une-pizza-sucree-total.png)
+![image]({{site.images_path}}voulez-vous-une-pizza-sucree-total.png)
 
 
 

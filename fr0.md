@@ -6,7 +6,7 @@ ref : 0
 
 <div style="text-align:center" markdown="1">
 
- ![image](/assets/images/opla-avatar.png) 
+ ![image]({{site.images_path}}opla-avatar.png) 
 </div>
 
 
@@ -18,7 +18,7 @@ Opla est un bot open source, que chacun peut intégrer et paramétrer comme il l
 ##  le Builder de la console
 
 <div style = "text-align:center" markdown="1">
-![image](/assets/images/builder.png)
+![image]({{site.images_path}}builder.png)
 </div>
 
 Il se divise en trois parties :
@@ -30,7 +30,7 @@ Il se divise en trois parties :
 
 Dans les Outputs se trouve un menu avec des items cliquables qui permettent de paramétrer l'interface : nous allons en expliquer quelques-uns : 
 
-![image](/assets/images/output-options.png)
+![image]({{site.images_path}}output-options.png)
 
 
                                             

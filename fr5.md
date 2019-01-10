@@ -10,7 +10,7 @@ ref : 5
     C'est parti pour une pizza tout chocolat!<br>
 
 
- ![image](assets/images/Tout-chocolat.png)
+ ![image]({{site.images_path}}Tout-chocolat.png)
 
 Ne pas oublier de cliquer sur SAVE avant d'essayer le schéma dans le playground.
 

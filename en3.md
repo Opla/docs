@@ -7,7 +7,7 @@ ref : 3
 
 We will write the following example
 
-![image](assets/images/schema-pizza.png)
+![image]({{site.images_path}}schema-pizza.png)
 
 
 

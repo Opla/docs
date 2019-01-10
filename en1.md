@@ -5,7 +5,7 @@ ref : 1
 ---
 <div style="float:left;width:5%" markdown="1">
 
- ![image](/assets/images/assignment.png) 
+ ![image]({{site.images_path}}assignment.png) 
 </div>
 
     1. insert variable assignment :
@@ -17,7 +17,7 @@ This button will enable getting information from the user and stocking it for fu
 
 <div style="float:left;width:5%" markdown="1">
 
- ![image](/assets/images/chevrons.png) 
+ ![image]({{site.images_path}}chevrons.png) 
 </div>
     2. Insert code :
 
@@ -28,7 +28,7 @@ The syntax of the action code to be entered will be &#60;action = name_of_action
 
 <div style="float:left;width:5%" markdown="1">
 
- ![image](/assets/images/category.png) 
+ ![image]({{site.images_path}}category.png) 
 </div>
     3. Button :
 
@@ -37,9 +37,9 @@ Creates a button that will be clickable by the user and which will allow to stan
 
 
 <div style="float:left;width:5%" markdown="1">
-
- ![image](/assets/images/trash.png) 
+ ![image]({{site.images_path}}trash.png) 
 </div>
+   
     4. Trash :
 
 This button is to remove any of the three buttons above in Outputs, which must be done by first removing the internal text and then clicking the button, then the trash.
@@ -49,15 +49,15 @@ This button is to remove any of the three buttons above in Outputs, which must b
 ### Adding a conditional
 
 
-![image](/assets/images/conditional-in-output-options.png)
+![image]({{site.images_path}}conditional-in-output-options.png)
 
 <div style="float:left;width:5%" markdown="1">
 
- ![image](/assets/images/device_hub.png) 
+ ![image]({{site.images_path}}device_hub.png) 
 </div>
     5. Conditional
 
-When creating a new intent, suppress the "I don't understand" line in Outputs. Then appears a three pointed stars called a conditional. This star is seen as long as outputs do not contain non conditional outputs. Its' code content should be the same as the action code ![image](/assets/images/chevrons.png) in logical order of conversation. <br><br>
+When creating a new intent, suppress the "I don't understand" line in Outputs. Then appears a three pointed stars called a conditional. This star is seen as long as outputs do not contain non conditional outputs. Its' code content should be the same as the action code ![image]({{site.images_path}}chevrons.png) in logical order of conversation. <br><br>
 
 **Please note that the interface is not input case sensitive**
 
