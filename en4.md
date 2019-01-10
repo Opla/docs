@@ -23,7 +23,7 @@ Click on the pencil to the right of the intents column to rename the intent
 
 ![image]({{site.images_path}}rename-intent-click.png)
 
-![image]({{site.images.path}}rename-intent-hello.png)
+![image]({{site.images_path}}rename-intent-hello.png)
 
 
 In the intent one must write the following
@@ -115,9 +115,9 @@ After having clicked SAVE, we can test out the conversation in the playground to
 
 The conversation should look something like this : 
 
-![image]{{site.images_path}}Playground-sweet-pizza.png)
+![image]({{site.images_path}}Playground-sweet-pizza.png)
 
-![image]{{site.images_path}}Playground-apple-chocolate-pizza.png)
+![image]({{site.images_path}}Playground-apple-chocolate-pizza.png)
 
 
 Congratulations, you have written your first branch of conversation! Now we will add the intent No to complete the diagram.
