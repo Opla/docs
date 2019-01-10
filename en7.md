@@ -96,14 +96,14 @@ Now we'll deal with the no going directly to e-mail
 Input : No<br>
 Output:
 action = getphoneyesno<br>
-What is your e-mail? ![image](/{{site.images_path}}mail.png)<action=confirmmail2><br>
+What is your e-mail? ![image]({{site.images_path}}mail.png)<action=confirmmail2><br>
 
 We need to rewrite that step in order to ask for the e-mail. We add index 2 to make a difference with the first branch. 
 
 #Any<br>
 Output:<br>
 action=confirmmail?<br>
-![image](/{{site.images_path}}mail.png) is your mail, right?<br>
+![image]({{site.images_path}}mail.png) is your mail, right?<br>
 <action=mailconfirmed2>[Yes][No]<br>
 
 #Yes<br>
@@ -132,7 +132,7 @@ We will add the two "No" loops : the arrow takes them up one step ; we will take
 
 #Non<br>
 <span style="background-color:lightblue">action = phonenbrconfirmed </span><br>
-What is your phone number? ![image](/{{site.images_path}}phonenbr.png)
+What is your phone number? ![image]({{site.images_path}}phonenbr.png)
 <span style="background-color: #FFFF00"> <action=confirmphonenbr> </span>
 
 likewise, on mail we will write a "No" between mailconfirmed et confirmmail
@@ -140,7 +140,7 @@ likewise, on mail we will write a "No" between mailconfirmed et confirmmail
 (<br>
     #Any<br>
 <span style="background-color: lightseagreen">action = confirmmail</span><br>
-![image](/{{site.images_path}}mail.png) is your e-mail adress, right?
+![image]/{{site.images_path}}mail.png) is your e-mail adress, right?
 <span style="background-color: lightcoral">&lt;action=mailconfirmed&gt;[Oui][Non]</span><br>
 
 ) rewritten as a reminder<br><br>
@@ -149,7 +149,7 @@ likewise, on mail we will write a "No" between mailconfirmed et confirmmail
 #No<br>
 <span style="background-color: lightcoral">action= mailconfirmed</span><br>
 What is your e-mail adress?
-![image](/{{site.images_path}}mail.png)  <span style="background-color: lightseagreen"><!--(mail=*)-->&lt;action=confirmmail&gt;</span>
+![image]({{site.images_path}}mail.png)  <span style="background-color: lightseagreen"><!--(mail=*)-->&lt;action=confirmmail&gt;</span>
 
 
 We are now done setting up diagram number 2!
