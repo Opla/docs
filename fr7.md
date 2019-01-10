@@ -123,7 +123,7 @@ On va enfin ajouter les deux boucles "Non" : on remarque que la flèche les fait
 
 #Any<br>
 <span style="background-color: #FFFF00"> action=confirmphonenbr </span>
-![image](\assets\images\phonenbr.png) est bien votre numéro de téléphone?<br>
+![image]({{site.images_path}}phonenbr.png) est bien votre numéro de téléphone?<br>
 <span style="background-color:lightblue">&lt;action = phonenbrconfirmed&gt; </span>[Oui][Non]<br><br>
  ) - réécrit pour rappel
 
