@@ -1,0 +1,25 @@
+// Media style
+//
+
+.Media {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.Media-content {
+
+}
+
+.Media-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.Media-img_left {
+    float: left;
+    margin-right: $main-gutters;
+    width: 36px;
+    flex-shrink: 0;
+}
+  
