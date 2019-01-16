@@ -1,0 +1,40 @@
+// Typography style
+//
+
+p {
+  color: $grey-lighter;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $grey-light;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 46px;
+  font-weight: 200;
+  letter-spacing: 0.4px;
+  line-height: 60px;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 40px;
+}
+
+a {
+  color: $brand-secondary;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+}

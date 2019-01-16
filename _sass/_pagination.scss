@@ -1,0 +1,26 @@
+// Pagination style
+//
+
+.Pagination {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    border-top: solid 1px rgba($grey-lightest, .5);
+    padding: 15px 0;
+}
+
+.Pagination-item {
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+    border-right: solid 1px rgba($grey-lightest, .5);
+
+    &:last-child {
+        border-right: none;
+    }
+}
+
+.Pagination-item_state {
+    color: $grey-lightest;
+    font-weight: bold;
+}

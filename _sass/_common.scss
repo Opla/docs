@@ -1,0 +1,29 @@
+// Common style
+//
+
+* {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: $font-family-default;
+}
+
+hr {
+  border: none;
+  border-bottom: solid 1px $grey-lightest;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  box-shadow: $box-shadow-default;
+}

@@ -1,0 +1,44 @@
+// Icons
+//
+
+@font-face {
+  font-family: "oplaicons";
+  src: url("../fonts/oplaicons.eot?xbjp2q");
+  src: url("../fonts/oplaicons.eot?xbjp2q#iefix") format("embedded-opentype"),
+    url("../fonts/oplaicons.ttf?xbjp2q") format("truetype"),
+    url("../fonts/oplaicons.woff?xbjp2q") format("woff"),
+    url("../fonts/oplaicons.svg?xbjp2q#oplaicons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon {
+  font-family: "oplaicons";
+  position: relative;
+  top: 2px;
+  display: inline-block;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+.icon-caret-up:before {
+  content: "\e902";
+}
+.icon-caret-down:before {
+  content: "\e903";
+}
+.icon-caret-right:before {
+  content: "\e900";
+}
+.icon-caret-left:before {
+  content: "\e901";
+}
+.icon-sphere:before {
+  content: "\e9c9";
+}
+.icon-arrow-right:before {
+  content: "\ea3c";
+}
+

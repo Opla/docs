@@ -1,59 +1,60 @@
-<nav class="mdc-permanent-drawer">
-  <div class="mdc-list-group">
-    <nav class="mdc-list" style="width: 256px;">
-      <a class="mdc-list-item mdc-permanent-drawer--selected" href="index.html">
-        {% if page.lang == "en" %}
-        Introduction
-        {% else %}
-        Introduction
-        {% endif %}
+<nav class="NavigationSidebar LayoutItem LayoutItem_scrollable">
 
-      </a>
-      <a class="mdc-list-item" href="start.html">
-
-        {% if page.lang == "en" %}
-        Getting started
-        {% else %}
-        Pour commencer
-        {% endif %}
-
-      </a>
-      <a class="mdc-list-item" href="first.html">
-
-        {% if page.lang == "en" %}
-        Your first chatbot
-        {% else %}
-        Votre premier chatbot
-        {% endif %}
-      </a>
-
-
-      {% if page.lang == "en" %}
-      <a class="mdc-list-item" href="glossary.html">
-        Glossary </a>
-      {% else %}
-      <a class="mdc-list-item" href="glossaire.html">
-        Glossaire </a>
+  {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
+  <div class="Dropdown">
+    <div class="Dropdown-menu">
+      <span>
+        <span class="icon icon-sphere"></span>
+        Language: {{ page.lang }}
+      </span>
+      <span class="icon icon-caret-down"></span>
+    </div>
+    <div class="Dropdown-content">
+      {% for page in pages %}
+      {% if page.lang %}
+        <a href="/docs{{ page.url }}" class="Dropdown-item">{{ page.lang }}</a>
       {% endif %}
-
-      <a class="mdc-list-item" href="#">
-
-        {% if page.lang == "en" %}
-        Settings
-        {% else %}
-        Configuration
-        {% endif %}
-      </a>
-      <!--<a class="mdc-list-item" href="en0.html">-->
-
-      {% if page.lang == "en" %}
-      <a class="mdc-list-item" href="en0.html">
-        Parametering examples </a>
-      {% else %}
-      <a class="mdc-list-item" href="fr0.html">
-        Exemples de paramétrages </a>
-      {% endif %}
-      </a>
-    </nav>
+      {% endfor %}
+    </div>
   </div>
+
+  <ul class="NavigationSidebar-list">
+    {% for item in include.nav[page.lang] %}
+    {% assign backslash-itemurl = "/" | append: item.url  %}
+    {% if item.url contains "index" %}
+    {% assign backslash-itemurl = "/" %}
+    {% endif %}
+    <li class="NavigationSidebar-listItem">
+      <a class="NavigationSidebar-link{% if backslash-itemurl == page.url or item.url contains 'fr' or item.url contains 'en' %} NavigationSidebar-link_isActive{% endif %}"
+        href="{{item.url}}">
+        {{item.title}}
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+
+  {% assign Var2Char = page.url | slice: 1, 2 %}
+  {% if Var2Char == page.lang %}
+  {% assign PageMinus = page.ref | minus : 1 %}
+  {% assign PagePlus = page.ref | plus : 1 %}
+  {% assign PageTotal = page.ref | size %}
+  <ul class="Pagination">
+    <li class="Pagination-item Pagination-item_link Pagination-item_previous">
+      <a href="{{page.lang}}{{PageMinus | modulo : 8 }}.html">
+        <span class="icon icon-caret-left"></span>
+        Previous
+      </a>
+    </li>
+    <li class="Pagination-item Pagination-item_state">
+      {{page.ref | plus : 1}}/{{PageTotal}}
+    </li>
+    <li class="Pagination-item Pagination-item_link Pagination-item_next">
+      <a href="{{page.lang}}{{PagePlus | modulo : 8 }}.html">
+        Next
+        <span class="icon icon-caret-right" />
+      </a>
+    </li>
+  </ul>
+  {% endif %}
+
 </nav>

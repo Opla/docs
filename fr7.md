@@ -10,7 +10,7 @@ On peut tout à fait, et c'est le cas ici, créer deux schémas de conversation 
 
     #Contact
     Input : contact
-    Output : 
+    Output :
     Voulez-vous donner votre numéro de téléphone ?
     <action = getphoneyesno>[Oui][Non]
 
@@ -22,7 +22,7 @@ Cliquer sur le signe plus et sur SAVE;
 
 <div style="float:left" markdown="1">
 
- ![image]({{site.images_path}}assignment.png) 
+ ![image]({{site.images_path}}assignment.png)
 </div> On va insérer une variable. Il faut écrire la valeur de la variable à l'intérieur du carré qui résulte de la pression sur le bouton insert variable assignment.<br>
 
 
@@ -149,9 +149,7 @@ De même, sur mail on va écrire un "Non" entre mailconfirmed et confirmmail
 #Non<br>
 <span style="background-color: lightcoral">action= mailconfirmed</span><br>
 Quel est votre mail?<br>
-![image]({{site.images_path}}mail.png)  <span style="background-color: lightseagreen"><!--(mail=*)--> <img width="60" class="text-aligned" src="images/mail.png">&lt;action=confirmmail&gt;</span>
+![image]({{site.images_path}}mail.png)  <span style="background-color: lightseagreen"><!--(mail=*)--> <img width="60" class="text-aligned" src="{{site.images_path}}mail.png">&lt;action=confirmmail&gt;</span>
 
 
 Nous avons dorénavant fini de paramétrer le schéma 2!
-
-
