@@ -1,6 +1,7 @@
 <nav class="NavigationSidebar LayoutItem LayoutItem_scrollable">
+  {% assign allposts = site.pages | concat: site.parametering_examples %}
 
-  {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
+  {% assign pages=allposts | where:"ref", page.ref | sort: 'lang' %}
   <div class="Dropdown">
     <div class="Dropdown-menu">
       <span>
@@ -12,47 +13,48 @@
     <div class="Dropdown-content">
       {% for page in pages %}
       {% if page.lang %}
-        <a href="/docs{{ page.url }}" class="Dropdown-item">{{ page.lang }}</a>
+        <a href="{{site.baseurl}}{{ page.url }}" class="Dropdown-item">{{ page.lang }}</a>
       {% endif %}
       {% endfor %}
     </div>
   </div>
 
   <ul class="NavigationSidebar-list">
+    {% assign pageUrlWithoutStep = page.url | split: "step_" %}
     {% for item in include.nav[page.lang] %}
-    {% assign backslash-itemurl = "/" | append: item.url  %}
-    {% if item.url contains "index" %}
-    {% assign backslash-itemurl = "/" %}
-    {% endif %}
     <li class="NavigationSidebar-listItem">
-      <a class="NavigationSidebar-link{% if backslash-itemurl == page.url or item.url contains 'fr' or item.url contains 'en' %} NavigationSidebar-link_isActive{% endif %}"
+      <a class="NavigationSidebar-link{% if item.url contains pageUrlWithoutStep[0] %} NavigationSidebar-link_isActive{% endif %}"
         href="{{item.url}}">
         {{item.title}}
       </a>
     </li>
     {% endfor %}
   </ul>
-
-  {% assign Var2Char = page.url | slice: 1, 2 %}
-  {% if Var2Char == page.lang %}
-  {% assign PageMinus = page.ref | minus : 1 %}
-  {% assign PagePlus = page.ref | plus : 1 %}
+  {% if page.url contains 'parametering_examples' or page.url contains 'exemple_parametrages' %}
+  {% assign currentPageIndex = page.url | split: 'step_' %}
+  {% assign previousPageIndex = currentPageIndex[1] | minus: 1 %}
+  {% assign nextPageIndex = currentPageIndex[1] | plus: 1 %}
   {% assign PageTotal = page.ref | size %}
   <ul class="Pagination">
     <li class="Pagination-item Pagination-item_link Pagination-item_previous">
-      <a href="{{page.lang}}{{PageMinus | modulo : 8 }}.html">
+      {% if previousPageIndex > 0 %}
+      <a href="{{baseUrl}}step_{{previousPageIndex}}"
+      disabled={{previousPage }}>
         <span class="icon icon-caret-left"></span>
         Previous
       </a>
+      {% endif %}
     </li>
     <li class="Pagination-item Pagination-item_state">
-      {{page.ref | plus : 1}}/{{PageTotal}}
+      {{currentPageIndex[1] | plus : 1}}/{{PageTotal}}
     </li>
     <li class="Pagination-item Pagination-item_link Pagination-item_next">
-      <a href="{{page.lang}}{{PagePlus | modulo : 8 }}.html">
+      {% if nextPageIndex < 8 %}
+      <a href="{{baseUrl}}step_{{nextPageIndex}}">
         Next
         <span class="icon icon-caret-right" />
       </a>
+      {% endif %}
     </li>
   </ul>
   {% endif %}

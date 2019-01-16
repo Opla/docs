@@ -2,6 +2,7 @@
 layout: default
 lang: en
 ref : 6
+permalink: /parametering_examples/step_6
 ---
 
 ## Schéma 2 : Contact
@@ -11,7 +12,4 @@ This diagram exerts input and use of variables given in by the user. To the ques
 
 
 
-![image]({{site.images_path}}Schema-contact.png)
-
-
-
+![image]({{site.images_path | relative_url }}Schema-contact.png)

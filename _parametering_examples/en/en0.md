@@ -2,13 +2,14 @@
 layout: default
 lang: en
 ref : 0
+permalink: /parametering_examples/step_0
 
 ---
 
 
 <div style="text-align:center" markdown="1">
 
- ![image]({{site.images_path}}opla-avatar.png) 
+ ![image]({{site.images_path | relative_url }}opla-avatar.png)
 </div>
 
 
@@ -21,10 +22,14 @@ Opla delivers an open source bot, which whomever can integrate and parameter as 
 is as shown:
 
 <div style = "text-align:center" markdown="1">
-![image]({{site.images_path}}builder-en.png)
+![image]({{site.images_path | relative_url }}builder-en.png)
+
+
+
+![image]({{site.images_path | relative_url }}builder-en.png)
 </div>
 
-It is divided into three parts : 
+It is divided into three parts :
 
 1. The Playground, where the bot is tested
 1. The Intents, which are the keywords used by user or computer to establish the conversation. Intents are preceded by a sharp key.
@@ -32,6 +37,4 @@ It is divided into three parts :
 
 In the outputs lies a menu with clikable items to set the interface up, we are going to explain some of them :
 
-![image]({{site.images_path}}output-options.png)
-
-
+![image]({{site.images_path | relative_url }}output-options.png)

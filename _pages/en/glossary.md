@@ -2,6 +2,7 @@
 layout: default
 lang: en
 ref : -1
+permalink: /glossary
 ---
 # Chatbot
 A chatbot is a program which contains a set of Intents which Inputs and Outputs' parametring create a conversation

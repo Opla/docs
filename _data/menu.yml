@@ -1,26 +1,22 @@
- fr:
+fr:
   - title: Introduction
-    url: index.html
+    url: /docs/index
   - title: Pour commencer
-    url: start.html
+    url: /docs/start
   - title: Votre premier chatbot
-    url: first.html
+    url: /docs/first-chatbot
   - title: Glossaire
-    url: glossaire.html
-  - title: Configuration
-    url: 404
+    url: /docs/glossaire
   - title: Exemples de paramétrages
-    url: fr0.html
- en:
+    url: /docs/exemple_parametrages/step_0
+en:
   - title: Introduction
-    url: index.html
+    url: /docs/index
   - title: Getting started
-    url: start.html
+    url: /docs/start
   - title: Your first chatbot
-    url: first.html
+    url: /docs/first-chatbot
   - title: Glossary
-    url: glossary.html
-  - title: Settings
-    url: 404
+    url: /docs/glossary
   - title: Parametering examples
-    url: en0.html
+    url: /docs/parametering_examples/step_0
