@@ -34,7 +34,7 @@ action = getphoneyesno <br>
 Quel est votre numéro de téléphone? ![image]({{site.images_path | relative_url }}phonenbr.png)<br>
 <action=confirmphonenbr>
 
-![images]({{site.images_path | relative_url }}Oui-contact.png)
+![images]({{site.images_path | relative_url }}oui-contact.png)
 
 Cliquer sur le signe plus et sur SAVE.
 
@@ -69,7 +69,7 @@ action = confirmphonenbr<br>
 ![image]({{site.images_path | relative_url }}phonenbr.png) est bien votre numéro de téléphone?<br>
 <action=phonenbrconfirmed>[oui][non]<br>
 
-![image]({{site.images_path | relative_url }}Any-confirmphonenbr.png)
+![image]({{site.images_path | relative_url }}any-confirmphonenbr.png)
 
 On clique sur SAVE après avoir modifié l'intent,
 
@@ -78,7 +78,7 @@ On clique sur SAVE après avoir modifié l'intent,
 action=phonenbrconfirmed<br>
 Quel est votre mail? ![image]({{site.images_path | relative_url }}mail.png)<action=confirmmail><br>
 
-![image]({{site.images_path | relative_url }}Oui-phonenbrconfirmed.png)
+![image]({{site.images_path | relative_url }}oui-phonenbrconfirmed.png)
 
 #Any<br>
 action=confirmmail<br>

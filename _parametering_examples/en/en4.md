@@ -7,12 +7,12 @@ permalink: /parametering_examples/step_4
 
 The start screen looks like this :
 
-![image]({{site.images_path | relative_url }}Ecran-zero.png)
+![image]({{site.images_path | relative_url }}ecran-zero.png)
 
 
 One must add an intent clicking on the plus sign :
 
-![image]({{site.images_path | relative_url }}Add-first-intent.png)
+![image]({{site.images_path | relative_url }}add-first-intent.png)
 
 
 one must delete the Input "Intent" and the Output "I don't understand" clicking on the minus on the line and on delete.
@@ -50,7 +50,7 @@ One must click on the plus end of line and on SAVE top of page to save the chang
 
 
 
-![image]({{site.images_path | relative_url }}Hello-SAVE.png)
+![image]({{site.images_path | relative_url }}hello-SAVE.png)
 
 
 
@@ -88,7 +88,7 @@ Then we will enter the text of the Yes intent's output :<br>
     [Yes][No]<action = applesyesno>
 
 
-![image]({{site.images_path | relative_url }}Yes-applesyesno.png)
+![image]({{site.images_path | relative_url }}yes-applesyesno.png)
 
 
 action=sweetyesno must be entered clicking on the three pointed star called conditionnal or insert condition
@@ -100,7 +100,7 @@ action=sweetyesno must be entered clicking on the three pointed star called cond
 
 Never forget to click on the plus sign end of line and on SAVE on top each time an intent is modified.
 
-![image]({{site.images_path | relative_url }}YES-save.png)
+![image]({{site.images_path | relative_url }}yes-SAVE.png)
 
 
 Add the second output, ending the all-yes side of the diagram.
@@ -116,9 +116,9 @@ After having clicked SAVE, we can test out the conversation in the playground to
 
 The conversation should look something like this :
 
-![image]({{site.images_path | relative_url }}Playground-sweet-pizza.png)
+![image]({{site.images_path | relative_url }}playground-sweet-pizza.png)
 
-![image]({{site.images_path | relative_url }}Playground-apple-chocolate-pizza.png)
+![image]({{site.images_path | relative_url }}playground-apple-chocolate-pizza.png)
 
 
 Congratulations, you have written your first branch of conversation! Now we will add the intent No to complete the diagram.

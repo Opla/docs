@@ -11,7 +11,7 @@ permalink: /exemple_parametrages/step_5
     C'est parti pour une pizza tout chocolat!<br>
 
 
- ![image]({{site.images_path | relative_url }}Tout-chocolat.png)
+ ![image]({{site.images_path | relative_url }}tout-chocolat.png)
 
 Ne pas oublier de cliquer sur SAVE avant d'essayer le schéma dans le playground.
 
