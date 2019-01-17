@@ -15,7 +15,7 @@ On peut tout à fait, et c'est le cas ici, créer deux schémas de conversation 
     Voulez-vous donner votre numéro de téléphone ?
     <action = getphoneyesno>[Oui][Non]
 
-![image]({{site.images_path | relative_url }}Contact-getphoneyesno.png)
+![image]({{site.images_path | relative_url }}contact-getphoneyesno.png)
 
 
 Cliquer sur le signe plus et sur SAVE;
