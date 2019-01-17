@@ -1,10 +1,9 @@
 ---
 layout: default
 lang: fr
-ref : 
+ref : hw
+permalink: /bonjourmonde
 ---
-{{site.images_path}}
-
 Nous allons d'abord créer un bot qui retourne un "Hello World"
 
 Cliquer sur Create

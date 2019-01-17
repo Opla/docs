@@ -1,11 +1,10 @@
 ---
 layout: default
-lang: fr
-ref : 
+lang: en
+ref : hw
+permalink: /helloworld
 ---
-{{site.images_path}}
-
-We will first test out the bot with a Hello World statement. 
+We will first test out the bot with a Hello World statement.
 
 Click on Create,
 
@@ -28,4 +27,4 @@ Delete "The response" statement by clicking on the minus sign end of line in out
 Type Hello in the Playground and press enter.
 ![image](assets/images/Playground-hello-world.png)
 
-Here we are, we created our first "Hello World" bot! Pretty straightforward, and as we go we're going to parameter two other schemes of conversation, namely "Pizza", which has us pick yes/no answers, and "Contact", which has us deal with user entries such as contact adress and phone number. 
+Here we are, we created our first "Hello World" bot! Pretty straightforward, and as we go we're going to parameter two other schemes of conversation, namely "Pizza", which has us pick yes/no answers, and "Contact", which has us deal with user entries such as contact adress and phone number.

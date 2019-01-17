@@ -5,6 +5,8 @@ fr:
     url: /docs/start
   - title: Votre premier chatbot
     url: /docs/first-chatbot
+  - title: Bonjour monde
+    url: /docs/bonjourmonde
   - title: Glossaire
     url: /docs/glossaire
   - title: Exemples de paramétrages
@@ -16,6 +18,8 @@ en:
     url: /docs/start
   - title: Your first chatbot
     url: /docs/first-chatbot
+  - title: Hello world
+    url: /docs/helloworld
   - title: Glossary
     url: /docs/glossary
   - title: Parametering examples
