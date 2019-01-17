@@ -37,7 +37,7 @@
   {% assign PageTotal = page.ref | size %}
   <ul class="Pagination">
     <li class="Pagination-item Pagination-item_link Pagination-item_previous">
-      {% if previousPageIndex > 0 %}
+      {% if previousPageIndex >= 0 %}
       <a href="{{baseUrl}}step_{{previousPageIndex}}"
       disabled={{previousPage }}>
         <span class="icon icon-caret-left"></span>
