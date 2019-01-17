@@ -2,11 +2,11 @@
 layout: default
 lang: fr
 ref : 0
+permalink: /exemple_parametrages/step_0
 ---
-
 <div style="text-align:center" markdown="1">
 
- ![image]({{site.images_path}}opla-avatar.png) 
+ ![image]({{site.images_path | relative_url }}opla-avatar.png)
 </div>
 
 
@@ -18,7 +18,7 @@ Opla est un bot open source, que chacun peut intégrer et paramétrer comme il l
 ##  le Builder de la console
 
 <div style = "text-align:center" markdown="1">
-![image]({{site.images_path}}builder.png)
+![image]({{site.images_path | relative_url }}builder.png)
 </div>
 
 Il se divise en trois parties :
@@ -28,10 +28,6 @@ Il se divise en trois parties :
 1. les Inputs et les Outputs, propres à chaque Intent, qui sont les réponses .(output) que donne le robot à chaque entrée (Input). C'est véritablement dans les Outputs que va se passer 80% de du paramétrage de la conversation.
 
 
-Dans les Outputs se trouve un menu avec des items cliquables qui permettent de paramétrer l'interface : nous allons en expliquer quelques-uns : 
+Dans les Outputs se trouve un menu avec des items cliquables qui permettent de paramétrer l'interface : nous allons en expliquer quelques-uns :
 
-![image]({{site.images_path}}output-options.png)
-
-
-                                            
-
+![image]({{site.images_path | relative_url }}output-options.png)

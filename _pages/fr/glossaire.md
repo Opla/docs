@@ -2,6 +2,7 @@
 layout: default
 lang: fr
 ref : -1
+permalink: /glossaire
 ---
 # Chatbot
 

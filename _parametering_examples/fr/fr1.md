@@ -2,14 +2,15 @@
 layout: default
 lang: fr
 ref : 1
+permalink: /exemple_parametrages/step_1
 ---
 <div style="float:left;width:5%" markdown="1">
 
- ![image]({{site.images_path}}assignment.png) 
+ ![image]({{site.images_path | relative_url }}assignment.png)
 </div>
 
     1. insert variable assignment :
- 
+
  Il s'agit du bouton qui va permettre de stocker une valeur qui sera réutilisée par le bot plus loin dans la conversation
 
 
@@ -17,7 +18,7 @@ ref : 1
 
 <div style="float:left;width:5%" markdown="1">
 
- ![image]({{site.images_path}}chevrons.png) 
+ ![image]({{site.images_path | relative_url }}chevrons.png)
 </div>
     2. Insert code :
 
@@ -28,7 +29,7 @@ La syntaxe du code d'action à saisir sera &#60;action = name_of_action&#62; . I
 
 <div style="float:left;width:5%" markdown="1">
 
- ![image]({{site.images_path}}category.png) 
+ ![image]({{site.images_path | relative_url }}category.png)
 </div>
     3. Button :
 
@@ -38,7 +39,7 @@ Permet de créer un bouton qui va être cliquable par l'utilisateur et qui donc 
 
 <div style="float:left;width:5%" markdown="1">
 
- ![image]({{site.images_path}}trash.png) 
+ ![image]({{site.images_path | relative_url }}trash.png)
 </div>
     4. Trash :
 
@@ -49,18 +50,16 @@ Ce bouton sert à supprimer un des trois items cliquables énoncés ci-dessus. I
 ### Ajout d'une conditionnelle
 
 
-![image]({{site.images_path}}conditional-in-output-options.png)
+![image]({{site.images_path | relative_url }}conditional-in-output-options.png)
 
 <div style="float:left;width:5%" markdown="1">
 
- ![image]({{site.images_path}}device_hub.png) 
+ ![image]({{site.images_path | relative_url }}device_hub.png)
 </div>
-    5. Conditionnelle 
+    5. Conditionnelle
 
 Quand on ouvre un nouvel intent, dans les outputs, supprimer la ligne "I don't understand." Apparaît alors une étoile à trois branches qu'on appelle une conditionnelle. Cette étoile est proposée tant que les outputs ne contiennent pas d'outputs non conditionnels. Elle doit contenir le même code que le code d'action qui précède, dans la logique de la conversation.<br><br>
 
 **Noter que l'interface n'est pas sensible à la casse des inputs.**
 
 Quand on modifie un intent, un bouton SAVE apparaît sur lequel in convient de cliquer pour sauvegarder les changements. Cliquer sur "+" en bout de ligne de l'output, puis sur Save.
-
-
