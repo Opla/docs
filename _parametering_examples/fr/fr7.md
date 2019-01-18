@@ -149,8 +149,7 @@ De même, sur mail on va écrire un "Non" entre mailconfirmed et confirmmail
 
 #Non<br>
 <span style="background-color: lightcoral">action= mailconfirmed</span><br>
-Quel est votre mail?<br>
-![image]({{site.images_path | relative_url }}mail.png)  <span style="background-color: lightseagreen"><!--(mail=*)-->&lt;action=confirmmail&gt;</span>
+Quel est votre mail? ![image]({{site.images_path | relative_url }}mail.png)  <span style="background-color: lightseagreen"><!--(mail=*)-->&lt;action=confirmmail&gt;</span>
 
 
 Nous avons dorénavant fini de paramétrer le schéma 2!
