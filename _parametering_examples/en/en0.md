@@ -24,9 +24,6 @@ is as shown:
 <div style = "text-align:center" markdown="1">
 ![image]({{site.images_path | relative_url }}builder-en.png)
 
-
-
-![image]({{site.images_path | relative_url }}builder-en.png)
 </div>
 
 It is divided into three parts :
