@@ -4,5 +4,5 @@ This documentation whill help you to use Opla.ai, a powerful opensource platform
 
 ## How to consult
 
-You can consult Opla Docs **here**
+You can consult Opla Docs [here](https://opla.github.io/docs)
 

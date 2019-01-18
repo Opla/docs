@@ -7,12 +7,12 @@ permalink: /exemple_parametrages/step_4
 
 L'écran de départ ressemble à ceci :
 
-![image]({{site.images_path | relative_url }}Ecran-zero.png)
+![image]({{site.images_path | relative_url }}ecran-zero.png)
 
 
 Il faut ajouter un intent en cliquant sur le plus
 
-![image]({{site.images_path | relative_url }}Add-first-intent.png)
+![image]({{site.images_path | relative_url }}add-first-intent.png)
 
 
 Il faut supprimer l'input "Intent" et  l'output "I don't understand" en cliquant sur le moins sur la ligne puis sur Delete.
@@ -44,11 +44,11 @@ ce qui donne à l'écran :
 
 Il faut cliquer sur le signe plus de la ligne et cliquer sur SAVE pour sauvegarder la progression du paramétrage.
 
-![image]({{site.images_path | relative_url }}Bonjour-output-sweetyesno-save1.png)
+![image]({{site.images_path | relative_url }}bonjour-output-sweetyesno-save1.png)
 
 Il faut ensuite cliquer sur "SAVE" en haut dans le cadre des intents
 
-![image]({{site.images_path | relative_url }}Bonjour-save.png)
+![image]({{site.images_path | relative_url }}bonjour-save.png)
 
 
 Le texte action = sweetyesno doit être recopié dans la conditionnelle suivante pour lier l'intent #Bonjour à l'intent #Oui suivant. On va suivre la branche des Oui pour enter les deux Outputs contenus dans l'intent #Oui sur la branche de gauche du schéma.

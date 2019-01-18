@@ -27,4 +27,4 @@ Delete "The response" statement by clicking on the minus sign end of line in out
 Type Hello in the Playground and press enter.
 ![image]({{site.images_path | relative_url }}playground-hello-world.png)
 
-Here we are, we created our first "Hello World" bot! Pretty straightforward, and as we go we're going to parameter two other schemes of conversation, namely "Pizza", which has us pick yes/no answers, and "Contact", which has us deal with user entries such as contact adress and phone number.
+Here we are, we created our first "Hello World" bot! Pretty straightforward, and as we go we're going to parameter two other schemes of conversation, namely "Pizza", which has us pick yes/no answers, and "Contact", which has us deal with user entries such as contact adress and phone number. We'll do this in parametering examples.

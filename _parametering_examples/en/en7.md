@@ -31,8 +31,7 @@ Click on plus sign and SAVE;
 Input : yes<br>
 Output :<br>
 action = getphoneyesno <br>
-What is your phone number? ![image]({{site.images_path | relative_url }}phonenbr.png)<br>
-<action=confirmphonenbr>
+What is your phone number? ![image]({{site.images_path | relative_url }}phonenbr.png)<action=confirmphonenbr>
 
 ![images]({{site.images_path | relative_url }}yes-confirmphonenbr.png)
 
@@ -43,7 +42,7 @@ click on plus sign and SAVE.
 
 create an intent #Any:
 
-Click on new intent, rename in #Any, and delete default outputs and inputs clicking on the end of line minus sign. ("intent" for input and "I don't understand" for output)
+Click on new intent, rename to #Any, and delete default outputs and inputs clicking on the end of line minus sign. ("intent" for input and "I don't understand" for output)
 
 ![image]({{site.images_path | relative_url }}any-empty.png)
 
@@ -64,8 +63,7 @@ then the output :
 input : ![image]({{site.images_path | relative_url }}at-any.png)<br>
 Output:<br>
 action = confirmphonenbr<br>
-![image]({{site.images_path | relative_url }}phonenbr.png) is your phone number, right?<br>
-<action=phonenbrconfirmed>[Yes][No]<br>
+![image]({{site.images_path | relative_url }}phonenbr.png) is your phone number, right? <action=phonenbrconfirmed>[Yes][No]<br>
 
 ![image]({{site.images_path | relative_url }}any-phonenbrconfirmed-en.png)
 
@@ -103,7 +101,7 @@ We need to rewrite that step in order to ask for the e-mail. We add index 2 to m
 
 #Any<br>
 Output:<br>
-action=confirmmail?<br>
+action=confirmmail<br>
 ![image]({{site.images_path | relative_url }}mail.png) is your mail, right?<br>
 <action=mailconfirmed2>[Yes][No]<br>
 
@@ -124,8 +122,7 @@ We will add the two "No" loops : the arrow takes them up one step ; we will take
 
 #Any<br>
 <span style="background-color: #FFFF00"> action=confirmphonenbr </span>
-![image]({{site.images_path | relative_url }}phonenbr.png) is your phone number, right?<br>
-<span style="background-color:lightblue">&lt;action = phonenbrconfirmed&gt; </span>[Yes][No]<br><br>
+![image]({{site.images_path | relative_url }}phonenbr.png) is your phone number, right? <span style="background-color:lightblue">&lt;action = phonenbrconfirmed&gt; </span>[Yes][No]<br><br>
  ) - rewritten as a reminder
 
  We will write the "No" inverting the actions called phonenbrconfirmed and confirmphonenbr, we will write phonenbrconfirmed in the conditional and confirmphonenbr in the code.
@@ -141,7 +138,7 @@ likewise, on mail we will write a "No" between mailconfirmed et confirmmail
 (<br>
     #Any<br>
 <span style="background-color: lightseagreen">action = confirmmail</span><br>
-![image]/{{site.images_path | relative_url }}mail.png) is your e-mail adress, right?
+![image]({{site.images_path | relative_url }}mail.png) is your e-mail adress, right?
 <span style="background-color: lightcoral">&lt;action=mailconfirmed&gt;[Oui][Non]</span><br>
 
 ) rewritten as a reminder<br><br>

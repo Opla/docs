@@ -15,7 +15,7 @@ On peut tout à fait, et c'est le cas ici, créer deux schémas de conversation 
     Voulez-vous donner votre numéro de téléphone ?
     <action = getphoneyesno>[Oui][Non]
 
-![image]({{site.images_path | relative_url }}Contact-getphoneyesno.png)
+![image]({{site.images_path | relative_url }}contact-getphoneyesno.png)
 
 
 Cliquer sur le signe plus et sur SAVE;
@@ -149,8 +149,7 @@ De même, sur mail on va écrire un "Non" entre mailconfirmed et confirmmail
 
 #Non<br>
 <span style="background-color: lightcoral">action= mailconfirmed</span><br>
-Quel est votre mail?<br>
-![image]({{site.images_path | relative_url }}mail.png)  <span style="background-color: lightseagreen"><!--(mail=*)--> <img width="60" class="text-aligned" src="images/mail.png">&lt;action=confirmmail&gt;</span>
+Quel est votre mail? ![image]({{site.images_path | relative_url }}mail.png)  <span style="background-color: lightseagreen"><!--(mail=*)-->&lt;action=confirmmail&gt;</span>
 
 
 Nous avons dorénavant fini de paramétrer le schéma 2!
