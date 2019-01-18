@@ -50,7 +50,7 @@ One must click on the plus end of line and on SAVE top of page to save the chang
 
 
 
-![image]({{site.images_path | relative_url }}hello-SAVE.png)
+![image]({{site.images_path | relative_url }}hello-save.png)
 
 
 
@@ -100,7 +100,7 @@ action=sweetyesno must be entered clicking on the three pointed star called cond
 
 Never forget to click on the plus sign end of line and on SAVE on top each time an intent is modified.
 
-![image]({{site.images_path | relative_url }}yes-SAVE.png)
+![image]({{site.images_path | relative_url }}yes-save.png)
 
 
 Add the second output, ending the all-yes side of the diagram.
