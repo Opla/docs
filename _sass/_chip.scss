@@ -1,0 +1,34 @@
+// Chips style
+//
+
+.Chip {
+    height: 26px;
+    line-height: 26px;
+    padding: 0 6px;
+    border: solid 1px transparent;
+    border-radius: 4px;
+    background-color: $grey-000;
+    display: inline-block;
+    margin: 4px 1px;
+    white-space: nowrap;
+}
+
+.Chip_red {
+    border-color: $red;
+}
+
+.Chip_brandSecondary {
+    border-color: $brand-secondary;
+}
+
+.Chip_green {
+    border-color: $green;
+}
+
+.Chip_blue {
+    border-color: $blue;
+}
+
+.Chip_orange {
+    border-color: $orange;
+}
