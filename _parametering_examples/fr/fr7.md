@@ -154,12 +154,6 @@ De même, sur mail on va écrire un "Non" entre mailconfirmed et confirmmail
 </div>
  )
 
-<div class="OplaAppSample">
-<span class="OplaAppSample-title">#Non</span>
-<b>Output</b> : action <b class="u-textColor_red">=</b> mailconfirmed<br>
-Quel est votre mail? <span class="chip chip_green">mail=*</span><span class="chip chip_blue">action=confirmmail</span>
-</div>
-
-{% include cardintent.html title="Oui" action="phonenbrconfirmed" question="Quel est votre mail?" chips="mail=*$green, action=confirmmail$blue" %}
+{% include cardintent.html title="Non" action="mailconfirmed" question="Quel est votre mail?" chips="mail=*$green, action=confirmmail$blue" %}
 
 Nous avons dorénavant fini de paramétrer le schéma 2!
