@@ -80,7 +80,7 @@ On clique sur SAVE après avoir modifié l'intent,
 <div class="OplaAppSample">
 <span class="OplaAppSample-title">#Oui</span>
 <b>Output</b> : action <b class="u-textColor_red">=</b> mailconfirmed<br>
-Ok, votre contact est enregistré 
+Ok, votre contact est enregistré
 </div>
 
 On a parcouru la branche des "Oui" du schéma.
@@ -107,7 +107,7 @@ On est obligé de réécrire l'étape pour reprendre le mail. On ajoute un indic
 <b>Output</b> : action <b class="u-textColor_red">=</b> mailconfirmed2<br>
 </div>
 
-Ok, votre contact est enregistré 
+Ok, votre contact est enregistré
 
 ## 2. Les boucles sur Non
 
@@ -152,12 +152,14 @@ De même, sur mail on va écrire un "Non" entre mailconfirmed et confirmmail
 </div>
 
 </div>
- ) 
+ )
 
 <div class="OplaAppSample">
 <span class="OplaAppSample-title">#Non</span>
 <b>Output</b> : action <b class="u-textColor_red">=</b> mailconfirmed<br>
 Quel est votre mail? <span class="chip chip_green">mail=*</span><span class="chip chip_blue">action=confirmmail</span>
 </div>
+
+{% include cardintent.html title="Oui" action="phonenbrconfirmed" question="Quel est votre mail?" chips="mail=*$green, action=confirmmail$blue" %}
 
 Nous avons dorénavant fini de paramétrer le schéma 2!
