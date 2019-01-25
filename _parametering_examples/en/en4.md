@@ -35,7 +35,6 @@ In the intent one must write the following
 
 
 
-![image]({{site.images_path | relative_url }}would-you-like-a-sweet-pizza.png)
 
 
 which on screen shows :
@@ -73,7 +72,7 @@ Then type in the new name
 
 Then enter Yes in the line of inputs and delete the default outputs present clicking on the minus of the line and SAVE on top of page.
 
-Ensuite il faut entrer Oui dans la ligne d'inputs et supprimer les autres inputs et outputs éventuellement déjà présents en cliquant sur le moins sur leur ligne.
+
 
 ![image]({{site.images_path | relative_url }}suppress-inputs-and-outputs.png)
 
@@ -88,10 +87,9 @@ Then we will enter the text of the Yes intent's output :<br>
     [Yes][No]<action = applesyesno>
 
 
-![image]({{site.images_path | relative_url }}yes-applesyesno.png)
 
 
-action=sweetyesno must be entered clicking on the three pointed star called conditionnal or insert condition
+action=sweetyesno must be entered clicking on the three pointed star called conditional or insert condition
 
 ![image]({{site.images_path | relative_url }}insert-condition.png)
 
@@ -105,7 +103,9 @@ Never forget to click on the plus sign end of line and on SAVE on top each time 
 
 Add the second output, ending the all-yes side of the diagram.
 
-
+    #Yes
+    Intent : Yes
+    Output : 
     action=applesyesno
     There goes an apple-chocolate pizza!
 

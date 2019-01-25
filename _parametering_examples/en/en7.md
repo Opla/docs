@@ -15,7 +15,7 @@ Note: An intent often has one or two inputs for several different outputs.
     Would you like to give out your phone number ?
     <action = getphoneyesno>[Yes][No]
 
-![image]({{site.images_path | relative_url }}contact-getphoneyesno-en.png)
+
 
 
 Click on plus sign and SAVE;
@@ -65,7 +65,7 @@ Output:<br>
 action = confirmphonenbr<br>
 ![image]({{site.images_path | relative_url }}phonenbr.png) is your phone number, right? <action=phonenbrconfirmed>[Yes][No]<br>
 
-![image]({{site.images_path | relative_url }}any-phonenbrconfirmed-en.png)
+
 
 Click SAVE after modifying the intent,
 

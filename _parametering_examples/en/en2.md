@@ -18,7 +18,6 @@ Intents names will be preceded by a sharp key #, buttons ![image]({{site.images_
     Output:Would you like a sweet pizza? [Yes] [No] <action=sweetyesno>
 
 
-![image]({{site.images_path | relative_url }}would-you-like-a-sweet-pizza.png)
 
 Shows on screen:
 

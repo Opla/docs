@@ -16,7 +16,6 @@ On peut tout à fait, et c'est le cas ici, créer deux schémas de conversation 
 <b>Output</b> : Voulez-vous donner votre numéro de téléphone ? <span class="chip chip_red">Oui</span><span class="chip chip_red">Non</span><span class="chip chip_brandSecondary">action = getphoneyesno</span>
 </div>
 
-![image]({{site.images_path | relative_url }}contact-getphoneyesno.png)
 
 
 Cliquer sur le signe plus et sur SAVE;
@@ -50,7 +49,7 @@ Puis on clique sur insert block any dans les inputs de #Any :
 
 ![images]({{site.images_path | relative_url }}at-any-in-input.png)
 
-L'intent #Any sert à stocker une valeur quelconque donnée par l'utilisateur dans une variable accessible avec le bouton ![image]({{site.images_path | relative_url }}assignment.png) ,insert variable assignment.
+L'intent #Any sert à stocker une valeur quelconque donnée par l'utilisateur dans une variable accessible avec le bouton ![image]({{site.images_path | relative_url }}assignment.png) ,insert variable assignment. On va presser ce bouton et écrire *phonenbr=* * à l'intérieur du cadre.
 
 Ensuite on paramètre l'output :
 
@@ -105,9 +104,10 @@ On est obligé de réécrire l'étape pour reprendre le mail. On ajoute un indic
 <div class="OplaAppSample">
 <span class="OplaAppSample-title">#Oui</span>
 <b>Output</b> : action <b class="u-textColor_red">=</b> mailconfirmed2<br>
+Ok, votre contact est enregistré
 </div>
 
-Ok, votre contact est enregistré
+
 
 ## 2. Les boucles sur Non
 
