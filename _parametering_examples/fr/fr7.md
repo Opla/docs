@@ -28,7 +28,7 @@ On va insérer une variable. Il faut écrire la valeur de la variable à l'inté
 <b>Input</b> : Oui
 <hr />
 <b>Output</b> : action <b class="u-textColor_red">=</b> getphoneyesno<br />
-Quel est votre numéro de téléphone? <span class="chip chip_green">phonenbr=*</span><span class="chip chip_blue">action=confirmphonenbr></span>
+Quel est votre numéro de téléphone? <span class="chip chip_green">phonenbr=*</span><span class="chip chip_blue">action=confirmphonenbr</span>
 </div>
 
 ![images]({{site.images_path | relative_url }}oui-contact.png)
@@ -65,7 +65,12 @@ Ensuite on paramètre l'output :
 
 On clique sur SAVE après avoir modifié l'intent,
 
-  {% include oplaAppSample-test.html title="Oui" action="phonenbrconfirmed" question="Quel est votre mail?" chip1color="green" chip1="mail=*" chip2color="blue" chip2="action=confirmmail" %}
+{% OplaAppSample title: "Oui" %}
+  {% Entry type: "Output" %}
+    {% Action label: "phonenbrconfirmed" %}
+    Quel est votre mail ? {% Chip color: "green", label: "mail=*" %} {% Chip color: "blue", label: "action=confirmmail" %} 
+  {% endEntry %}
+{% endOplaAppSample %}
 
 ![image]({{site.images_path | relative_url }}oui-phonenbrconfirmed.png)
 
@@ -152,8 +157,13 @@ De même, sur mail on va écrire un "Non" entre mailconfirmed et confirmmail
 </div>
 
 </div>
- )
+)
 
-{% include cardintent.html title="Non" action="mailconfirmed" question="Quel est votre mail?" chips="mail=*$green, action=confirmmail$blue" %}
+{% OplaAppSample title: "Non" %}
+  {% Entry type: "Output" %}
+    {% Action label: "mailconfirmed" %}
+    Quel est votre mail ? {% Chip color: "green", label: "mail=*" %} est bien votre mail ? {% Chip color: "blue", label: "action=confirmmail" %} 
+  {% endEntry %}
+{% endOplaAppSample %}
 
 Nous avons dorénavant fini de paramétrer le schéma 2!
