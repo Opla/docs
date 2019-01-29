@@ -26,14 +26,16 @@ Il faut renommer l'output en "Bonjour"
 
 On inscrit dans l'intent les lignes suivantes :
 
-    #Bonjour
-    Input: bonjour
-    bjr
-    output: Voulez-vous une pizza sucrée? [Oui] [Non] <action=sweetyesno>
 
+{% OplaAppSample title: "Bonjour" %}
+  {% Entry type : "Input" %}
+    Bonjour <br> bjr <br>
+  {% endEntry %}
+  {% Entry type: "Output" %}  
+    Voulez-vous une pizza sucrée? {% MaterialIcon icon: "category" %}{% Chip color: "red", label: "Oui" %}{% MaterialIcon icon: "category" %}{% Chip color: "red", label: "Non" %}{% MaterialIcon icon: "code" %}{% Chip color: "blue", label: "action=sweetyesno" %}
+  {% endEntry %}
+{% endOplaAppSample %}
 
-
-![image]({{site.images_path | relative_url }}voulez-vous-une-pizza-sucree.png)
 
 
 ce qui donne à l'écran :
@@ -80,6 +82,17 @@ Ensuite on va entrer le texte des outputs de l'intent Oui :<br>
     Est-ce que vous voulez des pommes?
     [Oui][Non]<action = pommesyesno>
 
+{% OplaAppSample title: "Oui" %}
+  {% Entry type : "Input" %}
+    oui
+  {% endEntry %}
+  {% Entry type: "Output" %}  
+  {% Action label: "sweetyesno" %} 
+    Est-ce que vous voulez des pommes? {% MaterialIcon icon: "category" %}{% Chip color: "red", label: "Oui" %}{% MaterialIcon icon: "category" %}{% Chip color: "red", label: "Non" %}{% MaterialIcon icon: "code" %}{% Chip color: "blue", label: "action=pommesyesno" %}
+  {% endEntry %}
+{% endOplaAppSample %}
+
+
 
 ![image]({{site.images_path | relative_url }}pommesyesno.png)
 
@@ -100,8 +113,21 @@ Ne pas oublier de cliquer sur le signe plus et sur SAVE à la fin de chaque modi
 
 Et pour le deuxième output, qui constitue la fin de la chaîne des "Oui"
 
-    action=pommesyesno
-    C'est parti pour une pizza pommes chocolat
+
+
+{% OplaAppSample title: "Oui" %}
+  {% Entry type : "Input" %}
+    oui
+  {% endEntry %}
+  {% Entry type: "Output" %}  
+  {% Action label: "pommesyesno" %} 
+    C'est parti pour une pizza pommes chocolat!
+  {% endEntry %}
+{% endOplaAppSample %}
+
+
+
+    
 
 ![image]({{site.images_path | relative_url }}pommes-chocolat.png)
 

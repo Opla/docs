@@ -6,7 +6,7 @@ permalink: /parametering_examples/step_1
 ---
 <div style="float:left;width:5%" markdown="1">
 
- ![image]({{site.images_path | relative_url }}assignment.png)
+  {% MaterialIcon icon: "assignment" %}
 </div>
 
     1. insert variable assignment :
@@ -18,7 +18,7 @@ This button will enable getting information from the user and stocking it for fu
 
 <div style="float:left;width:5%" markdown="1">
 
- ![image]({{site.images_path | relative_url }}chevrons.png)
+ {% MaterialIcon icon: "code" %}
 </div>
     2. Insert code :
 
@@ -29,7 +29,7 @@ The syntax of the action code to be entered will be &#60;action = name_of_action
 
 <div style="float:left;width:5%" markdown="1">
 
- ![image]({{site.images_path | relative_url }}category.png)
+ {% MaterialIcon icon: "category" %}
 </div>
     3. Button :
 
@@ -38,10 +38,10 @@ Creates a button that will be clickable by the user and which will allow to stan
 
 
 <div style="float:left;width:5%" markdown="1">
- ![image]({{site.images_path | relative_url }}trash.png)
+  {% MaterialIcon icon: "delete" %}
 </div>
 
-    4. Trash :
+    4. Delete :
 
 This button is to remove any of the three buttons above in Outputs, which must be done by first removing the internal text and then clicking the button, then the trash.
 
@@ -54,11 +54,11 @@ This button is to remove any of the three buttons above in Outputs, which must b
 
 <div style="float:left;width:5%" markdown="1">
 
- ![image]({{site.images_path | relative_url }}device_hub.png)
+ {% MaterialIcon icon: "device_hub" %}
 </div>
     5. Conditional
 
-When creating a new intent, suppress the "I don't understand" line in Outputs. Then appears a three pointed stars called a conditional. This star is seen as long as outputs do not contain non conditional outputs. Its' code content should be the same as the action code ![image]({{site.images_path | relative_url }}chevrons.png) in logical order of conversation. <br><br>
+When creating a new intent, suppress the "I don't understand" line in Outputs. Then appears a three pointed stars called a conditional. This star is seen as long as outputs do not contain non conditional outputs. Its' code content should be the same as the action code  {% MaterialIcon icon: "code" %} in logical order of conversation. <br><br>
 
 **Please note that the interface is not input case sensitive**
 

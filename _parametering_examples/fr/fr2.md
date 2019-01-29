@@ -5,21 +5,23 @@ ref : 2
 permalink: /exemple_parametrages/step_2
 ---
 
-### Conventions d'écriture
+#Conventions de documentation
 
-Nous allons documenter les échanges de la manière suivante : les titres d'intents seront précédés d'un dièse #, les boutons ![image]({{site.images_path | relative_url }}category.png) seront écrits entre parenthèses droites, les lignes de codes ![image]({{site.images_path | relative_url }}chevrons.png)  seront écrites entre chevrons simples, et les variables entre parenthèses.
+Dans cette documentation seront indiqués les boutons sur lesquels il faut appuyer juste avant la boîte dans laquelle il faudra écrire le code.
 
 
 #### Exemple :
 
-    #Bonjour
-    Input:
-    bonjour
-    bjr
-    output: Voulez-vous une pizza sucrée? [Oui] [Non] <action=sweetyesno>
 
+{% OplaAppSample title: "Bonjour" %}
+  {% Entry type : "Input" %}
+    Bonjour <br> bjr <br>
+  {% endEntry %}
+  {% Entry type: "Output" %}  
+    Voulez-vous une pizza sucrée? {% MaterialIcon icon: "category" %}{% Chip color: "red", label: "Oui" %}{% MaterialIcon icon: "category" %}{% Chip color: "red", label: "Non" %}{% MaterialIcon icon: "code" %}{% Chip color: "blue", label: "action=sweetyesno" %}
+  {% endEntry %}
+{% endOplaAppSample %}
 
-![image]({{site.images_path | relative_url }}voulez-vous-une-pizza-sucree.png)
 
 Donne à l'écran :
 

@@ -9,27 +9,40 @@ On peut tout à fait, et c'est le cas ici, créer deux schémas de conversation 
 
 *À noter : Un intent compte souvent un ou deux inputs pour plusieurs outputs différents.*
 
-<div class="OplaAppSample">
-<span class="OplaAppSample-title">#Contact</span>
-<b>Input</b> : Contact
-<hr />
-<b>Output</b> : Voulez-vous donner votre numéro de téléphone ? <span class="chip chip_red">Oui</span><span class="chip chip_red">Non</span><span class="chip chip_brandSecondary">action = getphoneyesno</span>
-</div>
+
+
+
+{% OplaAppSample title: "Contact" %}
+  {% Entry type : "Input" %}
+    Contact
+  {% endEntry %}
+  {% Entry type: "Output" %}  
+    Voulez-vous donner votre numéro de téléphone? {% MaterialIcon icon: "category" %}{% Chip color: "red", label: "oui" %}{% MaterialIcon icon: "category" %}{% Chip color: "red", label: "non" %} {% MaterialIcon icon: "code" %}{% Chip color: "blue", label: "action=getphoneyesno" %}
+  {% endEntry %}
+{% endOplaAppSample %}
+
+
+
 
 
 
 Cliquer sur le signe plus et sur SAVE;
 
- ![image]({{site.images_path | relative_url }}assignment.png)
+ {% MaterialIcon icon: "assignment" %}
 On va insérer une variable. Il faut écrire la valeur de la variable à l'intérieur du carré qui résulte de la pression sur le bouton insert variable assignment.<br>
 
-<div class="OplaAppSample">
-<span class="OplaAppSample-title">#Oui</span>
-<b>Input</b> : Oui
-<hr />
-<b>Output</b> : action <b class="u-textColor_red">=</b> getphoneyesno<br />
-Quel est votre numéro de téléphone? <span class="chip chip_green">phonenbr=*</span><span class="chip chip_blue">action=confirmphonenbr</span>
-</div>
+
+
+{% OplaAppSample title: "Oui" %}
+  {% Entry type : "Input" %}
+    oui
+  {% endEntry %}
+  {% Entry type: "Output" %} 
+    {% Action label: "getphoneyesno" %} 
+    Quel est votre numéro de téléphone ? {% MaterialIcon icon: "assignment" %}{% Chip color: "green", label: "phonenbr=*" %}{% MaterialIcon icon: "code" %}{% Chip color: "blue", label: "action=confirmphonenbr" %}
+  {% endEntry %}
+{% endOplaAppSample %}
+
 
 ![images]({{site.images_path | relative_url }}oui-contact.png)
 
@@ -53,13 +66,19 @@ L'intent #Any sert à stocker une valeur quelconque donnée par l'utilisateur da
 
 Ensuite on paramètre l'output :
 
-<div class="OplaAppSample">
-<span class="OplaAppSample-title">#Any</span>
-<b>Input</b> : <span class="chip chip_orange">@any</span>
-<hr />
-<b>Output</b> : action <b class="u-textColor_red">=</b> confirmphonenbr<br>
-<span class="chip chip_green">phonenbr=*</span> est bien votre numéro de téléphone? <span class="chip chip_blue">action=phonenbrconfirmed</span><span class="chip chip_red">oui</span><span class="chip chip_red">non</span>
-</div>
+
+{% OplaAppSample title: "Any" %}
+  {% Entry type : "Input" %}
+    {% Chip color: "orange", label: "@any" %}
+  {% endEntry %}
+  {% Entry type: "Output" %} 
+    {% Action label: "confirmphonenbr" %} 
+    {% MaterialIcon icon: "assignment" %}{% Chip color: "green", label: "phonenbr=*" %} estbien votre numéro de téléphone? {% MaterialIcon icon: "category" %}{% Chip color: "red", label: "oui" %}{% MaterialIcon icon: "category" %}{% Chip color: "red", label: "non" %}{% MaterialIcon icon: "code" %}{% Chip color: "blue", label: "action=phonenbrconfirmed" %}
+  {% endEntry %}
+{% endOplaAppSample %}
+
+
+
 
 ![image]({{site.images_path | relative_url }}any-confirmphonenbr.png)
 
@@ -68,49 +87,63 @@ On clique sur SAVE après avoir modifié l'intent,
 {% OplaAppSample title: "Oui" %}
   {% Entry type: "Output" %}
     {% Action label: "phonenbrconfirmed" %}
-    Quel est votre mail ? {% Chip color: "green", label: "mail=*" %} {% Chip color: "blue", label: "action=confirmmail" %} 
+    Quel est votre mail ? {% MaterialIcon icon : "assignment" %}{% Chip color: "green", label: "mail=*" %} {%MaterialIcon icon : "code"%}{% Chip color: "blue", label: "action=confirmmail" %} 
   {% endEntry %}
 {% endOplaAppSample %}
 
 ![image]({{site.images_path | relative_url }}oui-phonenbrconfirmed.png)
 
-<div class="OplaAppSample">
-<span class="OplaAppSample-title">#Any</span>
-<b>Output</b>: action <b class="u-textColor_red">=</b> confirmmail<br>
-<span class="chip chip_green">mail=*</span> est bien votre mail?
-<span class="chip chip_blue">action=mailconfirmed</span><span class="chip chip_red">oui</span><span class="chip chip_red">non</span>
-</div>
-<p></p>
-<div class="OplaAppSample">
-<span class="OplaAppSample-title">#Oui</span>
-<b>Output</b> : action <b class="u-textColor_red">=</b> mailconfirmed<br>
-Ok, votre contact est enregistré
-</div>
+
+{% OplaAppSample title: "Any" %}
+  {% Entry type: "Output" %}
+    {% Action label: "confirmmail" %}
+    {% MaterialIcon icon : "assignment" %}{% Chip color: "green", label: "mail=*" %} est bien votre mail? {%MaterialIcon icon : "category"%}{% Chip color: "red", label: "oui" %} {%MaterialIcon icon : "category"%}{% Chip color: "red", label: "non" %} {%MaterialIcon icon : "code"%}{% Chip color: "blue", label: "action=mailconfirmed" %} 
+  {% endEntry %}
+{% endOplaAppSample %}
+
+<br>
+
+{% OplaAppSample title: "Oui" %}
+  {% Entry type: "Output" %}
+    {% Action label: "mailconfirmed" %}
+    Ok, votre contact est enregistré.
+  {% endEntry %}
+{% endOplaAppSample %}
+
 
 On a parcouru la branche des "Oui" du schéma.
 
 On va s'intéresser à la première branche "Non", qui permet de sauter l'étape du téléphone pour donner l'e-mail.
 
-<div class="OplaAppSample">
-<span class="OplaAppSample-title">#Non</span>
-<b>Output</b> : action <b class="u-textColor_red">=</b> getphoneyesno<br>
-Quel est votre mail? <span class="chip chip_green">mail=*</span><span class="chip chip_blue">action=confirmmail2</span>
-</div>
+
+{% OplaAppSample title: "Non" %}
+  {% Entry type: "Output" %}
+    {% Action label: "getphoneyesno" %}
+    Quel est votre mail? {% MaterialIcon icon : "assignment" %}{% Chip color: "green", label: "mail=*" %}  {%MaterialIcon icon : "code"%}{% Chip color: "blue", label: "action=confirmmail2" %} 
+  {% endEntry %}
+{% endOplaAppSample %}
+
+
+
 
 On est obligé de réécrire l'étape pour reprendre le mail. On ajoute un indice, 2, pour faire la différence avec la première branche.
 
-<div class="OplaAppSample">
-<span class="OplaAppSample-title">#Any</span>
-<b>Output</b>: action <b class="u-textColor_red">=</b> confirmmail<br>
-<span class="chip chip_green">mail=*</span> est bien votre mail?
-<span class="chip chip_blue">action=mailconfirmed2</span><span class="chip chip_red">oui</span><span class="chip chip_red">non</span>
-</div>
-<p></p>
-<div class="OplaAppSample">
-<span class="OplaAppSample-title">#Oui</span>
-<b>Output</b> : action <b class="u-textColor_red">=</b> mailconfirmed2<br>
-Ok, votre contact est enregistré
-</div>
+
+{% OplaAppSample title: "Any" %}
+  {% Entry type: "Output" %}
+    {% Action label: "confirmmail" %}
+    {% MaterialIcon icon : "assignment" %}{% Chip color: "green", label: "mail=*" %} est bien votre mail? {%MaterialIcon icon : "category"%}{% Chip color: "red", label: "oui" %} {%MaterialIcon icon : "category"%}{% Chip color: "red", label: "non" %} {%MaterialIcon icon : "code"%}{% Chip color: "blue", label: "action=mailconfirmed2" %} 
+  {% endEntry %}
+{% endOplaAppSample %}
+
+<br>
+
+{% OplaAppSample title: "Oui" %}
+  {% Entry type: "Output" %}
+    {% Action label: "mailconfirmed2" %}
+Ok, votre contact est enregistré.
+  {% endEntry %}
+{% endOplaAppSample %}
 
 
 
@@ -160,6 +193,9 @@ De même, sur mail on va écrire un "Non" entre mailconfirmed et confirmmail
 )
 
 {% OplaAppSample title: "Non" %}
+  {% Entry type : "Input" %}
+    non
+  {% endEntry %}
   {% Entry type: "Output" %}
     {% Action label: "mailconfirmed" %}
     Quel est votre mail ? {% Chip color: "green", label: "mail=*" %} est bien votre mail ? {% Chip color: "blue", label: "action=confirmmail" %} 
