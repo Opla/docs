@@ -9,29 +9,34 @@ One can quite, and this is the case here, create two conversation patterns in th
 
 Note: An intent often has one or two inputs for several different outputs.
 
-    #Contact
-    Input : contact
-    Output :
-    Would you like to give out your phone number ?
-    <action = getphoneyesno>[Yes][No]
 
-![image]({{site.images_path | relative_url }}contact-getphoneyesno-en.png)
+{% OplaAppSample title: "Contact" %}
+  {% Entry type : "Input" %}
+    Contact
+  {% endEntry %}
+  {% Entry type: "Output" %}  
+    Would you like to give out your phone number? {% MaterialIcon icon: "category" %}{% Chip color: "red", label: "Yes" %}{% MaterialIcon icon: "category" %}{% Chip color: "red", label: "No" %} {% MaterialIcon icon: "code" %}{% Chip color: "blue", label: "action=getphoneyesno" %}
+  {% endEntry %}
+{% endOplaAppSample %}
 
 
 Click on plus sign and SAVE;
 
 
-<div style="float:left" markdown="1">
-
- ![image]({{site.images_path | relative_url }}assignment.png)
-</div> We will insert a variable. The value of the variable must be written inside the square resulting from pressing the insert variable assignment button.<br>
 
 
-<br>#Yes<br>
-Input : yes<br>
-Output :<br>
-action = getphoneyesno <br>
-What is your phone number? ![image]({{site.images_path | relative_url }}phonenbr.png)<action=confirmphonenbr>
+ {% MaterialIcon icon: "assignment" %} We will insert a variable. The value of the variable must be written inside the square resulting from pressing the insert variable assignment button.<br>
+
+{% OplaAppSample title: "Yes" %}
+  {% Entry type : "Input" %}
+    yes
+  {% endEntry %}
+  {% Entry type: "Output" %} 
+    {% Action label: "getphoneyesno" %} 
+    What is your phone number ? {% MaterialIcon icon: "assignment" %}{% Chip color: "green", label: "phonenbr=*" %}{% MaterialIcon icon: "code" %}{% Chip color: "blue", label: "action=confirmphonenbr" %}
+  {% endEntry %}
+{% endOplaAppSample %}
+
 
 ![images]({{site.images_path | relative_url }}yes-confirmphonenbr.png)
 
@@ -54,60 +59,93 @@ Then click on insert block any in #Any inputs :
 ![images]({{site.images_path | relative_url }}at-any-in-input.png)
 
 
-the #Any intent is meant to stock any user inputted value in a variable ![image]({{site.images_path | relative_url }}assignment.png) ,insert variable assignment.
+the #Any intent is meant to stock any user inputted value in a variable {% MaterialIcon icon: "assignment" %} ,insert variable assignment.
 
-then the output :
+Then the output :
 
 
-#Any<br>
-input : ![image]({{site.images_path | relative_url }}at-any.png)<br>
-Output:<br>
-action = confirmphonenbr<br>
-![image]({{site.images_path | relative_url }}phonenbr.png) is your phone number, right? <action=phonenbrconfirmed>[Yes][No]<br>
+{% OplaAppSample title: "Any" %}
+  {% Entry type : "Input" %}
+    {% Chip color: "orange", label: "@any" %}
+  {% endEntry %}
+  {% Entry type: "Output" %} 
+    {% Action label: "confirmphonenbr" %} 
+    {% MaterialIcon icon: "assignment" %}{% Chip color: "green", label: "phonenbr=*" %} is your phone number, right? {% MaterialIcon icon: "category" %}{% Chip color: "red", label: "yes" %}{% MaterialIcon icon: "category" %}{% Chip color: "red", label: "no" %}{% MaterialIcon icon: "code" %}{% Chip color: "blue", label: "action=phonenbrconfirmed" %}
+  {% endEntry %}
+{% endOplaAppSample %}
 
-![image]({{site.images_path | relative_url }}any-phonenbrconfirmed-en.png)
+
+
+
 
 Click SAVE after modifying the intent,
 
 
-#Yes<br>
-action=phonenbrconfirmed<br>
-What is your mail? ![image]({{site.images_path | relative_url }}mail.png)<action=confirmmail><br>
 
-![image]({{site.images_path | relative_url }}yes-confirmmail.png)
+{% OplaAppSample title: "Yes" %}
+  {% Entry type: "Output" %} 
+    {% Action label: "phonenbrconfirmed" %} 
+    What is your mail ? {% MaterialIcon icon: "assignment" %}{% Chip color: "green", label: "mail=*" %} {% MaterialIcon icon: "code" %}{% Chip color: "blue", label: "action=confirmmail" %}
+  {% endEntry %}
+{% endOplaAppSample %}
 
-#Any<br>
-action=confirmmail<br>
-![image]({{site.images_path | relative_url }}mail.png) is your mail, right?<br>
-<action=mailconfirmed>[Yes][No]<br>
-
+<br>
 
 
-#Yes<br>
-action=mailconfirmed<br>
-Ok, your contact is saved.<br>
+{% OplaAppSample title: "Any" %}
+  {% Entry type: "Output" %} 
+    {% Action label: "confirmmail" %} 
+    {% MaterialIcon icon: "assignment" %}{% Chip color: "green", label: "mail=*" %} is your mail, right? {% MaterialIcon icon: "category" %}{% Chip color: "red", label: "yes" %}{% MaterialIcon icon: "category" %}{% Chip color: "red", label: "no" %}{% MaterialIcon icon: "code" %}{% Chip color: "blue", label: "action=mailconfirmed" %}
+  {% endEntry %}
+{% endOplaAppSample %}
+
+<br>
+
+{% OplaAppSample title: "Yes" %}
+  {% Entry type: "Output" %} 
+    {% Action label: "mailconfirmed" %} 
+    Ok, your contact is saved.
+  {% endEntry %}
+{% endOplaAppSample %}
+
+
 
 
 Now we'll deal with the no going directly to e-mail
 
 
-#No<br>
-Input : No<br>
-Output:
-action = getphoneyesno<br>
-What is your e-mail? ![image]({{site.images_path | relative_url }}mail.png)<action=confirmmail2><br>
+
+{% OplaAppSample title: "No" %}
+  {% Entry type: "Input" %}
+  No
+  {% endEntry %}
+  {% Entry type: "Output" %} 
+    {% Action label: "getphoneyesno" %} 
+    What is your e-mail? {% MaterialIcon icon: "assignment" %}{% Chip color: "green", label: "mail=*" %} {% MaterialIcon icon: "code" %}{% Chip color: "blue", label: "action=confirmmail2" %}
+  {% endEntry %}
+{% endOplaAppSample %}
+
 
 We need to rewrite that step in order to ask for the e-mail. We add index 2 to make a difference with the first branch.
 
-#Any<br>
-Output:<br>
-action=confirmmail<br>
-![image]({{site.images_path | relative_url }}mail.png) is your mail, right?<br>
-<action=mailconfirmed2>[Yes][No]<br>
 
-#Yes<br>
-action=mailconfirmed2<br>
-Ok, your mail is saved.<br>
+
+{% OplaAppSample title: "Any" %}
+  {% Entry type: "Output" %} 
+    {% Action label: "confirmmail" %} 
+    {% MaterialIcon icon: "assignment" %}{% Chip color: "green", label: "mail=*" %} is your mail, right? {% MaterialIcon icon: "category" %}{% Chip color: "red", label: "yes" %}{% MaterialIcon icon: "category" %}{% Chip color: "red", label: "no" %}{% MaterialIcon icon: "code" %}{% Chip color: "blue", label: "action=mailconfirmed2" %}
+  {% endEntry %}
+{% endOplaAppSample %}
+
+<br>
+
+{% OplaAppSample title: "Yes" %}
+  {% Entry type: "Output" %} 
+    {% Action label: "mailconfirmed2" %} 
+    Ok, your mail is saved.
+  {% endEntry %}
+{% endOplaAppSample %}
+
 
 
 ## 2. Loops on "No"
@@ -116,38 +154,70 @@ We will add the two "No" loops : the arrow takes them up one step ; we will take
 
 
 (<br>
-    #Yes<br>
-    input=yes<br>
-    output= ... <action=confirmphonenbr><br><br>
 
-#Any<br>
-<span style="background-color: #FFFF00"> action=confirmphonenbr </span>
-![image]({{site.images_path | relative_url }}phonenbr.png) is your phone number, right? <span style="background-color:lightblue">&lt;action = phonenbrconfirmed&gt; </span>[Yes][No]<br><br>
+
+{% OplaAppSample title: "Any" %}
+  {% Entry type: "Output" %} 
+    {% Action label: "confirmphonenbr" %} 
+    {% MaterialIcon icon: "assignment" %}{% Chip color: "green", label: "phonenbr=*" %} is your phone number, right? {% MaterialIcon icon: "category" %}{% Chip color: "red", label: "yes" %}{% MaterialIcon icon: "category" %}{% Chip color: "red", label: "no" %}{% MaterialIcon icon: "code" %}{% Chip color: "blue", label: "action=phonenbrconfirmed" %}
+  {% endEntry %}
+{% endOplaAppSample %}
+
+
+
  ) - rewritten as a reminder
 
  We will write the "No" inverting the actions called phonenbrconfirmed and confirmphonenbr, we will write phonenbrconfirmed in the conditional and confirmphonenbr in the code.
 
 
-#Non<br>
+<!--#No<br>
 <span style="background-color:lightblue">action = phonenbrconfirmed </span><br>
 What is your phone number? ![image]({{site.images_path | relative_url }}phonenbr.png)
-<span style="background-color: #FFFF00"> <action=confirmphonenbr> </span>
+<span style="background-color: #FFFF00"> <action=confirmphonenbr> </span>-->
+
+
+{% OplaAppSample title: "No" %}
+  {% Entry type: "Output" %} 
+    {% Action label: "phonenbrconfirmed" %} 
+    What is your phone number? {% MaterialIcon icon: "assignment" %}{% Chip color: "green", label: "phonenbr=*" %} {% MaterialIcon icon: "code" %}{% Chip color: "blue", label: "action=confirmphonenbr" %}
+  {% endEntry %}
+{% endOplaAppSample %}
 
 likewise, on mail we will write a "No" between mailconfirmed et confirmmail
 
-(<br>
+(
+    
+<!--
     #Any<br>
 <span style="background-color: lightseagreen">action = confirmmail</span><br>
 ![image]({{site.images_path | relative_url }}mail.png) is your e-mail adress, right?
-<span style="background-color: lightcoral">&lt;action=mailconfirmed&gt;[Oui][Non]</span><br>
+<span style="background-color: lightcoral">&lt;action=mailconfirmed&gt;[Oui][Non]</span><br>-->
+
+
+
+{% OplaAppSample title: "Any" %}
+  {% Entry type: "Output" %} 
+    {% Action label: "confirmmail" %} 
+    {% MaterialIcon icon: "assignment" %}{% Chip color: "green", label: "mail=*" %} is your mail, right? {% MaterialIcon icon: "category" %}{% Chip color: "red", label: "yes" %}{% MaterialIcon icon: "category" %}{% Chip color: "red", label: "no" %}{% MaterialIcon icon: "code" %}{% Chip color: "blue", label: "action=mailconfirmed" %}
+  {% endEntry %}
+{% endOplaAppSample %}
+
 
 ) rewritten as a reminder<br><br>
 
-
+<!--
 #No<br>
 <span style="background-color: lightcoral">action= mailconfirmed</span><br>
 What is your e-mail adress?
-![image]({{site.images_path | relative_url }}mail.png)  <span style="background-color: lightseagreen"><!--(mail=*)-->&lt;action=confirmmail&gt;</span>
+![image]({{site.images_path | relative_url }}mail.png)  <span style="background-color: lightseagreen">&lt;action=confirmmail&gt;</span> -->
+
+
+{% OplaAppSample title: "No" %}
+  {% Entry type: "Output" %} 
+    {% Action label: "mailconfirmed" %} 
+    What is your e-mail adress? {% MaterialIcon icon: "assignment" %}{% Chip color: "green", label: "mail=*" %} {% MaterialIcon icon: "code" %}{% Chip color: "blue", label: "action=confirmmail" %}
+  {% endEntry %}
+{% endOplaAppSample %}
 
 
 We are now done setting up diagram number 2!

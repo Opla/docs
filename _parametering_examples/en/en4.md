@@ -29,13 +29,16 @@ Click on the pencil to the right of the intents column to rename the intent
 
 In the intent one must write the following
 
-    #Hello
-    Input: Hello
-    output: Would you like a sweet pizza? [yes] [no] <action=sweetyesno>
 
+{% OplaAppSample title: "Hello" %}
+  {% Entry type : "Input" %}
+    Hello
+  {% endEntry %}
+  {% Entry type: "Output" %}
+    Would you like a sweet pizza? {%MaterialIcon icon : "category" %} {% Chip color: "red", label: "Yes" %} {%MaterialIcon icon : "category" %} {% Chip color: "red", label: "No" %} {% MaterialIcon icon :"code" %}{% Chip color: "blue", label: "action=sweetyesno" %} 
+  {% endEntry %}
+{% endOplaAppSample %}
 
-
-![image]({{site.images_path | relative_url }}would-you-like-a-sweet-pizza.png)
 
 
 which on screen shows :
@@ -73,25 +76,29 @@ Then type in the new name
 
 Then enter Yes in the line of inputs and delete the default outputs present clicking on the minus of the line and SAVE on top of page.
 
-Ensuite il faut entrer Oui dans la ligne d'inputs et supprimer les autres inputs et outputs éventuellement déjà présents en cliquant sur le moins sur leur ligne.
+
 
 ![image]({{site.images_path | relative_url }}suppress-inputs-and-outputs.png)
 
 
 Then we will enter the text of the Yes intent's output :<br>
 
-    #Yes
-    Input : Yes
-    Output :
-    action=sweetyesno
-    Would you like apples on it?
-    [Yes][No]<action = applesyesno>
+
+{% OplaAppSample title: "Yes" %}
+  {% Entry type : "Input" %}
+    yes
+  {% endEntry %}
+  {% Entry type: "Output" %}
+  {% Action label : "sweetyesno" %}
+    Would you like apples on it? {%MaterialIcon icon : "category" %} {% Chip color: "red", label: "Yes" %} {%MaterialIcon icon : "category" %} {% Chip color: "red", label: "No" %} {%MaterialIcon icon : "code" %}{% Chip color: "blue", label: "action=applesyesno" %} 
+  {% endEntry %}
+{% endOplaAppSample %}
 
 
-![image]({{site.images_path | relative_url }}yes-applesyesno.png)
 
 
-action=sweetyesno must be entered clicking on the three pointed star called conditionnal or insert condition
+
+action=sweetyesno must be entered clicking on the three pointed star called conditional or insert condition
 
 ![image]({{site.images_path | relative_url }}insert-condition.png)
 
@@ -105,9 +112,21 @@ Never forget to click on the plus sign end of line and on SAVE on top each time 
 
 Add the second output, ending the all-yes side of the diagram.
 
+ 
 
-    action=applesyesno
+
+{% OplaAppSample title: "Yes" %}
+  {% Entry type : "Input" %}
+    yes
+  {% endEntry %}
+  {% Entry type: "Output" %}
+  {% Action label : "applesyesno" %}
     There goes an apple-chocolate pizza!
+  {% endEntry %}
+{% endOplaAppSample %}
+
+
+
 
 ![image]({{site.images_path | relative_url }}yes-applechocolatepizza.png)
 

@@ -6,7 +6,7 @@ permalink: /exemple_parametrages/step_1
 ---
 <div style="float:left;width:5%" markdown="1">
 
- ![image]({{site.images_path | relative_url }}assignment.png)
+ {% MaterialIcon icon: "assignment" %}
 </div>
 
     1. insert variable assignment :
@@ -18,18 +18,20 @@ permalink: /exemple_parametrages/step_1
 
 <div style="float:left;width:5%" markdown="1">
 
- ![image]({{site.images_path | relative_url }}chevrons.png)
+{% MaterialIcon icon: "code" %}
 </div>
     2. Insert code :
 
-La syntaxe du code d'action à saisir sera &#60;action = name_of_action&#62; . Il s'agit de la ligne de code d'action qui va permettre au bot de suivre le fil d'une conversation. On va mettre l'action dans un premier output d'intent, et la même syntaxe dans la conditionnelle de l'output d'intent suivant, ce qui va permettre de créer un chemin conversationnel.
+La syntaxe du code d'action à saisir sera, en écrivant à l'intérieur du cadre qui apparaît lorsqu'on presse le bouton    :
+ {% Chip color: "blue", label: "action=name_of_action" %} 
+  Il s'agit de la ligne de code d'action qui va permettre au bot de suivre le fil d'une conversation. On va mettre l'action dans un premier output d'intent, et la même syntaxe dans la conditionnelle de l'output d'intent suivant, ce qui va permettre de créer un chemin conversationnel.
 
 
 
 
 <div style="float:left;width:5%" markdown="1">
 
- ![image]({{site.images_path | relative_url }}category.png)
+{% MaterialIcon icon: "category" %}
 </div>
     3. Button :
 
@@ -39,9 +41,9 @@ Permet de créer un bouton qui va être cliquable par l'utilisateur et qui donc 
 
 <div style="float:left;width:5%" markdown="1">
 
- ![image]({{site.images_path | relative_url }}trash.png)
+{% MaterialIcon icon: "delete" %}
 </div>
-    4. Trash :
+    4. delete :
 
 Ce bouton sert à supprimer un des trois items cliquables énoncés ci-dessus. Il faut d'abord supprimer le texte, puis cliquer sur le bouton pour le sélectionner, puis cliquer sur la corbeille.
 
@@ -54,11 +56,11 @@ Ce bouton sert à supprimer un des trois items cliquables énoncés ci-dessus. I
 
 <div style="float:left;width:5%" markdown="1">
 
- ![image]({{site.images_path | relative_url }}device_hub.png)
+ {% MaterialIcon icon: "device_hub" %}
 </div>
     5. Conditionnelle
 
-Quand on ouvre un nouvel intent, dans les outputs, supprimer la ligne "I don't understand." Apparaît alors une étoile à trois branches qu'on appelle une conditionnelle. Cette étoile est proposée tant que les outputs ne contiennent pas d'outputs non conditionnels. Elle doit contenir le même code que le code d'action qui précède, dans la logique de la conversation.<br><br>
+Quand on ouvre un nouvel intent, dans les outputs, supprimer la ligne "I don't understand." Apparaît alors une étoile à trois branches qu'on appelle une conditionnelle. Cette étoile est proposée tant que les outputs ne contiennent pas d'outputs non conditionnels. Elle doit contenir le même code que le code d'action qui précède  {% MaterialIcon icon: "code" %}, dans la logique de la conversation.<br><br>
 
 **Noter que l'interface n'est pas sensible à la casse des inputs.**
 

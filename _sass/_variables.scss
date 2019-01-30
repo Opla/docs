@@ -6,18 +6,33 @@ $font-family-default: 'Work Sans', sans-serif;
 
 //Colors
 $brand-primary: #e74f4f;
-$brand-secondary: #4F81E7;
+$brand-secondary: #4f81e7;
 
-$grey-light: #1c252c;
-$grey-lighter: #4e575d;
-$grey-lightest: #dcdcdd;
+$grey-900: #1c252c;
+$grey-800: #2D3942;
+$grey-700: #3B4B57;
+$grey-600: #4A5E6D;
+$grey-500: #566C7D;
+$grey-400: #6E8190;
+$grey-300: #8797A3;
+$grey-200: #A9B4BD;
+$grey-100: #CBD2D7;
+$grey-050: #EBEDEF;
+$grey-000: #F7F9FB;
+
 $white: #ffffff;
+$black: #000000;
+
+$red: #A60000;
+$blue: #007c91;
+$green: #4b830d;
+$orange: #E57826;
 
 //Layout
 $main-gutters: 15px;
 
 //Box shadows
-$box-shadow-default: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+$box-shadow-default: 0 3px 6px rgba($black, 0.16), 0 3px 6px rgba($black, 0.23);
 
 // Transitions
 $transition-default: all 0.15s ease-in;

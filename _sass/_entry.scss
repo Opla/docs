@@ -1,0 +1,24 @@
+// Entry style
+//
+
+//Entry variable
+$entry-bottom-gutter: 15px;
+
+
+.Entry {
+    border-bottom: solid 1px $grey-100;
+    margin-bottom: $entry-bottom-gutter;
+    padding-bottom: $entry-bottom-gutter;
+    width: 100%;
+
+    &:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .Entry-label {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+}

@@ -39,6 +39,7 @@ github_username:  jekyll
 markdown: kramdown
 plugins:
   - jekyll-feed
+  - jekyll-spark
 sass:
   style: compressed
 

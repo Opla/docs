@@ -4,11 +4,19 @@ lang: fr
 ref : 5
 permalink: /exemple_parametrages/step_5
 ---
-    #Non
-    Input : non
-    Output:
-    action=pommesyesno
-    C'est parti pour une pizza tout chocolat!<br>
+
+On va ensuite rajouter le premier Non qui conduit à Pizza tout chocolat :
+
+{% OplaAppSample title: "Non" %}
+  {% Entry type : "Input" %}
+    non
+  {% endEntry %}
+  {% Entry type: "Output" %}  
+  {% Action label: "pommesyesno" %} 
+    C'est parti pour une pizza tout chocolat!
+  {% endEntry %}
+{% endOplaAppSample %}
+
 
 
  ![image]({{site.images_path | relative_url }}tout-chocolat.png)
@@ -17,25 +25,40 @@ Ne pas oublier de cliquer sur SAVE avant d'essayer le schéma dans le playground
 
 Puis nous allons rajouter la branche de droite,
 
-    #Non
-    Input : non
-    Output :
-    action=sweetyesno
-    Voulez-vous des champignons ?
-    [Oui][Non]<action=mushroomsyesno>
 
-    #Oui
-    Input : oui
-    Output :
-    action = mushroomsyesno
-    C'est parti pour une Reine
+{% OplaAppSample title: "Non" %}
+  {% Entry type : "Input" %}
+    non
+  {% endEntry %}
+  {% Entry type: "Output" %}  
+  {% Action label: "sweetyesno" %} 
+    Voulez-vous des champignons ?  {% MaterialIcon icon: "category" %}{% Chip color: "red", label: "Oui" %}{% MaterialIcon icon: "category" %}{% Chip color: "red", label: "Non" %}{% MaterialIcon icon: "code" %}{% Chip color: "blue", label: "action=mushroomsyesno" %}
+  {% endEntry %}
+{% endOplaAppSample %}
 
-    #Non
-    Input : non
-    Output :
-    action=mushroomsyesno
-    C'est parti pour une trois fromages !
+<br>
 
+{% OplaAppSample title: "Oui" %}
+  {% Entry type : "Input" %}
+    oui
+  {% endEntry %}
+  {% Entry type: "Output" %}  
+  {% Action label: "mushroomsyesno" %} 
+    C'est parti pour une Reine !
+  {% endEntry %}
+{% endOplaAppSample %}
+
+<br>
+
+{% OplaAppSample title: "Non" %}
+  {% Entry type : "Input" %}
+    non
+  {% endEntry %}
+  {% Entry type: "Output" %}  
+  {% Action label: "mushroomsyesno" %} 
+    C'est parti pour une trois fromages! 
+  {% endEntry %}
+{% endOplaAppSample %}
 
 
 Et voilà,  votre premier schéma de conversation est paramétré ! Passons maintenant à un exemple suivant, l'exemple de la prise de contact, qui gère des saisies manuelles effectuées par l'utilisateur.
