@@ -5,6 +5,7 @@ ref : 5
 permalink: /exemple_parametrages/step_5
 ---
 
+On va ensuite rajouter le premier Non qui conduit à Pizza tout chocolat :
 
 {% OplaAppSample title: "Non" %}
   {% Entry type : "Input" %}

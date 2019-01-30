@@ -75,12 +75,6 @@ Ensuite il faut entrer Oui dans la ligne d'inputs et supprimer les outputs éven
 
 Ensuite on va entrer le texte des outputs de l'intent Oui :<br>
 
-    #Oui
-    Input : Oui
-    Output :
-    action=sweetyesno
-    Est-ce que vous voulez des pommes?
-    [Oui][Non]<action = pommesyesno>
 
 {% OplaAppSample title: "Oui" %}
   {% Entry type : "Input" %}

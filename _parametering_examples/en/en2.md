@@ -7,17 +7,20 @@ permalink: /parametering_examples/step_2
 
 ### Documentation conventions
 
-Intents names will be preceded by a sharp key #, buttons ![image]({{site.images_path | relative_url }}category.png) will be written in square brackets, code lines ![image]({{site.images_path | relative_url }}chevrons.png)  will be written between chevrons. Variables will be copy-pasted.
-
+We will add in buttons that need to be clicked before any code block.
 
 #### Example :
 
-    #Hello
-    Input:
+
+
+{% OplaAppSample title: "Hello" %}
+  {% Entry type : "Input" %}
     Hello
-    Output:Would you like a sweet pizza? [Yes] [No] <action=sweetyesno>
-
-
+  {% endEntry %}
+  {% Entry type: "Output" %}
+    Would you like a sweet pizza? {%MaterialIcon icon : "category" %} {% Chip color: "red", label: "Yes" %} {%MaterialIcon icon : "category" %} {% Chip color: "red", label: "No" %} {% MaterialIcon icon : "code" %}{% Chip color: "blue", label: "action=sweetyesno" %} 
+  {% endEntry %}
+{% endOplaAppSample %}
 
 Shows on screen:
 

@@ -29,11 +29,15 @@ Click on the pencil to the right of the intents column to rename the intent
 
 In the intent one must write the following
 
-    #Hello
-    Input: Hello
-    output: Would you like a sweet pizza? [yes] [no] <action=sweetyesno>
 
-
+{% OplaAppSample title: "Hello" %}
+  {% Entry type : "Input" %}
+    Hello
+  {% endEntry %}
+  {% Entry type: "Output" %}
+    Would you like a sweet pizza? {%MaterialIcon icon : "category" %} {% Chip color: "red", label: "Yes" %} {%MaterialIcon icon : "category" %} {% Chip color: "red", label: "No" %} {% MaterialIcon icon :"code" %}{% Chip color: "blue", label: "action=sweetyesno" %} 
+  {% endEntry %}
+{% endOplaAppSample %}
 
 
 
@@ -79,12 +83,17 @@ Then enter Yes in the line of inputs and delete the default outputs present clic
 
 Then we will enter the text of the Yes intent's output :<br>
 
-    #Yes
-    Input : Yes
-    Output :
-    action=sweetyesno
-    Would you like apples on it?
-    [Yes][No]<action = applesyesno>
+
+{% OplaAppSample title: "Yes" %}
+  {% Entry type : "Input" %}
+    yes
+  {% endEntry %}
+  {% Entry type: "Output" %}
+  {% Action label : "sweetyesno" %}
+    Would you like apples on it? {%MaterialIcon icon : "category" %} {% Chip color: "red", label: "Yes" %} {%MaterialIcon icon : "category" %} {% Chip color: "red", label: "No" %} {%MaterialIcon icon : "code" %}{% Chip color: "blue", label: "action=applesyesno" %} 
+  {% endEntry %}
+{% endOplaAppSample %}
+
 
 
 
@@ -103,11 +112,21 @@ Never forget to click on the plus sign end of line and on SAVE on top each time 
 
 Add the second output, ending the all-yes side of the diagram.
 
-    #Yes
-    Intent : Yes
-    Output : 
-    action=applesyesno
+ 
+
+
+{% OplaAppSample title: "Yes" %}
+  {% Entry type : "Input" %}
+    yes
+  {% endEntry %}
+  {% Entry type: "Output" %}
+  {% Action label : "applesyesno" %}
     There goes an apple-chocolate pizza!
+  {% endEntry %}
+{% endOplaAppSample %}
+
+
+
 
 ![image]({{site.images_path | relative_url }}yes-applechocolatepizza.png)
 

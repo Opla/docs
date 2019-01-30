@@ -62,7 +62,7 @@ Puis on clique sur insert block any dans les inputs de #Any :
 
 ![images]({{site.images_path | relative_url }}at-any-in-input.png)
 
-L'intent #Any sert à stocker une valeur quelconque donnée par l'utilisateur dans une variable accessible avec le bouton ![image]({{site.images_path | relative_url }}assignment.png) ,insert variable assignment. On va presser ce bouton et écrire *phonenbr=* * à l'intérieur du cadre.
+L'intent #Any sert à stocker une valeur quelconque donnée par l'utilisateur dans une variable accessible avec le bouton {% MaterialIcon icon :"assignment" %} ,insert variable assignment. On va presser ce bouton et écrire *phonenbr=* * à l'intérieur du cadre.
 
 Ensuite on paramètre l'output :
 
@@ -73,7 +73,7 @@ Ensuite on paramètre l'output :
   {% endEntry %}
   {% Entry type: "Output" %} 
     {% Action label: "confirmphonenbr" %} 
-    {% MaterialIcon icon: "assignment" %}{% Chip color: "green", label: "phonenbr=*" %} estbien votre numéro de téléphone? {% MaterialIcon icon: "category" %}{% Chip color: "red", label: "oui" %}{% MaterialIcon icon: "category" %}{% Chip color: "red", label: "non" %}{% MaterialIcon icon: "code" %}{% Chip color: "blue", label: "action=phonenbrconfirmed" %}
+    {% MaterialIcon icon: "assignment" %}{% Chip color: "green", label: "phonenbr=*" %} est bien votre numéro de téléphone? {% MaterialIcon icon: "category" %}{% Chip color: "red", label: "oui" %}{% MaterialIcon icon: "category" %}{% Chip color: "red", label: "non" %}{% MaterialIcon icon: "code" %}{% Chip color: "blue", label: "action=phonenbrconfirmed" %}
   {% endEntry %}
 {% endOplaAppSample %}
 
@@ -131,7 +131,7 @@ On est obligé de réécrire l'étape pour reprendre le mail. On ajoute un indic
 
 {% OplaAppSample title: "Any" %}
   {% Entry type: "Output" %}
-    {% Action label: "confirmmail" %}
+    {% Action label: "confirmmail2" %}
     {% MaterialIcon icon : "assignment" %}{% Chip color: "green", label: "mail=*" %} est bien votre mail? {%MaterialIcon icon : "category"%}{% Chip color: "red", label: "oui" %} {%MaterialIcon icon : "category"%}{% Chip color: "red", label: "non" %} {%MaterialIcon icon : "code"%}{% Chip color: "blue", label: "action=mailconfirmed2" %} 
   {% endEntry %}
 {% endOplaAppSample %}
