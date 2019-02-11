@@ -1,62 +1,66 @@
-<nav class="NavigationSidebar LayoutItem LayoutItem_scrollable">
-  {% assign allposts = site.pages | concat: site.parametering_examples %}
+<div id="sidebar" class="NavigationSidebar-wrapper">
 
-  {% assign pages=allposts | where:"ref", page.ref | sort: 'lang' %}
-  <div class="Dropdown">
-    <div class="Dropdown-menu">
-      <span>
-        <span class="icon icon-sphere"></span>
-        Language: {{ page.lang }}
-      </span>
-      <span class="icon icon-caret-down"></span>
-    </div>
-    <div class="Dropdown-content">
-      {% for page in pages %}
-      {% if page.lang %}
+  <nav class="NavigationSidebar LayoutItem LayoutItem_scrollable">
+    {% assign allposts = site.pages | concat: site.parametering_examples %}
+
+    {% assign pages=allposts | where:"ref", page.ref | sort: 'lang' %}
+    <div class="Dropdown">
+      <div class="Dropdown-menu">
+        <span>
+          <span class="MaterialIcons">language</span>
+          Language: {{ page.lang }}
+        </span>
+        <span class="MaterialIcons">arrow_drop_down</span>
+      </div>
+      <div class="Dropdown-content">
+        {% for page in pages %}
+        {% if page.lang %}
         <a href="{{site.baseurl}}{{ page.url }}" class="Dropdown-item">{{ page.lang }}</a>
-      {% endif %}
-      {% endfor %}
+        {% endif %}
+        {% endfor %}
+      </div>
     </div>
-  </div>
 
-  <ul class="NavigationSidebar-list">
-    {% assign pageUrlWithoutStep = page.url | split: "step_" %}
-    {% for item in include.nav[page.lang] %}
-    <li class="NavigationSidebar-listItem">
-      <a class="NavigationSidebar-link{% if item.url contains pageUrlWithoutStep[0] %} NavigationSidebar-link_isActive{% endif %}"
-        href="{{item.url}}">
-        {{item.title}}
-      </a>
-    </li>
-    {% endfor %}
-  </ul>
-  {% if page.url contains 'parametering_examples' or page.url contains 'exemple_parametrages' %}
-  {% assign currentPageIndex = page.url | split: 'step_' %}
-  {% assign previousPageIndex = currentPageIndex[1] | minus: 1 %}
-  {% assign nextPageIndex = currentPageIndex[1] | plus: 1 %}
-  {% assign PageTotal = page.ref | size %}
-  <ul class="Pagination">
-    <li class="Pagination-item Pagination-item_link Pagination-item_previous">
-      {% if previousPageIndex >= 0 %}
-      <a href="{{baseUrl}}step_{{previousPageIndex}}"
-      disabled={{previousPage }}>
-        <span class="icon icon-caret-left"></span>
-        Previous
-      </a>
-      {% endif %}
-    </li>
-    <li class="Pagination-item Pagination-item_state">
-      {{currentPageIndex[1] | plus : 1}}/{{PageTotal}}
-    </li>
-    <li class="Pagination-item Pagination-item_link Pagination-item_next">
-      {% if nextPageIndex < 8 %}
-      <a href="{{baseUrl}}step_{{nextPageIndex}}">
-        Next
-        <span class="icon icon-caret-right" />
-      </a>
-      {% endif %}
-    </li>
-  </ul>
-  {% endif %}
+    <ul class="NavigationSidebar-list">
+      {% assign pageUrlWithoutStep = page.url | split: "step_" %}
+      {% for item in include.nav[page.lang] %}
+      <li class="NavigationSidebar-listItem">
+        <a class="NavigationSidebar-link{% if item.url contains pageUrlWithoutStep[0] %} NavigationSidebar-link_isActive{% endif %}"
+          href="{{item.url}}">
+          {{item.title}}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+    {% if page.url contains 'parametering_examples' or page.url contains 'exemple_parametrages' %}
+    {% assign currentPageIndex = page.url | split: 'step_' %}
+    {% assign previousPageIndex = currentPageIndex[1] | minus: 1 %}
+    {% assign nextPageIndex = currentPageIndex[1] | plus: 1 %}
+    {% assign PageTotal = page.ref | size %}
+    <ul class="Pagination">
+      <li class="Pagination-item Pagination-item_link Pagination-item_previous">
+        {% if previousPageIndex >= 0 %}
+        <a href="{{baseUrl}}step_{{previousPageIndex}}" disabled={{previousPage }}>
+          <span class="icon icon-caret-left"></span>
+          Previous
+        </a>
+        {% endif %}
+      </li>
+      <li class="Pagination-item Pagination-item_state">
+        {{currentPageIndex[1] | plus : 1}}/{{PageTotal}}
+      </li>
+      <li class="Pagination-item Pagination-item_link Pagination-item_next">
+        {% if nextPageIndex < 8 %} <a href="{{baseUrl}}step_{{nextPageIndex}}">
+          Next
+          <span class="icon icon-caret-right" />
+          </a>
+          {% endif %}
+      </li>
+    </ul>
+    {% endif %}
 
-</nav>
+  </nav>
+
+  <div class="NavigationSidebar-scrim" onclick="toggleSidebar()"></div>
+
+</div>

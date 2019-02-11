@@ -25,10 +25,16 @@ h1 {
 }
 
 h2 {
-  font-size: 32px;
+  font-size: 36px;
   line-height: 55px;
   color: $brand-secondary;
-  margin: 30px 0 10px;
+  margin: 30px 0 15px;
+}
+
+h3 {
+  font-size: 26px;
+  color: $brand-secondary;
+  margin: 25px 0 10px;
 }
 
 a {
@@ -38,5 +44,29 @@ a {
   &:hover {
     text-decoration: underline;
   }
+}
 
+li {
+  margin: 50px 0;
+}
+
+dl {
+  color: $grey-600;
+}
+
+dt {
+  font-weight: bold;
+  margin: 20px 0 10px;
+}
+
+dd {
+  font-weight: normal;
+}
+
+.Text_accent {
+  padding: 10px;
+  border: 1px solid $grey-100;
+  width: 100%;
+  font-weight: bold;
+  font-size: 85%;
 }
