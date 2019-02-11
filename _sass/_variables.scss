@@ -30,9 +30,14 @@ $orange: #E57826;
 
 //Layout
 $main-gutters: 15px;
+$topAppBarHeight: 64px;
+$sidebarWidth: 320px;
+
+// Media Queries Breakpoint
+$smallScreenBreakpoint: 1020px;
 
 //Box shadows
 $box-shadow-default: 0 3px 6px rgba($black, 0.16), 0 3px 6px rgba($black, 0.23);
 
 // Transitions
-$transition-default: all 0.15s ease-in;
+$transition-default: cubic-bezier(0.0, 0.0, 0.2, 1) .25s;
