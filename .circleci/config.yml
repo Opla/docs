@@ -29,6 +29,9 @@ jobs:
     executor: jekyll-workspace
     working_directory: ~/opla-docs
     steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "37:46:4b:cd:e9:e9:fb:1e:89:8b:95:10:9e:8c:13:d4"
       - checkout
       - run: git config --global user.email $GH_EMAIL
       - run: git config --global user.name $GH_NAME
