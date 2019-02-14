@@ -42,6 +42,7 @@ jobs:
       - run: |
           git add -A
           git commit -m "Automated deployment to GitHub Pages: ${CIRCLE_SHA1}" --allow-empty
+      - run: git push origin $TARGET_BRANCH
 workflows:
   version: 2.1
   build:
