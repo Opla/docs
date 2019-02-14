@@ -8,7 +8,6 @@ executors:
     environment:
       - SOURCE_BRANCH: master
       - TARGET_BRANCH: gh-pages
-
 jobs:
   build:
     executor: jekyll-workspace
@@ -31,14 +30,18 @@ jobs:
     working_directory: ~/opla-docs
     steps:
       - checkout
+      - run: git config --global user.email $GH_EMAIL
+      - run: git config --global user.name $GH_NAME
       - run: git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
       - run: git rm -rf .
       - run: mkdir -p workspace
       - attach_workspace:
           at: workspace
       - run: cp -R workspace/_site/* .
-      - run: git status
-      - run: ls -al
+      - run: rm -rf workspace
+      - run: |
+          git add -A
+          git commit -m "Automated deployment to GitHub Pages: ${CIRCLE_SHA1}" --allow-empty
 workflows:
   version: 2.1
   build:
@@ -47,3 +50,6 @@ workflows:
       - deploy:
           requires:
             - build
+          # filters:
+          #   branches:
+          #     only: master
