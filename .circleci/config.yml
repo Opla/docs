@@ -1,0 +1,64 @@
+version: 2.1
+
+executors:
+  jekyll-workspace:
+    docker:
+      - image: circleci/ruby:2.5.1
+    working_directory: ~/opla-docs
+    environment:
+      - SOURCE_BRANCH: master
+      - TARGET_BRANCH: gh-pages
+jobs:
+  build:
+    executor: jekyll-workspace
+    steps:
+      - checkout
+      - run: mkdir -p workspace
+      - run: |
+          echo 'export BUNDLER_VERSION=$(cat Gemfile.lock | tail -1 | tr -d " ")' >> $BASH_ENV
+          source $BASH_ENV
+          gem install bundler
+      - run: bundle install
+      - run: bundle exec jekyll build
+      - run: cp -R _site workspace/publish
+      - run: cp -R .circleci workspace/publish/circleci
+      - persist_to_workspace:
+          root: workspace
+          paths:
+            - publish
+  deploy:
+    executor: jekyll-workspace
+    working_directory: ~/opla-docs
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "37:46:4b:cd:e9:e9:fb:1e:89:8b:95:10:9e:8c:13:d4"
+      - checkout
+      - run: git config --global user.email $GH_EMAIL
+      - run: git config --global user.name $GH_NAME
+      - run: git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
+      - run: git rm -rf .
+      - run: mkdir -p workspace
+      - attach_workspace:
+          at: workspace
+      - run: cp -R workspace/publish/* .
+      - run: mv circleci .circleci
+      - run: rm -rf workspace
+      - run: |
+          git add .
+          git commit -m "Automated deployment to GitHub Pages: ${CIRCLE_SHA1}" --allow-empty
+      - run: git push origin $TARGET_BRANCH
+workflows:
+  version: 2.1
+  build:
+    jobs:
+      - build:
+          filters:
+            branches:
+              ignore: gh-pages
+      - deploy:
+          requires:
+            - build
+          # filters:
+          #   branches:
+          #     only: master
