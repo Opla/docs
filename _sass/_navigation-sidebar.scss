@@ -3,12 +3,29 @@
 
 .NavigationSidebar {
   grid-area: nav;
+
+  @media screen and (max-width: $smallScreenBreakpoint) {
+    position: fixed;
+    width: $sidebarWidth;
+    top: $topAppBarHeight;
+    bottom: 0;
+    background-color: $white;
+    z-index: 3;
+    transform: translate(-$sidebarWidth - 15px, 0);
+    transition: $transition-default;
+    box-shadow: $box-shadow-default;
+  }
 }
 
 .NavigationSidebar-list {
   list-style-type: none;
   padding: 0 0 0 10px;
 }
+
+.NavigationSidebar-listItem {
+  margin: 0;
+}
+
 
 .NavigationSidebar-link {
   text-decoration: none;
@@ -49,6 +66,35 @@
   }
 
   &:hover {
-    opacity: .7;
+    opacity: 0.7;
+  }
+}
+
+.NavigationSidebar-scrim {
+  @media screen and (max-width: $smallScreenBreakpoint) {
+    position: fixed;
+    top: $topAppBarHeight;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.32);
+    visibility: hidden;
+    z-index: 0;
+    opacity: 0;
+    cursor: pointer;
+    transition: $transition-default;
+  }
+}
+
+// Collapsible sidebar
+.NavigationSidebar-wrapper.isVisible {
+  .NavigationSidebar {
+    transform: translate(0, 0);
+  }
+
+  .NavigationSidebar-scrim {
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
   }
 }
