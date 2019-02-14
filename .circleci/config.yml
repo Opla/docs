@@ -20,11 +20,12 @@ jobs:
           gem install bundler
       - run: bundle install
       - run: bundle exec jekyll build
-      - run: mv _site workspace
+      - run: cp -R _site workspace/publish
+      - run: cp -R .circleci workspace/publish/circleci
       - persist_to_workspace:
           root: workspace
           paths:
-            - _site
+            - publish
   deploy:
     executor: jekyll-workspace
     working_directory: ~/opla-docs
@@ -40,20 +41,24 @@ jobs:
       - run: mkdir -p workspace
       - attach_workspace:
           at: workspace
-      - run: cp -R workspace/_site/* .
+      - run: cp -R workspace/publish/* .
+      - run: mv circleci .circleci
       - run: rm -rf workspace
       - run: |
-          git add -A
+          git add .
           git commit -m "Automated deployment to GitHub Pages: ${CIRCLE_SHA1}" --allow-empty
       - run: git push origin $TARGET_BRANCH
 workflows:
   version: 2.1
   build:
     jobs:
-      - build
+      - build:
+          filters:
+            branches:
+              ignore: gh-pages
       - deploy:
           requires:
             - build
-          # filters:
-          #   branches:
-          #     only: master
+          filters:
+            branches:
+              only: master
