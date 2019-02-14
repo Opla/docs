@@ -1,4 +1,4 @@
-<html class="mdc-typography">
+<html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -11,119 +11,123 @@
     <link rel="stylesheet" href="/docs/assets/css/styles.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-
 <body class="Layout Layout_topBarFixedAndSidebarLeftFixed">
   <header class="TopAppBar">
   <div class="TopAppBar-row">
     <section class="TopAppBar-section">
+      <button class="TopAppBar-toggleMenuButton" onclick="toggleSidebar()" type="button">
+        <span class="MaterialIcons">menu</span>
+      </button>
       <img class="TopAppBar-brandLogo" src="/docs/assets/images/opla-brand-logo.png" />
       <span class="TopAppBar-title">Documentation</span>
     </section>
   </div>
 </header>
+  <div id="sidebar" class="NavigationSidebar-wrapper">
 
   <nav class="NavigationSidebar LayoutItem LayoutItem_scrollable">
-  
+    
 
-  
-  <div class="Dropdown">
-    <div class="Dropdown-menu">
-      <span>
-        <span class="icon icon-sphere"></span>
-        Language: fr
-      </span>
-      <span class="icon icon-caret-down"></span>
-    </div>
-    <div class="Dropdown-content">
-      
-      
+    
+    <div class="Dropdown">
+      <div class="Dropdown-menu">
+        <span>
+          <span class="MaterialIcons">language</span>
+          Language: fr
+        </span>
+        <span class="MaterialIcons">arrow_drop_down</span>
+      </div>
+      <div class="Dropdown-content">
+        
+        
         <a href="/docs/parametering_examples/step_4" class="Dropdown-item">en</a>
-      
-      
-      
+        
+        
+        
         <a href="/docs/exemple_parametrages/step_4" class="Dropdown-item">fr</a>
-      
-      
+        
+        
+      </div>
     </div>
-  </div>
 
-  <ul class="NavigationSidebar-list">
-    
-    
-    <li class="NavigationSidebar-listItem">
-      <a class="NavigationSidebar-link"
-        href="/docs/index">
-        Introduction
-      </a>
-    </li>
-    
-    <li class="NavigationSidebar-listItem">
-      <a class="NavigationSidebar-link"
-        href="/docs/start">
-        Pour commencer
-      </a>
-    </li>
-    
-    <li class="NavigationSidebar-listItem">
-      <a class="NavigationSidebar-link"
-        href="/docs/first-chatbot">
-        Votre premier chatbot
-      </a>
-    </li>
-    
-    <li class="NavigationSidebar-listItem">
-      <a class="NavigationSidebar-link"
-        href="/docs/bonjourmonde">
-        Bonjour monde
-      </a>
-    </li>
-    
-    <li class="NavigationSidebar-listItem">
-      <a class="NavigationSidebar-link"
-        href="/docs/glossaire">
-        Glossaire
-      </a>
-    </li>
-    
-    <li class="NavigationSidebar-listItem">
-      <a class="NavigationSidebar-link NavigationSidebar-link_isActive"
-        href="/docs/exemple_parametrages/step_0">
-        Exemples de paramétrages
-      </a>
-    </li>
-    
-  </ul>
-  
-  
-  
-  
-  
-  <ul class="Pagination">
-    <li class="Pagination-item Pagination-item_link Pagination-item_previous">
+    <ul class="NavigationSidebar-list">
       
-      <a href="step_3"
-      disabled=>
-        <span class="icon icon-caret-left"></span>
-        Previous
-      </a>
       
-    </li>
-    <li class="Pagination-item Pagination-item_state">
-      5/8
-    </li>
-    <li class="Pagination-item Pagination-item_link Pagination-item_next">
+      <li class="NavigationSidebar-listItem">
+        <a class="NavigationSidebar-link"
+          href="/docs/index">
+          Introduction
+        </a>
+      </li>
       
-      <a href="step_5">
-        Next
-        <span class="icon icon-caret-right" />
-      </a>
+      <li class="NavigationSidebar-listItem">
+        <a class="NavigationSidebar-link"
+          href="/docs/start">
+          Pour commencer
+        </a>
+      </li>
       
-    </li>
-  </ul>
-  
+      <li class="NavigationSidebar-listItem">
+        <a class="NavigationSidebar-link"
+          href="/docs/first-chatbot">
+          Votre premier chatbot
+        </a>
+      </li>
+      
+      <li class="NavigationSidebar-listItem">
+        <a class="NavigationSidebar-link"
+          href="/docs/bonjourmonde">
+          Bonjour monde
+        </a>
+      </li>
+      
+      <li class="NavigationSidebar-listItem">
+        <a class="NavigationSidebar-link"
+          href="/docs/glossaire">
+          Glossaire
+        </a>
+      </li>
+      
+      <li class="NavigationSidebar-listItem">
+        <a class="NavigationSidebar-link NavigationSidebar-link_isActive"
+          href="/docs/exemple_parametrages/step_0">
+          Exemples de paramétrages
+        </a>
+      </li>
+      
+    </ul>
+    
+    
+    
+    
+    
+    <ul class="Pagination">
+      <li class="Pagination-item Pagination-item_link Pagination-item_previous">
+        
+        <a href="step_3" disabled=>
+          <span class="icon icon-caret-left"></span>
+          Previous
+        </a>
+        
+      </li>
+      <li class="Pagination-item Pagination-item_state">
+        5/8
+      </li>
+      <li class="Pagination-item Pagination-item_link Pagination-item_next">
+         <a href="step_5">
+          Next
+          <span class="icon icon-caret-right" />
+          </a>
+          
+      </li>
+    </ul>
+    
 
-</nav>
+  </nav>
 
+  <div class="NavigationSidebar-scrim" onclick="toggleSidebar()"></div>
+
+</div>
   <main class="LayoutItem LayoutItem_scrollable">
     <p>L’écran de départ ressemble à ceci :</p>
 
@@ -203,6 +207,8 @@
 <p>Félicitations, vous avez écrit votre première branche de schéma conversationnel! Maintenant nous allons rajouter le Non qui conduit à Pizza tout chocolat.</p>
 
   </main>
+
+  <script  src="/docs/assets/js/main.js"></script>
 </body>
 
 </html>

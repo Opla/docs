@@ -1,4 +1,4 @@
-<html class="mdc-typography">
+<html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -11,92 +11,98 @@
     <link rel="stylesheet" href="/docs/assets/css/styles.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-
 <body class="Layout Layout_topBarFixedAndSidebarLeftFixed">
   <header class="TopAppBar">
   <div class="TopAppBar-row">
     <section class="TopAppBar-section">
+      <button class="TopAppBar-toggleMenuButton" onclick="toggleSidebar()" type="button">
+        <span class="MaterialIcons">menu</span>
+      </button>
       <img class="TopAppBar-brandLogo" src="/docs/assets/images/opla-brand-logo.png" />
       <span class="TopAppBar-title">Documentation</span>
     </section>
   </div>
 </header>
+  <div id="sidebar" class="NavigationSidebar-wrapper">
 
   <nav class="NavigationSidebar LayoutItem LayoutItem_scrollable">
-  
+    
 
-  
-  <div class="Dropdown">
-    <div class="Dropdown-menu">
-      <span>
-        <span class="icon icon-sphere"></span>
-        Language: en
-      </span>
-      <span class="icon icon-caret-down"></span>
-    </div>
-    <div class="Dropdown-content">
-      
-      
+    
+    <div class="Dropdown">
+      <div class="Dropdown-menu">
+        <span>
+          <span class="MaterialIcons">language</span>
+          Language: en
+        </span>
+        <span class="MaterialIcons">arrow_drop_down</span>
+      </div>
+      <div class="Dropdown-content">
+        
+        
         <a href="/docs/helloworld" class="Dropdown-item">en</a>
-      
-      
-      
+        
+        
+        
         <a href="/docs/bonjourmonde" class="Dropdown-item">fr</a>
-      
-      
+        
+        
+      </div>
     </div>
-  </div>
 
-  <ul class="NavigationSidebar-list">
+    <ul class="NavigationSidebar-list">
+      
+      
+      <li class="NavigationSidebar-listItem">
+        <a class="NavigationSidebar-link"
+          href="/docs/index">
+          Introduction
+        </a>
+      </li>
+      
+      <li class="NavigationSidebar-listItem">
+        <a class="NavigationSidebar-link"
+          href="/docs/start">
+          Getting started
+        </a>
+      </li>
+      
+      <li class="NavigationSidebar-listItem">
+        <a class="NavigationSidebar-link"
+          href="/docs/first-chatbot">
+          Your first chatbot
+        </a>
+      </li>
+      
+      <li class="NavigationSidebar-listItem">
+        <a class="NavigationSidebar-link NavigationSidebar-link_isActive"
+          href="/docs/helloworld">
+          Hello world
+        </a>
+      </li>
+      
+      <li class="NavigationSidebar-listItem">
+        <a class="NavigationSidebar-link"
+          href="/docs/glossary">
+          Glossary
+        </a>
+      </li>
+      
+      <li class="NavigationSidebar-listItem">
+        <a class="NavigationSidebar-link"
+          href="/docs/parametering_examples/step_0">
+          Parametering examples
+        </a>
+      </li>
+      
+    </ul>
     
-    
-    <li class="NavigationSidebar-listItem">
-      <a class="NavigationSidebar-link"
-        href="/docs/index">
-        Introduction
-      </a>
-    </li>
-    
-    <li class="NavigationSidebar-listItem">
-      <a class="NavigationSidebar-link"
-        href="/docs/start">
-        Getting started
-      </a>
-    </li>
-    
-    <li class="NavigationSidebar-listItem">
-      <a class="NavigationSidebar-link"
-        href="/docs/first-chatbot">
-        Your first chatbot
-      </a>
-    </li>
-    
-    <li class="NavigationSidebar-listItem">
-      <a class="NavigationSidebar-link NavigationSidebar-link_isActive"
-        href="/docs/helloworld">
-        Hello world
-      </a>
-    </li>
-    
-    <li class="NavigationSidebar-listItem">
-      <a class="NavigationSidebar-link"
-        href="/docs/glossary">
-        Glossary
-      </a>
-    </li>
-    
-    <li class="NavigationSidebar-listItem">
-      <a class="NavigationSidebar-link"
-        href="/docs/parametering_examples/step_0">
-        Parametering examples
-      </a>
-    </li>
-    
-  </ul>
-  
 
-</nav>
+  </nav>
 
+  <div class="NavigationSidebar-scrim" onclick="toggleSidebar()"></div>
+
+</div>
   <main class="LayoutItem LayoutItem_scrollable">
     <p>We will first test out the bot with a Hello World statement.</p>
 
@@ -118,12 +124,14 @@
 <img src="/docs/assets/images/hello-world-plus.png" alt="image" />
 <img src="/docs/assets/images/first-intent-save.png" alt="image" /></p>
 
-<p>Type Hello in the Playground and press enter.
+<p>Type Hello in the Playground and press enter.<br />
 <img src="/docs/assets/images/playground-hello-world.png" alt="image" /></p>
 
 <p>Here we are, we created our first “Hello World” bot! Pretty straightforward, and as we go we’re going to parameter two other schemes of conversation, namely “Pizza”, which has us pick yes/no answers, and “Contact”, which has us deal with user entries such as contact adress and phone number. We’ll do this in parametering examples.</p>
 
   </main>
+
+  <script  src="/docs/assets/js/main.js"></script>
 </body>
 
 </html>

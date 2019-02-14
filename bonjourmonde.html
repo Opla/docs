@@ -1,4 +1,4 @@
-<html class="mdc-typography">
+<html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -11,92 +11,98 @@
     <link rel="stylesheet" href="/docs/assets/css/styles.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-
 <body class="Layout Layout_topBarFixedAndSidebarLeftFixed">
   <header class="TopAppBar">
   <div class="TopAppBar-row">
     <section class="TopAppBar-section">
+      <button class="TopAppBar-toggleMenuButton" onclick="toggleSidebar()" type="button">
+        <span class="MaterialIcons">menu</span>
+      </button>
       <img class="TopAppBar-brandLogo" src="/docs/assets/images/opla-brand-logo.png" />
       <span class="TopAppBar-title">Documentation</span>
     </section>
   </div>
 </header>
+  <div id="sidebar" class="NavigationSidebar-wrapper">
 
   <nav class="NavigationSidebar LayoutItem LayoutItem_scrollable">
-  
+    
 
-  
-  <div class="Dropdown">
-    <div class="Dropdown-menu">
-      <span>
-        <span class="icon icon-sphere"></span>
-        Language: fr
-      </span>
-      <span class="icon icon-caret-down"></span>
-    </div>
-    <div class="Dropdown-content">
-      
-      
+    
+    <div class="Dropdown">
+      <div class="Dropdown-menu">
+        <span>
+          <span class="MaterialIcons">language</span>
+          Language: fr
+        </span>
+        <span class="MaterialIcons">arrow_drop_down</span>
+      </div>
+      <div class="Dropdown-content">
+        
+        
         <a href="/docs/helloworld" class="Dropdown-item">en</a>
-      
-      
-      
+        
+        
+        
         <a href="/docs/bonjourmonde" class="Dropdown-item">fr</a>
-      
-      
+        
+        
+      </div>
     </div>
-  </div>
 
-  <ul class="NavigationSidebar-list">
+    <ul class="NavigationSidebar-list">
+      
+      
+      <li class="NavigationSidebar-listItem">
+        <a class="NavigationSidebar-link"
+          href="/docs/index">
+          Introduction
+        </a>
+      </li>
+      
+      <li class="NavigationSidebar-listItem">
+        <a class="NavigationSidebar-link"
+          href="/docs/start">
+          Pour commencer
+        </a>
+      </li>
+      
+      <li class="NavigationSidebar-listItem">
+        <a class="NavigationSidebar-link"
+          href="/docs/first-chatbot">
+          Votre premier chatbot
+        </a>
+      </li>
+      
+      <li class="NavigationSidebar-listItem">
+        <a class="NavigationSidebar-link NavigationSidebar-link_isActive"
+          href="/docs/bonjourmonde">
+          Bonjour monde
+        </a>
+      </li>
+      
+      <li class="NavigationSidebar-listItem">
+        <a class="NavigationSidebar-link"
+          href="/docs/glossaire">
+          Glossaire
+        </a>
+      </li>
+      
+      <li class="NavigationSidebar-listItem">
+        <a class="NavigationSidebar-link"
+          href="/docs/exemple_parametrages/step_0">
+          Exemples de paramétrages
+        </a>
+      </li>
+      
+    </ul>
     
-    
-    <li class="NavigationSidebar-listItem">
-      <a class="NavigationSidebar-link"
-        href="/docs/index">
-        Introduction
-      </a>
-    </li>
-    
-    <li class="NavigationSidebar-listItem">
-      <a class="NavigationSidebar-link"
-        href="/docs/start">
-        Pour commencer
-      </a>
-    </li>
-    
-    <li class="NavigationSidebar-listItem">
-      <a class="NavigationSidebar-link"
-        href="/docs/first-chatbot">
-        Votre premier chatbot
-      </a>
-    </li>
-    
-    <li class="NavigationSidebar-listItem">
-      <a class="NavigationSidebar-link NavigationSidebar-link_isActive"
-        href="/docs/bonjourmonde">
-        Bonjour monde
-      </a>
-    </li>
-    
-    <li class="NavigationSidebar-listItem">
-      <a class="NavigationSidebar-link"
-        href="/docs/glossaire">
-        Glossaire
-      </a>
-    </li>
-    
-    <li class="NavigationSidebar-listItem">
-      <a class="NavigationSidebar-link"
-        href="/docs/exemple_parametrages/step_0">
-        Exemples de paramétrages
-      </a>
-    </li>
-    
-  </ul>
-  
 
-</nav>
+  </nav>
 
+  <div class="NavigationSidebar-scrim" onclick="toggleSidebar()"></div>
+
+</div>
   <main class="LayoutItem LayoutItem_scrollable">
     <p>Nous allons d’abord créer un bot qui retourne un “Hello World”</p>
 
@@ -126,6 +132,8 @@
 <p>Et voilà, nous avons créé notre premier bot, qui retourne un simple “Hello World”! C’est un bot tout simple, qui va nous permettre de mieux comprendre comment paramétrer deux autres schémas de conversation, qui sont les schémas “Pizza”, qui va montrer comment se gèrent des entrées oui/non et “Contact”, qui va nous permettre de gérer des entrées plus complexes telles que la saisie d’une adresse e-mail ou d’un numéro de téléphone. Nous verrons ceci dans les exemples de paramétrage.</p>
 
   </main>
+
+  <script  src="/docs/assets/js/main.js"></script>
 </body>
 
 </html>

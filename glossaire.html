@@ -1,4 +1,4 @@
-<html class="mdc-typography">
+<html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -11,121 +11,129 @@
     <link rel="stylesheet" href="/docs/assets/css/styles.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-
 <body class="Layout Layout_topBarFixedAndSidebarLeftFixed">
   <header class="TopAppBar">
   <div class="TopAppBar-row">
     <section class="TopAppBar-section">
+      <button class="TopAppBar-toggleMenuButton" onclick="toggleSidebar()" type="button">
+        <span class="MaterialIcons">menu</span>
+      </button>
       <img class="TopAppBar-brandLogo" src="/docs/assets/images/opla-brand-logo.png" />
       <span class="TopAppBar-title">Documentation</span>
     </section>
   </div>
 </header>
+  <div id="sidebar" class="NavigationSidebar-wrapper">
 
   <nav class="NavigationSidebar LayoutItem LayoutItem_scrollable">
-  
+    
 
-  
-  <div class="Dropdown">
-    <div class="Dropdown-menu">
-      <span>
-        <span class="icon icon-sphere"></span>
-        Language: fr
-      </span>
-      <span class="icon icon-caret-down"></span>
-    </div>
-    <div class="Dropdown-content">
-      
-      
+    
+    <div class="Dropdown">
+      <div class="Dropdown-menu">
+        <span>
+          <span class="MaterialIcons">language</span>
+          Language: fr
+        </span>
+        <span class="MaterialIcons">arrow_drop_down</span>
+      </div>
+      <div class="Dropdown-content">
+        
+        
         <a href="/docs/glossary" class="Dropdown-item">en</a>
-      
-      
-      
+        
+        
+        
         <a href="/docs/glossaire" class="Dropdown-item">fr</a>
-      
-      
+        
+        
+      </div>
     </div>
-  </div>
 
-  <ul class="NavigationSidebar-list">
+    <ul class="NavigationSidebar-list">
+      
+      
+      <li class="NavigationSidebar-listItem">
+        <a class="NavigationSidebar-link"
+          href="/docs/index">
+          Introduction
+        </a>
+      </li>
+      
+      <li class="NavigationSidebar-listItem">
+        <a class="NavigationSidebar-link"
+          href="/docs/start">
+          Pour commencer
+        </a>
+      </li>
+      
+      <li class="NavigationSidebar-listItem">
+        <a class="NavigationSidebar-link"
+          href="/docs/first-chatbot">
+          Votre premier chatbot
+        </a>
+      </li>
+      
+      <li class="NavigationSidebar-listItem">
+        <a class="NavigationSidebar-link"
+          href="/docs/bonjourmonde">
+          Bonjour monde
+        </a>
+      </li>
+      
+      <li class="NavigationSidebar-listItem">
+        <a class="NavigationSidebar-link NavigationSidebar-link_isActive"
+          href="/docs/glossaire">
+          Glossaire
+        </a>
+      </li>
+      
+      <li class="NavigationSidebar-listItem">
+        <a class="NavigationSidebar-link"
+          href="/docs/exemple_parametrages/step_0">
+          Exemples de paramétrages
+        </a>
+      </li>
+      
+    </ul>
     
-    
-    <li class="NavigationSidebar-listItem">
-      <a class="NavigationSidebar-link"
-        href="/docs/index">
-        Introduction
-      </a>
-    </li>
-    
-    <li class="NavigationSidebar-listItem">
-      <a class="NavigationSidebar-link"
-        href="/docs/start">
-        Pour commencer
-      </a>
-    </li>
-    
-    <li class="NavigationSidebar-listItem">
-      <a class="NavigationSidebar-link"
-        href="/docs/first-chatbot">
-        Votre premier chatbot
-      </a>
-    </li>
-    
-    <li class="NavigationSidebar-listItem">
-      <a class="NavigationSidebar-link"
-        href="/docs/bonjourmonde">
-        Bonjour monde
-      </a>
-    </li>
-    
-    <li class="NavigationSidebar-listItem">
-      <a class="NavigationSidebar-link NavigationSidebar-link_isActive"
-        href="/docs/glossaire">
-        Glossaire
-      </a>
-    </li>
-    
-    <li class="NavigationSidebar-listItem">
-      <a class="NavigationSidebar-link"
-        href="/docs/exemple_parametrages/step_0">
-        Exemples de paramétrages
-      </a>
-    </li>
-    
-  </ul>
-  
 
-</nav>
+  </nav>
 
+  <div class="NavigationSidebar-scrim" onclick="toggleSidebar()"></div>
+
+</div>
   <main class="LayoutItem LayoutItem_scrollable">
-    <h1 id="chatbot">Chatbot</h1>
+    <h2 id="chatbot">Chatbot</h2>
 
 <p>Un Chatbot est un programme ; c’est un ensemble d’Intents dont les paramétrages d’Inputs et d’Outputs (entrées et sorties) créent une conversation</p>
 
-<h1 id="builder">Builder</h1>
+<h2 id="builder">Builder</h2>
 
 <p>C’est l’endroit où sont paramétrés la conversation via les Intents</p>
 
-<h1 id="playground">Playground</h1>
+<h2 id="playground">Playground</h2>
 
 <p>C’est l’endroit où est testé le chatbot</p>
 
-<h1 id="intent">Intent</h1>
+<h2 id="intent">Intent</h2>
 <p>Ce sont des ensembles de mots-clés qui permettent de diriger des conversations</p>
 
-<h1 id="input">Input</h1>
+<h2 id="input">Input</h2>
 <p>C’est un mot clé saisi ou cliqué par l’utilisateur qui va permettre d’engager ou de suivre une conversation.</p>
 
-<h1 id="output">Output</h1>
+<h2 id="output">Output</h2>
 <p>C’est une réponse donnée par le chatbot à un Input. Dans l’Output se trouve un code conditionnel qui va permettre de diriger la conversation.</p>
 
-<h1 id="conditional">Conditional</h1>
+<h2 id="conditional">Conditional</h2>
 <p>C’est un code qui sert d’appel de conversation, qui lie un Output à l’Input suivant</p>
 
-<h1 id="any">Any</h1>
+<h2 id="any">Any</h2>
 <p>C’est l’intent qui gère les saisies manuelles de variables entrées par l’utilisateur, telles que la saisie d’un numéro de téléphone, d’une adresse mail, ou de toute autre valeur à exploiter dans la conversation.</p>
 
   </main>
+
+  <script  src="/docs/assets/js/main.js"></script>
 </body>
 
 </html>
