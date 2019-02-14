@@ -1,0 +1,208 @@
+<html class="mdc-typography">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Fr4</title>
+
+    
+    <link href="/docs/assets/images/favicon.png" rel="shortcut icon" />
+    <link rel="stylesheet"
+      href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+    <link rel="stylesheet" href="/docs/assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+<body class="Layout Layout_topBarFixedAndSidebarLeftFixed">
+  <header class="TopAppBar">
+  <div class="TopAppBar-row">
+    <section class="TopAppBar-section">
+      <img class="TopAppBar-brandLogo" src="/docs/assets/images/opla-brand-logo.png" />
+      <span class="TopAppBar-title">Documentation</span>
+    </section>
+  </div>
+</header>
+
+  <nav class="NavigationSidebar LayoutItem LayoutItem_scrollable">
+  
+
+  
+  <div class="Dropdown">
+    <div class="Dropdown-menu">
+      <span>
+        <span class="icon icon-sphere"></span>
+        Language: fr
+      </span>
+      <span class="icon icon-caret-down"></span>
+    </div>
+    <div class="Dropdown-content">
+      
+      
+        <a href="/docs/parametering_examples/step_4" class="Dropdown-item">en</a>
+      
+      
+      
+        <a href="/docs/exemple_parametrages/step_4" class="Dropdown-item">fr</a>
+      
+      
+    </div>
+  </div>
+
+  <ul class="NavigationSidebar-list">
+    
+    
+    <li class="NavigationSidebar-listItem">
+      <a class="NavigationSidebar-link"
+        href="/docs/index">
+        Introduction
+      </a>
+    </li>
+    
+    <li class="NavigationSidebar-listItem">
+      <a class="NavigationSidebar-link"
+        href="/docs/start">
+        Pour commencer
+      </a>
+    </li>
+    
+    <li class="NavigationSidebar-listItem">
+      <a class="NavigationSidebar-link"
+        href="/docs/first-chatbot">
+        Votre premier chatbot
+      </a>
+    </li>
+    
+    <li class="NavigationSidebar-listItem">
+      <a class="NavigationSidebar-link"
+        href="/docs/bonjourmonde">
+        Bonjour monde
+      </a>
+    </li>
+    
+    <li class="NavigationSidebar-listItem">
+      <a class="NavigationSidebar-link"
+        href="/docs/glossaire">
+        Glossaire
+      </a>
+    </li>
+    
+    <li class="NavigationSidebar-listItem">
+      <a class="NavigationSidebar-link NavigationSidebar-link_isActive"
+        href="/docs/exemple_parametrages/step_0">
+        Exemples de paramétrages
+      </a>
+    </li>
+    
+  </ul>
+  
+  
+  
+  
+  
+  <ul class="Pagination">
+    <li class="Pagination-item Pagination-item_link Pagination-item_previous">
+      
+      <a href="step_3"
+      disabled=>
+        <span class="icon icon-caret-left"></span>
+        Previous
+      </a>
+      
+    </li>
+    <li class="Pagination-item Pagination-item_state">
+      5/8
+    </li>
+    <li class="Pagination-item Pagination-item_link Pagination-item_next">
+      
+      <a href="step_5">
+        Next
+        <span class="icon icon-caret-right" />
+      </a>
+      
+    </li>
+  </ul>
+  
+
+</nav>
+
+  <main class="LayoutItem LayoutItem_scrollable">
+    <p>L’écran de départ ressemble à ceci :</p>
+
+<p><img src="/docs/assets/images/ecran-zero.png" alt="image" /></p>
+
+<p>Il faut ajouter un intent en cliquant sur le plus</p>
+
+<p><img src="/docs/assets/images/add-first-intent.png" alt="image" /></p>
+
+<p>Il faut supprimer l’input “Intent” et  l’output “I don’t understand” en cliquant sur le moins sur la ligne puis sur Delete.</p>
+
+<p><img src="/docs/assets/images/delete-i-dont-understand.png" alt="image" /></p>
+
+<p>Il faut renommer l’output en “Bonjour”</p>
+
+<p><img src="/docs/assets/images/rename-intent-bonjour.png" alt="image" /></p>
+
+<p>On inscrit dans l’intent les lignes suivantes :</p>
+
+<div class="OplaAppSample"><p class="OplaAppSample-title">#Bonjour</p><div class="Entry"><div class="Entry-label"> Input: </div> Bonjour <br /> bjr <br /></div><div class="Entry"><div class="Entry-label"> Output: </div> Voulez-vous une pizza sucrée? <i class="MaterialIcons">category</i><div class="Chip Chip_red"> Oui </div><i class="MaterialIcons">category</i><div class="Chip Chip_red"> Non </div><i class="MaterialIcons">code</i><div class="Chip Chip_blue"> action=sweetyesno </div></div></div>
+
+<p>ce qui donne à l’écran :</p>
+
+<p><img src="/docs/assets/images/voulez-vous-une-pizza-sucree-total.png" alt="image" /></p>
+
+<p>Il faut cliquer sur le signe plus de la ligne et cliquer sur SAVE pour sauvegarder la progression du paramétrage.</p>
+
+<p><img src="/docs/assets/images/bonjour-output-sweetyesno-save1.png" alt="image" /></p>
+
+<p>Il faut ensuite cliquer sur “SAVE” en haut dans le cadre des intents</p>
+
+<p><img src="/docs/assets/images/bonjour-save.png" alt="image" /></p>
+
+<p>Le texte action = sweetyesno doit être recopié dans la conditionnelle suivante pour lier l’intent #Bonjour à l’intent #Oui suivant. On va suivre la branche des Oui pour enter les deux Outputs contenus dans l’intent #Oui sur la branche de gauche du schéma.</p>
+
+<p>Pour ajouter l’intent Oui, cliquer sur le signe plus gris/bleu à droite dans la colonne intents.</p>
+
+<p><img src="/docs/assets/images/add-an-intent.png" alt="image" /></p>
+
+<p>Pour modifier le nom de l’intent, il faut cliquer sur le crayon à droite dans la ligne qui vient d’apparaître,</p>
+
+<p><img src="/docs/assets/images/modify-intents-name.png" alt="image" /></p>
+
+<p>Puis saisir le nouveau nom,</p>
+
+<p><img src="/docs/assets/images/rename-intent.png" alt="image" /></p>
+
+<p>Ensuite il faut entrer Oui dans la ligne d’inputs et supprimer les outputs éventuellement déjà présents en cliquant sur le moins sur leur ligne.</p>
+
+<p><img src="/docs/assets/images/supprimer-outputs.png" alt="image" /></p>
+
+<p>Ensuite on va entrer le texte des outputs de l’intent Oui :<br /></p>
+
+<div class="OplaAppSample"><p class="OplaAppSample-title">#Oui</p><div class="Entry"><div class="Entry-label"> Input: </div> oui </div><div class="Entry"><div class="Entry-label"> Output: </div><div class="Action"> action <b class="u-textColor_red">=</b> sweetyesno </div> Est-ce que vous voulez des pommes? <i class="MaterialIcons">category</i><div class="Chip Chip_red"> Oui </div><i class="MaterialIcons">category</i><div class="Chip Chip_red"> Non </div><i class="MaterialIcons">code</i><div class="Chip Chip_blue"> action=pommesyesno </div></div></div>
+
+<p><img src="/docs/assets/images/pommesyesno.png" alt="image" /></p>
+
+<p>On entre le code action=sweetyesno en cliquant sur la conditionnelle</p>
+
+<p><img src="/docs/assets/images/insert-condition.png" alt="image" /></p>
+
+<p><img src="/docs/assets/images/action-eg-sweetyesno.png" alt="image" />
+<img src="/docs/assets/images/pommesyesno-boite.png" alt="image" /></p>
+
+<p>Ne pas oublier de cliquer sur le signe plus et sur SAVE à la fin de chaque modification d’intent</p>
+
+<p><img src="/docs/assets/images/save-pommesyesno.png" alt="image" /></p>
+
+<p>Et pour le deuxième output, qui constitue la fin de la chaîne des “Oui”</p>
+
+<div class="OplaAppSample"><p class="OplaAppSample-title">#Oui</p><div class="Entry"><div class="Entry-label"> Input: </div> oui </div><div class="Entry"><div class="Entry-label"> Output: </div><div class="Action"> action <b class="u-textColor_red">=</b> pommesyesno </div> C'est parti pour une pizza pommes chocolat! </div></div>
+
+<p><img src="/docs/assets/images/pommes-chocolat.png" alt="image" /></p>
+
+<p>Après avoir cliqué sur SAVE, vous pouvez faire des tests dans le playground ainsi qu’indiqué sur les captures d’écrans, pour voir si vos enchaînements se passent bien.</p>
+
+<p>Félicitations, vous avez écrit votre première branche de schéma conversationnel! Maintenant nous allons rajouter le Non qui conduit à Pizza tout chocolat.</p>
+
+  </main>
+</body>
+
+</html>

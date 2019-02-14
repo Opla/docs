@@ -1,0 +1,240 @@
+<html class="mdc-typography">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Fr7</title>
+
+    
+    <link href="/docs/assets/images/favicon.png" rel="shortcut icon" />
+    <link rel="stylesheet"
+      href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+    <link rel="stylesheet" href="/docs/assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+<body class="Layout Layout_topBarFixedAndSidebarLeftFixed">
+  <header class="TopAppBar">
+  <div class="TopAppBar-row">
+    <section class="TopAppBar-section">
+      <img class="TopAppBar-brandLogo" src="/docs/assets/images/opla-brand-logo.png" />
+      <span class="TopAppBar-title">Documentation</span>
+    </section>
+  </div>
+</header>
+
+  <nav class="NavigationSidebar LayoutItem LayoutItem_scrollable">
+  
+
+  
+  <div class="Dropdown">
+    <div class="Dropdown-menu">
+      <span>
+        <span class="icon icon-sphere"></span>
+        Language: fr
+      </span>
+      <span class="icon icon-caret-down"></span>
+    </div>
+    <div class="Dropdown-content">
+      
+      
+        <a href="/docs/parametering_examples/step_7" class="Dropdown-item">en</a>
+      
+      
+      
+        <a href="/docs/exemple_parametrages/step_7" class="Dropdown-item">fr</a>
+      
+      
+    </div>
+  </div>
+
+  <ul class="NavigationSidebar-list">
+    
+    
+    <li class="NavigationSidebar-listItem">
+      <a class="NavigationSidebar-link"
+        href="/docs/index">
+        Introduction
+      </a>
+    </li>
+    
+    <li class="NavigationSidebar-listItem">
+      <a class="NavigationSidebar-link"
+        href="/docs/start">
+        Pour commencer
+      </a>
+    </li>
+    
+    <li class="NavigationSidebar-listItem">
+      <a class="NavigationSidebar-link"
+        href="/docs/first-chatbot">
+        Votre premier chatbot
+      </a>
+    </li>
+    
+    <li class="NavigationSidebar-listItem">
+      <a class="NavigationSidebar-link"
+        href="/docs/bonjourmonde">
+        Bonjour monde
+      </a>
+    </li>
+    
+    <li class="NavigationSidebar-listItem">
+      <a class="NavigationSidebar-link"
+        href="/docs/glossaire">
+        Glossaire
+      </a>
+    </li>
+    
+    <li class="NavigationSidebar-listItem">
+      <a class="NavigationSidebar-link NavigationSidebar-link_isActive"
+        href="/docs/exemple_parametrages/step_0">
+        Exemples de paramétrages
+      </a>
+    </li>
+    
+  </ul>
+  
+  
+  
+  
+  
+  <ul class="Pagination">
+    <li class="Pagination-item Pagination-item_link Pagination-item_previous">
+      
+      <a href="step_6"
+      disabled=>
+        <span class="icon icon-caret-left"></span>
+        Previous
+      </a>
+      
+    </li>
+    <li class="Pagination-item Pagination-item_state">
+      8/8
+    </li>
+    <li class="Pagination-item Pagination-item_link Pagination-item_next">
+      
+    </li>
+  </ul>
+  
+
+</nav>
+
+  <main class="LayoutItem LayoutItem_scrollable">
+    <p>On peut tout à fait, et c’est le cas ici, créer deux schémas de conversation dans le même bot. On va créer la conversation “Contact” parallèlement à la conversation “Pizza”.</p>
+
+<p><em>À noter : Un intent compte souvent un ou deux inputs pour plusieurs outputs différents.</em></p>
+
+<div class="OplaAppSample"><p class="OplaAppSample-title">#Contact</p><div class="Entry"><div class="Entry-label"> Input: </div> Contact </div><div class="Entry"><div class="Entry-label"> Output: </div> Voulez-vous donner votre numéro de téléphone? <i class="MaterialIcons">category</i><div class="Chip Chip_red"> oui </div><i class="MaterialIcons">category</i><div class="Chip Chip_red"> non </div><i class="MaterialIcons">code</i><div class="Chip Chip_blue"> action=getphoneyesno </div></div></div>
+
+<p>Cliquer sur le signe plus et sur SAVE;</p>
+
+<p><i class="MaterialIcons">assignment</i>
+On va insérer une variable. Il faut écrire la valeur de la variable à l’intérieur du carré qui résulte de la pression sur le bouton insert variable assignment.<br /></p>
+
+<div class="OplaAppSample"><p class="OplaAppSample-title">#Oui</p><div class="Entry"><div class="Entry-label"> Input: </div> oui </div><div class="Entry"><div class="Entry-label"> Output: </div><div class="Action"> action <b class="u-textColor_red">=</b> getphoneyesno </div> Quel est votre numéro de téléphone ? <i class="MaterialIcons">assignment</i><div class="Chip Chip_green"> phonenbr=* </div><i class="MaterialIcons">code</i><div class="Chip Chip_blue"> action=confirmphonenbr </div></div></div>
+
+<p><img src="/docs/assets/images/oui-contact.png" alt="images" /></p>
+
+<p>Cliquer sur le signe plus et sur SAVE.</p>
+
+<h2 id="1-les-intents-any">1. Les intents #Any</h2>
+
+<p>On va créer un intent #Any:</p>
+
+<p>on clique sur créer un nouvel intent, on renomme l’intent en #Any, et on supprime les inputs et outputs déjà présents en cliquant sur le signe moins en bout de ligne pour input (marqué “intent”) et output (“I don’t understand”)</p>
+
+<p><img src="/docs/assets/images/any-empty.png" alt="image" /></p>
+
+<p>Puis on clique sur insert block any dans les inputs de #Any :</p>
+
+<p><img src="/docs/assets/images/any-block-input.png" alt="images" /></p>
+
+<p><img src="/docs/assets/images/at-any-in-input.png" alt="images" /></p>
+
+<p>L’intent #Any sert à stocker une valeur quelconque donnée par l’utilisateur dans une variable accessible avec le bouton <i class="MaterialIcons">assignment</i> ,insert variable assignment. On va presser ce bouton et écrire <em>phonenbr=</em> * à l’intérieur du cadre.</p>
+
+<p>Ensuite on paramètre l’output :</p>
+
+<div class="OplaAppSample"><p class="OplaAppSample-title">#Any</p><div class="Entry"><div class="Entry-label"> Input: </div><div class="Chip Chip_orange"> @any </div></div><div class="Entry"><div class="Entry-label"> Output: </div><div class="Action"> action <b class="u-textColor_red">=</b> confirmphonenbr </div><i class="MaterialIcons">assignment</i><div class="Chip Chip_green"> phonenbr=* </div> est bien votre numéro de téléphone? <i class="MaterialIcons">category</i><div class="Chip Chip_red"> oui </div><i class="MaterialIcons">category</i><div class="Chip Chip_red"> non </div><i class="MaterialIcons">code</i><div class="Chip Chip_blue"> action=phonenbrconfirmed </div></div></div>
+
+<p><img src="/docs/assets/images/any-confirmphonenbr.png" alt="image" /></p>
+
+<p>On clique sur SAVE après avoir modifié l’intent,</p>
+
+<div class="OplaAppSample"><p class="OplaAppSample-title">#Oui</p><div class="Entry"><div class="Entry-label"> Output: </div><div class="Action"> action <b class="u-textColor_red">=</b> phonenbrconfirmed </div> Quel est votre mail ? <i class="MaterialIcons">assignment</i><div class="Chip Chip_green"> mail=* </div><i class="MaterialIcons">code</i><div class="Chip Chip_blue"> action=confirmmail </div></div></div>
+
+<p><img src="/docs/assets/images/oui-phonenbrconfirmed.png" alt="image" /></p>
+
+<div class="OplaAppSample"><p class="OplaAppSample-title">#Any</p><div class="Entry"><div class="Entry-label"> Output: </div><div class="Action"> action <b class="u-textColor_red">=</b> confirmmail </div><i class="MaterialIcons">assignment</i><div class="Chip Chip_green"> mail=* </div> est bien votre mail? <i class="MaterialIcons">category</i><div class="Chip Chip_red"> oui </div><i class="MaterialIcons">category</i><div class="Chip Chip_red"> non </div><i class="MaterialIcons">code</i><div class="Chip Chip_blue"> action=mailconfirmed </div></div></div>
+
+<p><br /></p>
+
+<div class="OplaAppSample"><p class="OplaAppSample-title">#Oui</p><div class="Entry"><div class="Entry-label"> Output: </div><div class="Action"> action <b class="u-textColor_red">=</b> mailconfirmed </div> Ok, votre contact est enregistré. </div></div>
+
+<p>On a parcouru la branche des “Oui” du schéma.</p>
+
+<p>On va s’intéresser à la première branche “Non”, qui permet de sauter l’étape du téléphone pour donner l’e-mail.</p>
+
+<div class="OplaAppSample"><p class="OplaAppSample-title">#Non</p><div class="Entry"><div class="Entry-label"> Output: </div><div class="Action"> action <b class="u-textColor_red">=</b> getphoneyesno </div> Quel est votre mail? <i class="MaterialIcons">assignment</i><div class="Chip Chip_green"> mail=* </div><i class="MaterialIcons">code</i><div class="Chip Chip_blue"> action=confirmmail2 </div></div></div>
+
+<p>On est obligé de réécrire l’étape pour reprendre le mail. On ajoute un indice, 2, pour faire la différence avec la première branche.</p>
+
+<div class="OplaAppSample"><p class="OplaAppSample-title">#Any</p><div class="Entry"><div class="Entry-label"> Output: </div><div class="Action"> action <b class="u-textColor_red">=</b> confirmmail2 </div><i class="MaterialIcons">assignment</i><div class="Chip Chip_green"> mail=* </div> est bien votre mail? <i class="MaterialIcons">category</i><div class="Chip Chip_red"> oui </div><i class="MaterialIcons">category</i><div class="Chip Chip_red"> non </div><i class="MaterialIcons">code</i><div class="Chip Chip_blue"> action=mailconfirmed2 </div></div></div>
+
+<p><br /></p>
+
+<div class="OplaAppSample"><p class="OplaAppSample-title">#Oui</p><div class="Entry"><div class="Entry-label"> Output: </div><div class="Action"> action <b class="u-textColor_red">=</b> mailconfirmed2 </div> Ok, votre contact est enregistré. </div></div>
+
+<h2 id="2-les-boucles-sur-non">2. Les boucles sur Non</h2>
+
+<p>On va enfin ajouter les deux boucles “Non” : on remarque que la flèche les fait remonter d’une étape : on va donc prendre comme conditionnelle la ligne de code précédente, ce qui va faire reboucler le chatbot sur la question.</p>
+
+<p>(</p>
+<div class="OplaAppSample_loopWraper">
+
+<div class="OplaAppSample">
+<span class="OplaAppSample-title">#Oui</span>
+<b>Input</b> : Oui
+<hr />
+<b>Output</b> : ... action <b class="u-textColor_red">=</b> confirmphonenbr<br />
+</div>
+
+<div class="OplaAppSample">
+<span class="OplaAppSample-title">#Any</span>
+<b>Output</b> : ... action <b class="u-textColor_red">=</b> confirmphonenbr<br /><span class="chip chip_green">phonenbr=*</span> est bien votre numéro de téléphone?
+<span class="chip chip_blue">action=phonenbrconfirmed</span><span class="chip chip_red">oui</span><span class="chip chip_red">non</span>
+</div>
+
+</div>
+<p>) - <em>réécrit pour rappel</em></p>
+
+<p>On va écrire le “Non” en reprenant et inversant les actions phonenbrconfirmed et confirmphonenbr, on va mettre phonenbrconfirmed dans la conditionnelle et confirmphonenbr dans le code.</p>
+
+<div class="OplaAppSample">
+<span class="OplaAppSample-title">#Non</span>
+<b>Output</b> : action <b class="u-textColor_red">=</b> phonenbrconfirmed<br />
+Quel est votre numéro de téléphone? <span class="chip chip_green">phonenbr=*</span><span class="chip chip_blue">action=confirmphonenbr</span>
+</div>
+
+<p>De même, sur mail on va écrire un “Non” entre mailconfirmed et confirmmail</p>
+
+<p>(</p>
+<div class="OplaAppSample_loopWraper">
+
+<div class="OplaAppSample">
+<span class="OplaAppSample-title">#Any</span>
+<b>Output</b> : action <b class="u-textColor_red">=</b> confirmmail<br /><span class="chip chip_green">mail=*</span> est bien votre mail?
+<span class="chip chip_blue">action=mailconfirmed</span><span class="chip chip_red">oui</span><span class="chip chip_red">non</span>
+</div>
+
+</div>
+<p>)</p>
+
+<div class="OplaAppSample"><p class="OplaAppSample-title">#Non</p><div class="Entry"><div class="Entry-label"> Input: </div> non </div><div class="Entry"><div class="Entry-label"> Output: </div><div class="Action"> action <b class="u-textColor_red">=</b> mailconfirmed </div> Quel est votre mail ? <div class="Chip Chip_green"> mail=* </div> est bien votre mail ? <div class="Chip Chip_blue"> action=confirmmail </div></div></div>
+
+<p>Nous avons dorénavant fini de paramétrer le schéma 2!</p>
+
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,185 @@
+<html class="mdc-typography">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>En1</title>
+
+    
+    <link href="/docs/assets/images/favicon.png" rel="shortcut icon" />
+    <link rel="stylesheet"
+      href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+    <link rel="stylesheet" href="/docs/assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+<body class="Layout Layout_topBarFixedAndSidebarLeftFixed">
+  <header class="TopAppBar">
+  <div class="TopAppBar-row">
+    <section class="TopAppBar-section">
+      <img class="TopAppBar-brandLogo" src="/docs/assets/images/opla-brand-logo.png" />
+      <span class="TopAppBar-title">Documentation</span>
+    </section>
+  </div>
+</header>
+
+  <nav class="NavigationSidebar LayoutItem LayoutItem_scrollable">
+  
+
+  
+  <div class="Dropdown">
+    <div class="Dropdown-menu">
+      <span>
+        <span class="icon icon-sphere"></span>
+        Language: en
+      </span>
+      <span class="icon icon-caret-down"></span>
+    </div>
+    <div class="Dropdown-content">
+      
+      
+        <a href="/docs/parametering_examples/step_1" class="Dropdown-item">en</a>
+      
+      
+      
+        <a href="/docs/exemple_parametrages/step_1" class="Dropdown-item">fr</a>
+      
+      
+    </div>
+  </div>
+
+  <ul class="NavigationSidebar-list">
+    
+    
+    <li class="NavigationSidebar-listItem">
+      <a class="NavigationSidebar-link"
+        href="/docs/index">
+        Introduction
+      </a>
+    </li>
+    
+    <li class="NavigationSidebar-listItem">
+      <a class="NavigationSidebar-link"
+        href="/docs/start">
+        Getting started
+      </a>
+    </li>
+    
+    <li class="NavigationSidebar-listItem">
+      <a class="NavigationSidebar-link"
+        href="/docs/first-chatbot">
+        Your first chatbot
+      </a>
+    </li>
+    
+    <li class="NavigationSidebar-listItem">
+      <a class="NavigationSidebar-link"
+        href="/docs/helloworld">
+        Hello world
+      </a>
+    </li>
+    
+    <li class="NavigationSidebar-listItem">
+      <a class="NavigationSidebar-link"
+        href="/docs/glossary">
+        Glossary
+      </a>
+    </li>
+    
+    <li class="NavigationSidebar-listItem">
+      <a class="NavigationSidebar-link NavigationSidebar-link_isActive"
+        href="/docs/parametering_examples/step_0">
+        Parametering examples
+      </a>
+    </li>
+    
+  </ul>
+  
+  
+  
+  
+  
+  <ul class="Pagination">
+    <li class="Pagination-item Pagination-item_link Pagination-item_previous">
+      
+      <a href="step_0"
+      disabled=>
+        <span class="icon icon-caret-left"></span>
+        Previous
+      </a>
+      
+    </li>
+    <li class="Pagination-item Pagination-item_state">
+      2/8
+    </li>
+    <li class="Pagination-item Pagination-item_link Pagination-item_next">
+      
+      <a href="step_2">
+        Next
+        <span class="icon icon-caret-right" />
+      </a>
+      
+    </li>
+  </ul>
+  
+
+</nav>
+
+  <main class="LayoutItem LayoutItem_scrollable">
+    <div style="float:left;width:5%">
+
+  <p><i class="MaterialIcons">assignment</i></p>
+</div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. insert variable assignment :
+</code></pre></div></div>
+
+<p>This button will enable getting information from the user and stocking it for further display, still using this button.</p>
+
+<div style="float:left;width:5%">
+
+  <p><i class="MaterialIcons">code</i></p>
+</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>2. Insert code :
+</code></pre></div></div>
+
+<p>The syntax of the action code to be entered will be &#60;action = name_of_action&#62;. This is the line of code that will allow the bot to follow the thread of a conversation. This goes in the outputs.</p>
+
+<div style="float:left;width:5%">
+
+  <p><i class="MaterialIcons">category</i></p>
+</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>3. Button :
+</code></pre></div></div>
+
+<p>Creates a button that will be clickable by the user and which will allow to standardize the inputs. One can create a Yes, No, or any desired input button.</p>
+
+<div style="float:left;width:5%">
+  <p><i class="MaterialIcons">delete</i></p>
+</div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>4. Delete :
+</code></pre></div></div>
+
+<p>This button is to remove any of the three buttons above in Outputs, which must be done by first removing the internal text and then clicking the button, then the trash.</p>
+
+<h3 id="adding-a-conditional">Adding a conditional</h3>
+
+<p><img src="/docs/assets/images/conditional-in-output-options.png" alt="image" /></p>
+
+<div style="float:left;width:5%">
+
+  <p><i class="MaterialIcons">device_hub</i></p>
+</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>5. Conditional
+</code></pre></div></div>
+
+<p>When creating a new intent, suppress the “I don’t understand” line in Outputs. Then appears a three pointed stars called a conditional. This star is seen as long as outputs do not contain non conditional outputs. Its’ code content should be the same as the action code  <i class="MaterialIcons">code</i> in logical order of conversation. <br /><br /></p>
+
+<p><strong>Please note that the interface is not input case sensitive</strong></p>
+
+<p>When an intent is modified, one must first click the “+” sign on end of line, and then a blue capital SAVE button appears to the right of the Intent’s name in Intent screen, on which one must click to save changes.</p>
+
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,166 @@
+<html class="mdc-typography">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Opla.ai documentation</title>
+
+    
+    <link href="/docs/assets/images/favicon.png" rel="shortcut icon" />
+    <link rel="stylesheet"
+      href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+    <link rel="stylesheet" href="/docs/assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+<body class="Layout Layout_topBarFixedAndSidebarLeftFixed">
+  <header class="TopAppBar">
+  <div class="TopAppBar-row">
+    <section class="TopAppBar-section">
+      <img class="TopAppBar-brandLogo" src="/docs/assets/images/opla-brand-logo.png" />
+      <span class="TopAppBar-title">Documentation</span>
+    </section>
+  </div>
+</header>
+
+  <nav class="NavigationSidebar LayoutItem LayoutItem_scrollable">
+  
+
+  
+  <div class="Dropdown">
+    <div class="Dropdown-menu">
+      <span>
+        <span class="icon icon-sphere"></span>
+        Language: en
+      </span>
+      <span class="icon icon-caret-down"></span>
+    </div>
+    <div class="Dropdown-content">
+      
+      
+        <a href="/docs/first-chatbot" class="Dropdown-item">en</a>
+      
+      
+    </div>
+  </div>
+
+  <ul class="NavigationSidebar-list">
+    
+    
+    <li class="NavigationSidebar-listItem">
+      <a class="NavigationSidebar-link"
+        href="/docs/index">
+        Introduction
+      </a>
+    </li>
+    
+    <li class="NavigationSidebar-listItem">
+      <a class="NavigationSidebar-link"
+        href="/docs/start">
+        Getting started
+      </a>
+    </li>
+    
+    <li class="NavigationSidebar-listItem">
+      <a class="NavigationSidebar-link NavigationSidebar-link_isActive"
+        href="/docs/first-chatbot">
+        Your first chatbot
+      </a>
+    </li>
+    
+    <li class="NavigationSidebar-listItem">
+      <a class="NavigationSidebar-link"
+        href="/docs/helloworld">
+        Hello world
+      </a>
+    </li>
+    
+    <li class="NavigationSidebar-listItem">
+      <a class="NavigationSidebar-link"
+        href="/docs/glossary">
+        Glossary
+      </a>
+    </li>
+    
+    <li class="NavigationSidebar-listItem">
+      <a class="NavigationSidebar-link"
+        href="/docs/parametering_examples/step_0">
+        Parametering examples
+      </a>
+    </li>
+    
+  </ul>
+  
+
+</nav>
+
+  <main class="LayoutItem LayoutItem_scrollable">
+    <section class="demo-typography--section mdc-typography">
+  <h1 class="mdc-typography--display1">Your first chatbot</h1>
+  <p class="mdc-typography--body1">When you login for the first time, you arrive in Builder Page</p>
+  <img class="doc-images-start" src="/docs/assets/images/emptybuilder.png" />
+</section>
+<section class="demo-typography--section mdc-typography">
+  <h2 class="mdc-typography--title mdc-typography--adjust-margin">Interface</h2>
+  <p class="mdc-typography--body1">Explorer : the list of intents. you could add, select, delete, move, rename an
+    intent.</p>
+  <p class="mdc-typography--body1">Intent detail : In this panel you will edit the selected intent. And save it.</p>
+  <p class="mdc-typography--body1">Sandbox : test directly the conversation with intents you just created.</p>
+</section>
+<section class="demo-typography--section mdc-typography">
+  <h2 class="mdc-typography--title mdc-typography--adjust-margin">Add an intent</h2>
+  <div class="demo-theme__text-styles mdc-theme--accent-bg mdc-typography mdc-typography--body2">
+    <span class="mdc-theme--text-primary-on-accent">An intent is a component that will response (output) to a sentence
+      or a media (input) that a user send to an assistant.</span>
+  </div>
+  <p class="mdc-typography--body1">1 - In Explorer menu select "add intent"</p>
+  <img class="doc-images-sub" src="/docs/assets/images/addintentmenu.png" />
+  <p class="mdc-typography--body1">2 - A dialog appears, set intent name like "Hello". And click "CREATE"</p>
+  <img class="doc-images-sub" src="/docs/assets/images/addintentdialog.png" />
+  <p class="mdc-typography--body1">3 - Now in the Explorer list your intent "Hello" is visible and selected. In Intent
+    Detail you see it is name in the gray bar on top.</p>
+  <img class="doc-images-sub" src="/docs/assets/images/addintent.png" />
+  <p class="mdc-typography--body1">4 - In Intent detail we setup input. You select "ADD SIMPLE ITEM". in the dialog set
+    the input text "Hello"</p>
+  <img class="doc-images-sub" src="/docs/assets/images/addsimpleinput.png" />
+  <p class="mdc-typography--body1">5 - You now have one input text : "Hello"</p>
+  <img class="doc-images-sub" src="/docs/assets/images/onesimpleinput.png" />
+  <p class="mdc-typography--body1">6 - The same way we setup output. You select "ADD SIMPLE ITEM". in the dialog set
+    the input text "Hello  !". You will get this output. </p>
+  <img class="doc-images-sub" src="/docs/assets/images/onesimpleoutput.png" />
+  <div class="demo-theme__text-styles mdc-theme--accent-bg mdc-typography mdc-typography--body2">
+    <span class="mdc-theme--text-primary-on-accent"> is a variable from the context that will
+      display username in the output text.</span>
+  </div>
+  <p class="mdc-typography--body1">7 - In the Intent Detail titlebar next to intent's name you see a star. It indicates
+    you need to save it before using it. the up arrow icon at the right in the titlebar. Click on it and the star
+    disappears. You could now test your intent. </p>
+  <img class="doc-images-sub" src="/docs/assets/images/saveintent.png" />
+</section>
+<section class="demo-typography--section mdc-typography">
+  <h2 class="mdc-typography--title mdc-typography--adjust-margin">Test an intent</h2>
+  <p class="mdc-typography--body1">1 - Go to sandbox textfield "Your message" and type "Hello". And press send icon.</p>
+  <img class="doc-images-sub" src="/docs/assets/images/sandboxtextfield.png" />
+  <p class="mdc-typography--body1">2 - A conversation appears. And you see that your assistant replied with the correct
+    username.</p>
+  <img class="doc-images-sub" src="/docs/assets/images/firstconversation.png" />
+  <p class="mdc-typography--body1">3 - You want your chatbot to reply to "Hello Buddy" or any "Hello xxx yyy". Go back
+    to intent's input in detail panel, and add a new input, using "+" icon. type "Hello *" in dialog. And don't forget
+    to save it. You now have two inputs.</p>
+  <img class="doc-images-sub" src="/docs/assets/images/twoinputs.png" />
+  <p class="mdc-typography--body1">4 - Type in the sandbox textfield "Hello Buddy !", and send. Your bot will reply as
+    previously.</p>
+  <img class="doc-images-sub" src="/docs/assets/images/hellobuddy.png" />
+  <p class="mdc-typography--body1">5 - Create a new intent "How are you" that will reply "Fine an you ?". And test it
+    in sandbox. You will get this.</p>
+  <img class="doc-images-sub" src="/docs/assets/images/howareyou.png" />
+  <p class="mdc-typography--body1">6 - That's it! You could create as many intents you want and test/change them. And
+    much more could be done !</p>
+  <p class="mdc-typography--body1">A tips : In sandbox menu you could clear the conversation/context to start a new
+    conversation.</p>
+  <img class="doc-images-sub" src="/docs/assets/images/sandboxmenu.png" />
+</section>
+
+  </main>
+</body>
+
+</html>

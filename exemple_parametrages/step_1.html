@@ -1,0 +1,187 @@
+<html class="mdc-typography">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Fr1</title>
+
+    
+    <link href="/docs/assets/images/favicon.png" rel="shortcut icon" />
+    <link rel="stylesheet"
+      href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+    <link rel="stylesheet" href="/docs/assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+<body class="Layout Layout_topBarFixedAndSidebarLeftFixed">
+  <header class="TopAppBar">
+  <div class="TopAppBar-row">
+    <section class="TopAppBar-section">
+      <img class="TopAppBar-brandLogo" src="/docs/assets/images/opla-brand-logo.png" />
+      <span class="TopAppBar-title">Documentation</span>
+    </section>
+  </div>
+</header>
+
+  <nav class="NavigationSidebar LayoutItem LayoutItem_scrollable">
+  
+
+  
+  <div class="Dropdown">
+    <div class="Dropdown-menu">
+      <span>
+        <span class="icon icon-sphere"></span>
+        Language: fr
+      </span>
+      <span class="icon icon-caret-down"></span>
+    </div>
+    <div class="Dropdown-content">
+      
+      
+        <a href="/docs/parametering_examples/step_1" class="Dropdown-item">en</a>
+      
+      
+      
+        <a href="/docs/exemple_parametrages/step_1" class="Dropdown-item">fr</a>
+      
+      
+    </div>
+  </div>
+
+  <ul class="NavigationSidebar-list">
+    
+    
+    <li class="NavigationSidebar-listItem">
+      <a class="NavigationSidebar-link"
+        href="/docs/index">
+        Introduction
+      </a>
+    </li>
+    
+    <li class="NavigationSidebar-listItem">
+      <a class="NavigationSidebar-link"
+        href="/docs/start">
+        Pour commencer
+      </a>
+    </li>
+    
+    <li class="NavigationSidebar-listItem">
+      <a class="NavigationSidebar-link"
+        href="/docs/first-chatbot">
+        Votre premier chatbot
+      </a>
+    </li>
+    
+    <li class="NavigationSidebar-listItem">
+      <a class="NavigationSidebar-link"
+        href="/docs/bonjourmonde">
+        Bonjour monde
+      </a>
+    </li>
+    
+    <li class="NavigationSidebar-listItem">
+      <a class="NavigationSidebar-link"
+        href="/docs/glossaire">
+        Glossaire
+      </a>
+    </li>
+    
+    <li class="NavigationSidebar-listItem">
+      <a class="NavigationSidebar-link NavigationSidebar-link_isActive"
+        href="/docs/exemple_parametrages/step_0">
+        Exemples de paramétrages
+      </a>
+    </li>
+    
+  </ul>
+  
+  
+  
+  
+  
+  <ul class="Pagination">
+    <li class="Pagination-item Pagination-item_link Pagination-item_previous">
+      
+      <a href="step_0"
+      disabled=>
+        <span class="icon icon-caret-left"></span>
+        Previous
+      </a>
+      
+    </li>
+    <li class="Pagination-item Pagination-item_state">
+      2/8
+    </li>
+    <li class="Pagination-item Pagination-item_link Pagination-item_next">
+      
+      <a href="step_2">
+        Next
+        <span class="icon icon-caret-right" />
+      </a>
+      
+    </li>
+  </ul>
+  
+
+</nav>
+
+  <main class="LayoutItem LayoutItem_scrollable">
+    <div style="float:left;width:5%">
+
+  <p><i class="MaterialIcons">assignment</i></p>
+</div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. insert variable assignment :
+</code></pre></div></div>
+
+<p>Il s’agit du bouton qui va permettre de stocker une valeur qui sera réutilisée par le bot plus loin dans la conversation</p>
+
+<div style="float:left;width:5%">
+
+  <p><i class="MaterialIcons">code</i></p>
+</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>2. Insert code :
+</code></pre></div></div>
+
+<p>La syntaxe du code d’action à saisir sera, en écrivant à l’intérieur du cadre qui apparaît lorsqu’on presse le bouton    :</p>
+<div class="Chip Chip_blue"> action=name_of_action </div>
+<p>Il s’agit de la ligne de code d’action qui va permettre au bot de suivre le fil d’une conversation. On va mettre l’action dans un premier output d’intent, et la même syntaxe dans la conditionnelle de l’output d’intent suivant, ce qui va permettre de créer un chemin conversationnel.</p>
+
+<div style="float:left;width:5%">
+
+  <p><i class="MaterialIcons">category</i></p>
+</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>3. Button :
+</code></pre></div></div>
+
+<p>Permet de créer un bouton qui va être cliquable par l’utilisateur et qui donc va permettre de standadiser les inputs. On peut créer un bouton Oui, Non, ou n’importe quel input souhaité.</p>
+
+<div style="float:left;width:5%">
+
+  <p><i class="MaterialIcons">delete</i></p>
+</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>4. delete :
+</code></pre></div></div>
+
+<p>Ce bouton sert à supprimer un des trois items cliquables énoncés ci-dessus. Il faut d’abord supprimer le texte, puis cliquer sur le bouton pour le sélectionner, puis cliquer sur la corbeille.</p>
+
+<h3 id="ajout-dune-conditionnelle">Ajout d’une conditionnelle</h3>
+
+<p><img src="/docs/assets/images/conditional-in-output-options.png" alt="image" /></p>
+
+<div style="float:left;width:5%">
+
+  <p><i class="MaterialIcons">device_hub</i></p>
+</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>5. Conditionnelle
+</code></pre></div></div>
+
+<p>Quand on ouvre un nouvel intent, dans les outputs, supprimer la ligne “I don’t understand.” Apparaît alors une étoile à trois branches qu’on appelle une conditionnelle. Cette étoile est proposée tant que les outputs ne contiennent pas d’outputs non conditionnels. Elle doit contenir le même code que le code d’action qui précède  <i class="MaterialIcons">code</i>, dans la logique de la conversation.<br /><br /></p>
+
+<p><strong>Noter que l’interface n’est pas sensible à la casse des inputs.</strong></p>
+
+<p>Quand on modifie un intent, un bouton SAVE apparaît sur lequel in convient de cliquer pour sauvegarder les changements. Cliquer sur “+” en bout de ligne de l’output, puis sur Save.</p>
+
+  </main>
+</body>
+
+</html>
