@@ -29,7 +29,7 @@ On peut tout à fait, et c'est le cas ici, créer deux schémas de conversation 
 Cliquer sur le signe plus et sur SAVE;
 
  {% MaterialIcon icon: "assignment" %}
-On va insérer une variable. Il faut écrire la valeur de la variable à l'intérieur du carré qui résulte de la pression sur le bouton insert variable assignment.<br>
+On va insérer une variable. Il faut écrire la valeur de la variable à l'intérieur du carré qui résulte de la pression sur le bouton insert output code.<br>
 
 
 
@@ -62,7 +62,7 @@ Puis on clique sur insert block any dans les inputs de #Any :
 
 ![images]({{site.images_path | relative_url }}at-any-in-input.png)
 
-L'intent #Any sert à stocker une valeur quelconque donnée par l'utilisateur dans une variable accessible avec le bouton {% MaterialIcon icon :"assignment" %} ,insert variable assignment. On va presser ce bouton et écrire *phonenbr=* * à l'intérieur du cadre.
+L'intent #Any sert à stocker une valeur quelconque donnée par l'utilisateur dans une variable accessible avec le bouton {% MaterialIcon icon :"assignment" %} ,insert output code. On va presser ce bouton et écrire *phonenbr=* * à l'intérieur du cadre.
 
 Ensuite on paramètre l'output :
 

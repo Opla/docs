@@ -25,7 +25,7 @@ Click on plus sign and SAVE;
 
 
 
- {% MaterialIcon icon: "assignment" %} We will insert a variable. The value of the variable must be written inside the square resulting from pressing the insert variable assignment button.<br>
+ {% MaterialIcon icon: "assignment" %} We will insert a variable. The value of the variable must be written inside the square resulting from pressing the insert output code button.<br>
 
 {% OplaAppSample title: "Yes" %}
   {% Entry type : "Input" %}
