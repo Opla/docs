@@ -70,7 +70,7 @@ The mention @any in intent #Any is used to collect information not contained in 
 
 {% OplaAppSample title: "" %}
   {% Entry type: "Output" %} 
-   {% MaterialIcon icon: "code" %}{% Chip color: "blue", label: "valeur=*" %}
+   {% MaterialIcon icon: "code" %}{% Chip color: "blue", label: "value=*" %}
   {% endEntry %}
 {% endOplaAppSample %}
 

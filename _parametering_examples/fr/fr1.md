@@ -35,7 +35,7 @@ La syntaxe du code d'action à saisir sera, en écrivant à l'intérieur du cadr
 </div>
     3. Button :
 
-Permet de créer un bouton qui va être cliquable par l'utilisateur et qui donc va permettre de standadiser les inputs. On peut créer un bouton Oui, Non, ou n'importe quel input souhaité.
+Permet de créer un bouton qui va être cliquable par l'utilisateur et qui donc va permettre de standardiser les inputs. On peut créer un bouton Oui, Non, ou n'importe quel input souhaité.
 
 
 

@@ -5,34 +5,33 @@ ref : 5
 permalink: /exemple_parametrages/step_5
 ---
 
-On va ensuite rajouter le premier Non qui conduit à Pizza tout chocolat :
+On va ensuite rajouter le premier Non qui conduit "Vous souhaitez louer une citadine" :
 
 {% OplaAppSample title: "Non" %}
   {% Entry type : "Input" %}
     non
   {% endEntry %}
   {% Entry type: "Output" %}  
-  {% Action label: "pommesyesno" %} 
-    C'est parti pour une pizza tout chocolat!
+  {% Action label: "longueursup4mouinon" %} 
+    Vous souhaitez louer une citadine.
   {% endEntry %}
 {% endOplaAppSample %}
 
 
 
- ![image]({{site.images_path | relative_url }}tout-chocolat.png)
 
 Ne pas oublier de cliquer sur SAVE avant d'essayer le schéma dans le playground.
 
 Puis nous allons rajouter la branche de droite,
 
 
-{% OplaAppSample title: "Non" %}
+{% OplaAppSample title: "Un utilitaire" %}
   {% Entry type : "Input" %}
-    non
+    Un utilitaire
   {% endEntry %}
   {% Entry type: "Output" %}  
-  {% Action label: "sweetyesno" %} 
-    Voulez-vous des champignons ?  {% MaterialIcon icon: "category" %}{% Chip color: "red", label: "Oui" %}{% MaterialIcon icon: "category" %}{% Chip color: "red", label: "Non" %}{% MaterialIcon icon: "code" %}{% Chip color: "blue", label: "action=mushroomsyesno" %}
+  {% Action label: "saisirtypevehicule" %} 
+    Son volume doit-il être supérieur à 10m3 ?  {% MaterialIcon icon: "category" %}{% Chip color: "red", label: "Oui" %}{% MaterialIcon icon: "category" %}{% Chip color: "red", label: "Non" %}{% MaterialIcon icon: "code" %}{% Chip color: "blue", label: "action=volumesup10m3ouinon" %}
   {% endEntry %}
 {% endOplaAppSample %}
 
@@ -43,8 +42,8 @@ Puis nous allons rajouter la branche de droite,
     oui
   {% endEntry %}
   {% Entry type: "Output" %}  
-  {% Action label: "mushroomsyesno" %} 
-    C'est parti pour une Reine !
+  {% Action label: "volumesup10m3ouinon" %} 
+    Vous souhaitez louer un fourgon.
   {% endEntry %}
 {% endOplaAppSample %}
 
@@ -55,10 +54,22 @@ Puis nous allons rajouter la branche de droite,
     non
   {% endEntry %}
   {% Entry type: "Output" %}  
-  {% Action label: "mushroomsyesno" %} 
-    C'est parti pour une trois fromages! 
+  {% Action label: "volumesup10m3ouinon" %} 
+    Vous souhaitez louer une fourgonnette. 
   {% endEntry %}
 {% endOplaAppSample %}
+
+
+
+
+## Vue générale de l'exercice dans le bot
+
+![image]({{site.images_path | relative_url }}location-voiture-Bonjour.png)
+![image]({{site.images_path | relative_url }}location-voiture-Une-voiture.png)
+![image]({{site.images_path | relative_url }}location-voiture-Un-utilitaire.png)
+![image]({{site.images_path | relative_url }}location-voiture-oui.png)
+![image]({{site.images_path | relative_url }}location-voiture-non.png)
+
 
 
 Et voilà,  votre premier schéma de conversation est paramétré ! Passons maintenant à un exemple suivant, l'exemple de la prise de contact, qui gère des saisies manuelles effectuées par l'utilisateur.

@@ -5,11 +5,7 @@ ref : 7
 permalink: /exemple_parametrages/step_7
 ---
 
-On peut tout à fait, et c'est le cas ici, créer deux schémas de conversation dans le même bot. On va créer la conversation "Contact" parallèlement à la conversation "Pizza".
-
-*À noter : Un intent compte souvent un ou deux inputs pour plusieurs outputs différents.*
-
-
+Nous allons paramétrer un bot qui stocke les informations de deux questions : quel est votre numéro de téléphone? quel est votre e-mail? Tout en permettant d'effectuer des correctifs sur les deux valeurs.
 
 
 {% OplaAppSample title: "Contact" %}
