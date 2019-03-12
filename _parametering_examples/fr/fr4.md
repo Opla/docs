@@ -29,10 +29,10 @@ On inscrit dans l'intent les lignes suivantes :
 
 {% OplaAppSample title: "Bonjour" %}
   {% Entry type : "Input" %}
-    Bonjour <br> bjr <br>
+    Bonjour <br>
   {% endEntry %}
   {% Entry type: "Output" %}  
-    Voulez-vous louer une voiture ou un utilitaire? {% MaterialIcon icon: "category" %}{% Chip color: "red", label: "Une voiture" %}{% MaterialIcon icon: "category" %}{% Chip color: "red", label: "Un utiltiaire" %}{% MaterialIcon icon: "code" %}{% Chip color: "blue", label: "action=saisirtypevehicule" %}
+    Voulez-vous louer une voiture ou un utilitaire? {% MaterialIcon icon: "category" %}{% Chip color: "red", label: "Une voiture" %}{% MaterialIcon icon: "category" %}{% Chip color: "red", label: "Un utilitaire" %}{% MaterialIcon icon: "code" %}{% Chip color: "blue", label: "action=saisirtypevehicule" %}
   {% endEntry %}
 {% endOplaAppSample %}
 
@@ -104,7 +104,7 @@ Ne pas oublier de cliquer sur le signe plus et sur SAVE à la fin de chaque modi
 
 
 
-Et pour le deuxième output, qui constitue la fin de la chaîne ;
+Et pour le deuxième intent, qui constitue la fin de la chaîne ;
 
 
 On va créer un intent #Oui, avec pour input oui et qui aura pour outputs à la fin de cet exercice plusieurs possibilités, mais qui maintenant va contenir :
@@ -121,10 +121,6 @@ On va créer un intent #Oui, avec pour input oui et qui aura pour outputs à la 
 {% endOplaAppSample %}
 
 
-
-
-
-Après avoir cliqué sur SAVE, vous pouvez faire des tests dans le playground ainsi qu'indiqué sur les captures d'écrans, pour voir si vos enchaînements se passent bien.
 
 
 
