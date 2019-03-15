@@ -149,19 +149,32 @@
 
 <p>In the intent one must write the following</p>
 
-<div class="OplaAppSample"><p class="OplaAppSample-title">#Hello</p><div class="Entry"><div class="Entry-label"> Input: </div> Hello </div><div class="Entry"><div class="Entry-label"> Output: </div> Would you like a sweet pizza? <i class="MaterialIcons">category</i><div class="Chip Chip_red"> Yes </div><i class="MaterialIcons">category</i><div class="Chip Chip_red"> No </div><i class="MaterialIcons">code</i><div class="Chip Chip_blue"> action=sweetyesno </div></div></div>
+<div class="OplaAppSample"><p class="OplaAppSample-title">#Hello</p><div class="Entry"><div class="Entry-label"> Input: </div> Hello </div><div class="Entry"><div class="Entry-label"> Output: </div> What kind of vehicle would you like to rent ? <i class="MaterialIcons">category</i><div class="Chip Chip_red"> a car </div><i class="MaterialIcons">category</i><div class="Chip Chip_red"> a commercial vehicle </div><i class="MaterialIcons">code</i><div class="Chip Chip_blue"> action=getvehicletype </div></div></div>
 
-<p>which on screen shows :</p>
+<p>which on screen shows</p>
 
-<p><img src="/docs/assets/images/would-you-like-a-sweet-pizza-total.png" alt="image" /></p>
+<p><img src="/docs/assets/images/rent-a-car-hello.png" alt="image" /></p>
 
-<p>One must click on the plus end of line and on SAVE top of page to save the changes.</p>
+<p>Click the blue plus end of line of the output to save the parametering</p>
 
-<p><img src="/docs/assets/images/would-you-like-a-sweet-pizza-saved.png" alt="image" /></p>
+<p>Do not forget to save the intent clicking on SAVE to the right of the intent’s name</p>
 
 <p><img src="/docs/assets/images/hello-save.png" alt="image" /></p>
 
-<p>To add the Yes intent (#Yes), click on the grey/blue plus sign on the right in intents column</p>
+<p>the action=getvehicletype text must be copied in the conditionnal following in the intent coming after Hello</p>
+
+<p>as it happens, two intents are concerned :</p>
+
+<ul>
+  <li>
+    <p>intent #A Car</p>
+  </li>
+  <li>
+    <p>intent #A commercial vehicle</p>
+  </li>
+</ul>
+
+<p>To add the “a car” intent (#A car), click on the grey/blue plus sign on the right in intents column</p>
 
 <p><img src="/docs/assets/images/add--an-intent-hello.png" alt="image" /></p>
 
@@ -171,42 +184,27 @@
 
 <p>Then type in the new name</p>
 
-<p><img src="/docs/assets/images/rename-intent-yes.png" alt="image" /></p>
+<p><img src="/docs/assets/images/rename-intent-a-car.png" alt="image" /></p>
 
-<p>Then enter Yes in the line of inputs and delete the default outputs present clicking on the minus of the line and SAVE on top of page.</p>
+<p>Then enter A car in the line of inputs and delete the default outputs present clicking on the minus of the line and SAVE on top of page.</p>
 
-<p><img src="/docs/assets/images/suppress-inputs-and-outputs.png" alt="image" /></p>
+<p>Then we will enter the text of the A car intent’s output :<br /></p>
 
-<p>Then we will enter the text of the Yes intent’s output :<br /></p>
+<div class="OplaAppSample"><p class="OplaAppSample-title">#A car</p><div class="Entry"><div class="Entry-label"> Input: </div> A car </div><div class="Entry"><div class="Entry-label"> Output: </div><div class="Action"> action <b class="u-textColor_red">=</b> getvehicletype </div> Must it be longer than 4m? <i class="MaterialIcons">category</i><div class="Chip Chip_red"> Yes </div><i class="MaterialIcons">category</i><div class="Chip Chip_red"> No </div><i class="MaterialIcons">code</i><div class="Chip Chip_blue"> action=lengthsup4myesno </div></div></div>
 
-<div class="OplaAppSample"><p class="OplaAppSample-title">#Yes</p><div class="Entry"><div class="Entry-label"> Input: </div> yes </div><div class="Entry"><div class="Entry-label"> Output: </div><div class="Action"> action <b class="u-textColor_red">=</b> sweetyesno </div> Would you like apples on it? <i class="MaterialIcons">category</i><div class="Chip Chip_red"> Yes </div><i class="MaterialIcons">category</i><div class="Chip Chip_red"> No </div><i class="MaterialIcons">code</i><div class="Chip Chip_blue"> action=applesyesno </div></div></div>
-
-<p>action=sweetyesno must be entered clicking on the three pointed star called conditional or insert condition</p>
+<p>action=getvehicletype must be entered clicking on the three pointed star called conditional or insert condition</p>
 
 <p><img src="/docs/assets/images/insert-condition.png" alt="image" /></p>
 
-<p><img src="/docs/assets/images/action-eg-sweetyesno.png" alt="image" />
-<img src="/docs/assets/images/save-applesyesno.png" alt="image" /></p>
-
 <p>Never forget to click on the plus sign end of line and on SAVE on top each time an intent is modified.</p>
 
-<p><img src="/docs/assets/images/yes-save.png" alt="image" /></p>
+<p>And for the second intent, which is at the end of the chain</p>
 
-<p>Add the second output, ending the all-yes side of the diagram.</p>
+<p>We will create a #yes intent, with as input yes and outputs multiple possibilities, but which for now will contain :</p>
 
-<div class="OplaAppSample"><p class="OplaAppSample-title">#Yes</p><div class="Entry"><div class="Entry-label"> Input: </div> yes </div><div class="Entry"><div class="Entry-label"> Output: </div><div class="Action"> action <b class="u-textColor_red">=</b> applesyesno </div> There goes an apple-chocolate pizza! </div></div>
+<div class="OplaAppSample"><p class="OplaAppSample-title">#Yes</p><div class="Entry"><div class="Entry-label"> Input: </div> yes </div><div class="Entry"><div class="Entry-label"> Output: </div><div class="Action"> action <b class="u-textColor_red">=</b> lengthsup4myesno </div> You would like to rent an estate car </div></div>
 
-<p><img src="/docs/assets/images/yes-applechocolatepizza.png" alt="image" /></p>
-
-<p>After having clicked SAVE, we can test out the conversation in the playground to see if the dialogue unfolds correctly.</p>
-
-<p>The conversation should look something like this :</p>
-
-<p><img src="/docs/assets/images/playground-sweet-pizza.png" alt="image" /></p>
-
-<p><img src="/docs/assets/images/playground-apple-chocolate-pizza.png" alt="image" /></p>
-
-<p>Congratulations, you have written your first branch of conversation! Now we will add the intent No to complete the diagram.</p>
+<p>Congratulations, you have written your first branch of conversation! Now we will add the intent No which leads to “You would like to rent a city car”</p>
 
   </main>
 

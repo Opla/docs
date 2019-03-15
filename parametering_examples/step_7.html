@@ -125,108 +125,90 @@
 
 </div>
   <main class="LayoutItem LayoutItem_scrollable">
-    <p>One can quite, and this is the case here, create two conversation patterns in the same bot. “Contact” will be created alongside with “Pizza”.</p>
+    <p>We will set up a bot that stores the information of two questions: what is your phone number? What is your email? While allowing to make corrections on both values.</p>
 
-<p>Note: An intent often has one or two inputs for several different outputs.</p>
+<div class="OplaAppSample"><p class="OplaAppSample-title">#Contact</p><div class="Entry"><div class="Entry-label"> Input: </div> Contact </div><div class="Entry"><div class="Entry-label"> Output: </div> Would you like to give your phone number? <i class="MaterialIcons">category</i><div class="Chip Chip_red"> Yes </div><i class="MaterialIcons">category</i><div class="Chip Chip_red"> no </div><i class="MaterialIcons">code</i><div class="Chip Chip_blue"> action=getphoneyesno </div></div></div>
 
-<div class="OplaAppSample"><p class="OplaAppSample-title">#Contact</p><div class="Entry"><div class="Entry-label"> Input: </div> Contact </div><div class="Entry"><div class="Entry-label"> Output: </div> Would you like to give out your phone number? <i class="MaterialIcons">category</i><div class="Chip Chip_red"> Yes </div><i class="MaterialIcons">category</i><div class="Chip Chip_red"> No </div><i class="MaterialIcons">code</i><div class="Chip Chip_blue"> action=getphoneyesno </div></div></div>
+<p>Click on the plus sign and on SAVE;</p>
 
-<p>Click on plus sign and SAVE;</p>
+<div class="OplaAppSample"><p class="OplaAppSample-title">#Yes</p><div class="Entry"><div class="Entry-label"> Input: </div> Yes </div><div class="Entry"><div class="Entry-label"> Output: </div><div class="Action"> action <b class="u-textColor_red">=</b> getphoneyesno </div> What is your phone number ? <i class="MaterialIcons">code</i><div class="Chip Chip_blue"> action=getphone </div></div></div>
 
-<p><i class="MaterialIcons">assignment</i> We will insert a variable. The value of the variable must be written inside the square resulting from pressing the insert variable assignment button.<br /></p>
-
-<div class="OplaAppSample"><p class="OplaAppSample-title">#Yes</p><div class="Entry"><div class="Entry-label"> Input: </div> yes </div><div class="Entry"><div class="Entry-label"> Output: </div><div class="Action"> action <b class="u-textColor_red">=</b> getphoneyesno </div> What is your phone number ? <i class="MaterialIcons">assignment</i><div class="Chip Chip_green"> phonenbr=* </div><i class="MaterialIcons">code</i><div class="Chip Chip_blue"> action=confirmphonenbr </div></div></div>
-
-<p><img src="/docs/assets/images/yes-confirmphonenbr.png" alt="images" /></p>
-
-<p>click on plus sign and SAVE.</p>
+<p>Click on the plus sign and on SAVE;</p>
 
 <h2 id="1-any-intents">1. #Any intents</h2>
 
-<p>create an intent #Any:</p>
+<p>We will create an #Any intent :</p>
 
-<p>Click on new intent, rename to #Any, and delete default outputs and inputs clicking on the end of line minus sign. (“intent” for input and “I don’t understand” for output)</p>
+<p>we click on create a new intent, we rename the intent in #Any, and we delete the inputs and outputs already present by clicking on the minus sign at the end of the line for input (marked “intent”) and output (“I don ‘t understand “)</p>
 
 <p><img src="/docs/assets/images/any-empty.png" alt="image" /></p>
 
-<p>Then click on insert block any in #Any inputs :</p>
+<p>Then we click on insert block any in the inputs of intent #Any :</p>
 
 <p><img src="/docs/assets/images/any-block-input.png" alt="images" /></p>
 
 <p><img src="/docs/assets/images/at-any-in-input.png" alt="images" /></p>
 
-<p>the #Any intent is meant to stock any user inputted value in a variable <i class="MaterialIcons">assignment</i> ,insert variable assignment.</p>
+<p>We click on the blue plus sign and on SAVE ;</p>
 
-<p>Then the output :</p>
+<p>We will focus on the variables.</p>
 
-<div class="OplaAppSample"><p class="OplaAppSample-title">#Any</p><div class="Entry"><div class="Entry-label"> Input: </div><div class="Chip Chip_orange"> @any </div></div><div class="Entry"><div class="Entry-label"> Output: </div><div class="Action"> action <b class="u-textColor_red">=</b> confirmphonenbr </div><i class="MaterialIcons">assignment</i><div class="Chip Chip_green"> phonenbr=* </div> is your phone number, right? <i class="MaterialIcons">category</i><div class="Chip Chip_red"> yes </div><i class="MaterialIcons">category</i><div class="Chip Chip_red"> no </div><i class="MaterialIcons">code</i><div class="Chip Chip_blue"> action=phonenbrconfirmed </div></div></div>
+<p>A variable can be managed in two different ways:</p>
+<ul>
+  <li>either it is discrete, that is to say that it does not appear in the window of the playground or publish, it is the case if it is written in a code button <i class="MaterialIcons">code </i>,</li>
+  <li>or it is explicit and is displayed in the playground or publish window, this is the case if it is written in the output code button <i class="MaterialIcons">assignment</i>.</li>
+</ul>
 
-<p>Click SAVE after modifying the intent,</p>
+<p>The mention @any in intent #Any is used to collect information not contained in other intents, in this case a value entered freely by the user. To capture this value, and to save it in a variable of name “value” for example, it is necessary to make the following manipulation: to click on code, <i class="MaterialIcons">code</i> and fill the resulting frame with the declaration of the name of the variable, the name “value”, and the following symbols, = *, which means assigning a value to the variable value, example:</p>
 
-<div class="OplaAppSample"><p class="OplaAppSample-title">#Yes</p><div class="Entry"><div class="Entry-label"> Output: </div><div class="Action"> action <b class="u-textColor_red">=</b> phonenbrconfirmed </div> What is your mail ? <i class="MaterialIcons">assignment</i><div class="Chip Chip_green"> mail=* </div><i class="MaterialIcons">code</i><div class="Chip Chip_blue"> action=confirmmail </div></div></div>
+<div class="OplaAppSample"><p class="OplaAppSample-title">#</p><div class="Entry"><div class="Entry-label"> Output: </div><i class="MaterialIcons">code</i><div class="Chip Chip_blue"> value=* </div></div></div>
 
-<p><br /></p>
+<p>We then parameter the output :</p>
 
-<div class="OplaAppSample"><p class="OplaAppSample-title">#Any</p><div class="Entry"><div class="Entry-label"> Output: </div><div class="Action"> action <b class="u-textColor_red">=</b> confirmmail </div><i class="MaterialIcons">assignment</i><div class="Chip Chip_green"> mail=* </div> is your mail, right? <i class="MaterialIcons">category</i><div class="Chip Chip_red"> yes </div><i class="MaterialIcons">category</i><div class="Chip Chip_red"> no </div><i class="MaterialIcons">code</i><div class="Chip Chip_blue"> action=mailconfirmed </div></div></div>
+<div class="OplaAppSample"><p class="OplaAppSample-title">#Any</p><div class="Entry"><div class="Entry-label"> Input: </div><div class="Chip Chip_orange"> @any </div></div><div class="Entry"><div class="Entry-label"> Output: </div><div class="Action"> action <b class="u-textColor_red">=</b> getphone </div><i class="MaterialIcons">code</i><div class="Chip Chip_blue"> phone=* </div> Is your number <i class="MaterialIcons">assignment</i><div class="Chip Chip_green"> phone </div> ?<i class="MaterialIcons">category</i><div class="Chip Chip_red"> Yes </div><i class="MaterialIcons">category</i><div class="Chip Chip_red"> No </div><i class="MaterialIcons">code</i><div class="Chip Chip_blue"> action=confirmphonenbr </div></div></div>
 
-<p><br /></p>
+<p>We click SAVE after modifying the intent</p>
 
-<div class="OplaAppSample"><p class="OplaAppSample-title">#Yes</p><div class="Entry"><div class="Entry-label"> Output: </div><div class="Action"> action <b class="u-textColor_red">=</b> mailconfirmed </div> Ok, your contact is saved. </div></div>
+<div class="OplaAppSample"><p class="OplaAppSample-title">#Yes</p><div class="Entry"><div class="Entry-label"> Output: </div><div class="Action"> action <b class="u-textColor_red">=</b> confirmphonenbr </div> What is your e-mail adress? <i class="MaterialIcons">code</i><div class="Chip Chip_blue"> action=getmail </div></div></div>
 
-<p>Now we’ll deal with the no going directly to e-mail</p>
-
-<div class="OplaAppSample"><p class="OplaAppSample-title">#No</p><div class="Entry"><div class="Entry-label"> Input: </div> No </div><div class="Entry"><div class="Entry-label"> Output: </div><div class="Action"> action <b class="u-textColor_red">=</b> getphoneyesno </div> What is your e-mail? <i class="MaterialIcons">assignment</i><div class="Chip Chip_green"> mail=* </div><i class="MaterialIcons">code</i><div class="Chip Chip_blue"> action=confirmmail2 </div></div></div>
-
-<p>We need to rewrite that step in order to ask for the e-mail. We add index 2 to make a difference with the first branch.</p>
-
-<div class="OplaAppSample"><p class="OplaAppSample-title">#Any</p><div class="Entry"><div class="Entry-label"> Output: </div><div class="Action"> action <b class="u-textColor_red">=</b> confirmmail </div><i class="MaterialIcons">assignment</i><div class="Chip Chip_green"> mail=* </div> is your mail, right? <i class="MaterialIcons">category</i><div class="Chip Chip_red"> yes </div><i class="MaterialIcons">category</i><div class="Chip Chip_red"> no </div><i class="MaterialIcons">code</i><div class="Chip Chip_blue"> action=mailconfirmed2 </div></div></div>
+<div class="OplaAppSample"><p class="OplaAppSample-title">#Any</p><div class="Entry"><div class="Entry-label"> Output: </div><div class="Action"> action <b class="u-textColor_red">=</b> getmail </div><i class="MaterialIcons">code</i><div class="Chip Chip_blue"> email=* </div> Is your e-mail <i class="MaterialIcons">assignment</i><div class="Chip Chip_green"> email </div>? <i class="MaterialIcons">category</i><div class="Chip Chip_red"> Yes </div><i class="MaterialIcons">category</i><div class="Chip Chip_red"> No </div><i class="MaterialIcons">code</i><div class="Chip Chip_blue"> action=confirmmail </div></div></div>
 
 <p><br /></p>
 
-<div class="OplaAppSample"><p class="OplaAppSample-title">#Yes</p><div class="Entry"><div class="Entry-label"> Output: </div><div class="Action"> action <b class="u-textColor_red">=</b> mailconfirmed2 </div> Ok, your mail is saved. </div></div>
+<div class="OplaAppSample"><p class="OplaAppSample-title">#Yes</p><div class="Entry"><div class="Entry-label"> Output: </div><div class="Action"> action <b class="u-textColor_red">=</b> confirmmail </div> Ok, your contact is saved. </div></div>
+
+<p>We went through the branch of the “Yes” in the schematic.</p>
+
+<p>We will focus on the first branch “No”, which allows you to skip the step of asking the phone number to give the e-mail.</p>
+
+<div class="OplaAppSample"><p class="OplaAppSample-title">#No</p><div class="Entry"><div class="Entry-label"> Output: </div><div class="Action"> action <b class="u-textColor_red">=</b> getphoneyesno </div> What is your e-mail <i class="MaterialIcons">code</i><div class="Chip Chip_blue"> action=getmail </div></div></div>
+
+<div class="OplaAppSample"><p class="OplaAppSample-title">#Any</p><div class="Entry"><div class="Entry-label"> Output: </div><div class="Action"> action <b class="u-textColor_red">=</b> getmail </div><i class="MaterialIcons">code</i><div class="Chip Chip_blue"> email=* </div> is your e-mail <i class="MaterialIcons">assignment</i><div class="Chip Chip_green"> email </div> ? <i class="MaterialIcons">category</i><div class="Chip Chip_red"> Yes </div><i class="MaterialIcons">category</i><div class="Chip Chip_red"> No </div><i class="MaterialIcons">code</i><div class="Chip Chip_blue"> action=confirmmail </div></div></div>
+
+<p><br /></p>
 
 <h2 id="2-loops-on-no">2. Loops on “No”</h2>
 
-<p>We will add the two “No” loops : the arrow takes them up one step ; we will take as a conditional the previous line of code, which will loop the chatbot on the question.</p>
+<p>We will finally add the two loops “No”: we notice that the arrow makes them go back a step: we will take as conditional the previous line of code, which will loop the chatbot on the question.</p>
 
-<p>(<br /></p>
+<p>  We will write the “No” by resuming and reversing the actions getphone and confirmphonenbr, we will put the confirmphonenbr in the conditional and enter the getphone in the code.</p>
 
-<div class="OplaAppSample"><p class="OplaAppSample-title">#Any</p><div class="Entry"><div class="Entry-label"> Output: </div><div class="Action"> action <b class="u-textColor_red">=</b> confirmphonenbr </div><i class="MaterialIcons">assignment</i><div class="Chip Chip_green"> phonenbr=* </div> is your phone number, right? <i class="MaterialIcons">category</i><div class="Chip Chip_red"> yes </div><i class="MaterialIcons">category</i><div class="Chip Chip_red"> no </div><i class="MaterialIcons">code</i><div class="Chip Chip_blue"> action=phonenbrconfirmed </div></div></div>
+<div class="OplaAppSample"><p class="OplaAppSample-title">#No</p><div class="Entry"><div class="Entry-label"> Output: </div><div class="Action"> action <b class="u-textColor_red">=</b> confirmphonenbr </div> What is your phone number? <i class="MaterialIcons">code</i><div class="Chip Chip_blue"> action=getphone </div></div></div>
 
-<p>) - rewritten as a reminder</p>
+<p>Similarly, on mail we will write a “No” between confirmmail and getmail</p>
 
-<p>We will write the “No” inverting the actions called phonenbrconfirmed and confirmphonenbr, we will write phonenbrconfirmed in the conditional and confirmphonenbr in the code.</p>
+<div class="OplaAppSample"><p class="OplaAppSample-title">#No</p><div class="Entry"><div class="Entry-label"> Input: </div> No </div><div class="Entry"><div class="Entry-label"> Output: </div><div class="Action"> action <b class="u-textColor_red">=</b> confirmmail </div> What is your e-mail adress ? <i class="MaterialIcons">code</i><div class="Chip Chip_blue"> action=getmail </div></div></div>
 
-<!--#No<br>
-<span style="background-color:lightblue">action = phonenbrconfirmed </span><br>
-What is your phone number? ![image](/docs/assets/images/phonenbr.png)
-<span style="background-color: #FFFF00"> <action=confirmphonenbr> </span>-->
+<p>We are now done parametering scheme two!</p>
 
-<div class="OplaAppSample"><p class="OplaAppSample-title">#No</p><div class="Entry"><div class="Entry-label"> Output: </div><div class="Action"> action <b class="u-textColor_red">=</b> phonenbrconfirmed </div> What is your phone number? <i class="MaterialIcons">assignment</i><div class="Chip Chip_green"> phonenbr=* </div><i class="MaterialIcons">code</i><div class="Chip Chip_blue"> action=confirmphonenbr </div></div></div>
+<h2 id="3-outlook-of-the-exercice-in-the-bot-">3. Outlook of the exercice in the bot :</h2>
 
-<p>likewise, on mail we will write a “No” between mailconfirmed et confirmmail</p>
+<p>There goes a screen capture of the four intents :</p>
 
-<p>(</p>
-
-<!--
-    #Any<br>
-<span style="background-color: lightseagreen">action = confirmmail</span><br>
-![image](/docs/assets/images/mail.png) is your e-mail adress, right?
-<span style="background-color: lightcoral">&lt;action=mailconfirmed&gt;[Oui][Non]</span><br>-->
-
-<div class="OplaAppSample"><p class="OplaAppSample-title">#Any</p><div class="Entry"><div class="Entry-label"> Output: </div><div class="Action"> action <b class="u-textColor_red">=</b> confirmmail </div><i class="MaterialIcons">assignment</i><div class="Chip Chip_green"> mail=* </div> is your mail, right? <i class="MaterialIcons">category</i><div class="Chip Chip_red"> yes </div><i class="MaterialIcons">category</i><div class="Chip Chip_red"> no </div><i class="MaterialIcons">code</i><div class="Chip Chip_blue"> action=mailconfirmed </div></div></div>
-
-<p>) rewritten as a reminder<br /><br /></p>
-
-<!--
-#No<br>
-<span style="background-color: lightcoral">action= mailconfirmed</span><br>
-What is your e-mail adress?
-![image](/docs/assets/images/mail.png)  <span style="background-color: lightseagreen">&lt;action=confirmmail&gt;</span> -->
-
-<div class="OplaAppSample"><p class="OplaAppSample-title">#No</p><div class="Entry"><div class="Entry-label"> Output: </div><div class="Action"> action <b class="u-textColor_red">=</b> mailconfirmed </div> What is your e-mail adress? <i class="MaterialIcons">assignment</i><div class="Chip Chip_green"> mail=* </div><i class="MaterialIcons">code</i><div class="Chip Chip_blue"> action=confirmmail </div></div></div>
-
-<p>We are now done setting up diagram number 2!</p>
+<p><img src="/docs/assets/images/contact-contact-en.png" alt="image" />
+<img src="/docs/assets/images/contact-yes.png" alt="image" />
+<img src="/docs/assets/images/contact-any-en.png" alt="image" />
+<img src="/docs/assets/images/contact-no.png" alt="image" /></p>
 
   </main>
 

@@ -129,26 +129,40 @@
 
 </div>
   <main class="LayoutItem LayoutItem_scrollable">
-    <div style="float:left;width:5%">
+    <h2 id="les-boutons-des-outputs">Les boutons des outputs</h2>
+
+<p>Dans les Outputs (les sorties des intents) se trouve un menu avec des items cliquables qui permettent de paramétrer l’interface : nous allons en expliquer quelques-uns :</p>
+
+<p><img src="/docs/assets/images/output-options.png" alt="image" /></p>
+
+<div style="float:left;width:5%">
 
   <p><i class="MaterialIcons">assignment</i></p>
 </div>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. insert variable assignment :
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. insert output code :
 </code></pre></div></div>
 
-<p>Il s’agit du bouton qui va permettre de stocker une valeur qui sera réutilisée par le bot plus loin dans la conversation</p>
+<p>Ce bouton correspond à un mode de traitement d’une variable, qui va afficher la variable à l’écran.</p>
 
 <div style="float:left;width:5%">
 
   <p><i class="MaterialIcons">code</i></p>
 </div>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>2. Insert code :
+On se sert de insert code à deux fins : 
 </code></pre></div></div>
 
-<p>La syntaxe du code d’action à saisir sera, en écrivant à l’intérieur du cadre qui apparaît lorsqu’on presse le bouton    :</p>
+<ul>
+  <li>premièrement pour écrire un code d’action ; La syntaxe du code d’action à saisir sera, en écrivant à l’intérieur du cadre qui apparaît lorsqu’on presse le bouton    :</li>
+</ul>
 <div class="Chip Chip_blue"> action=name_of_action </div>
 <p>Il s’agit de la ligne de code d’action qui va permettre au bot de suivre le fil d’une conversation. On va mettre l’action dans un premier output d’intent, et la même syntaxe dans la conditionnelle de l’output d’intent suivant, ce qui va permettre de créer un chemin conversationnel.</p>
+<ul>
+  <li>deuxièmement pour capter une valeur tapée par l’utilisateur, avec la syntaxte</li>
+</ul>
+<div class="Chip Chip_blue"> valeur=* </div>
+<p>qui permet de stocker une donnée quelconque dans la variable valeur.</p>
 
 <div style="float:left;width:5%">
 
@@ -157,7 +171,7 @@
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>3. Button :
 </code></pre></div></div>
 
-<p>Permet de créer un bouton qui va être cliquable par l’utilisateur et qui donc va permettre de standadiser les inputs. On peut créer un bouton Oui, Non, ou n’importe quel input souhaité.</p>
+<p>Permet de créer un bouton qui va être cliquable par l’utilisateur et qui donc va permettre de standardiser les inputs. On peut créer un bouton Oui, Non, ou n’importe quel input souhaité.</p>
 
 <div style="float:left;width:5%">
 
