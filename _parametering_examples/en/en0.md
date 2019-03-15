@@ -32,6 +32,4 @@ It is divided into three parts :
 1. The Intents, which are the keywords used by user or computer to establish the conversation. Intents are preceded by a sharp key.
 1. Inputs and Outputs, specific to each Intent, which are the resposes (Output) that the robot gives to each entered data (Input). It's really in Outputs that 80% of the conversation is set.
 
-In the outputs lies a menu with clikable items to set the interface up, we are going to explain some of them :
 
-![image]({{site.images_path | relative_url }}output-options.png)
