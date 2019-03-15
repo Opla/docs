@@ -5,11 +5,7 @@ ref : 7
 permalink: /exemple_parametrages/step_7
 ---
 
-On peut tout à fait, et c'est le cas ici, créer deux schémas de conversation dans le même bot. On va créer la conversation "Contact" parallèlement à la conversation "Pizza".
-
-*À noter : Un intent compte souvent un ou deux inputs pour plusieurs outputs différents.*
-
-
+Nous allons paramétrer un bot qui stocke les informations de deux questions : quel est votre numéro de téléphone? quel est votre e-mail? Tout en permettant d'effectuer des correctifs sur les deux valeurs.
 
 
 {% OplaAppSample title: "Contact" %}
@@ -17,7 +13,7 @@ On peut tout à fait, et c'est le cas ici, créer deux schémas de conversation 
     Contact
   {% endEntry %}
   {% Entry type: "Output" %}  
-    Voulez-vous donner votre numéro de téléphone? {% MaterialIcon icon: "category" %}{% Chip color: "red", label: "oui" %}{% MaterialIcon icon: "category" %}{% Chip color: "red", label: "non" %} {% MaterialIcon icon: "code" %}{% Chip color: "blue", label: "action=getphoneyesno" %}
+    Voulez-vous donner votre numéro de téléphone? {% MaterialIcon icon: "category" %}{% Chip color: "red", label: "oui" %}{% MaterialIcon icon: "category" %}{% Chip color: "red", label: "non" %} {% MaterialIcon icon: "code" %}{% Chip color: "blue", label: "action=saisirtelephoneouinon" %}
   {% endEntry %}
 {% endOplaAppSample %}
 
@@ -28,9 +24,7 @@ On peut tout à fait, et c'est le cas ici, créer deux schémas de conversation 
 
 Cliquer sur le signe plus et sur SAVE;
 
- {% MaterialIcon icon: "assignment" %}
-On va insérer une variable. Il faut écrire la valeur de la variable à l'intérieur du carré qui résulte de la pression sur le bouton insert variable assignment.<br>
-
+ 
 
 
 {% OplaAppSample title: "Oui" %}
@@ -38,13 +32,12 @@ On va insérer une variable. Il faut écrire la valeur de la variable à l'inté
     oui
   {% endEntry %}
   {% Entry type: "Output" %} 
-    {% Action label: "getphoneyesno" %} 
-    Quel est votre numéro de téléphone ? {% MaterialIcon icon: "assignment" %}{% Chip color: "green", label: "phonenbr=*" %}{% MaterialIcon icon: "code" %}{% Chip color: "blue", label: "action=confirmphonenbr" %}
+    {% Action label: "saisirtelephoneouinon" %} 
+    Quel est votre numéro de téléphone ? {% MaterialIcon icon: "code" %}{% Chip color: "blue", label: "action=saisirtelephone" %}
   {% endEntry %}
 {% endOplaAppSample %}
 
 
-![images]({{site.images_path | relative_url }}oui-contact.png)
 
 Cliquer sur le signe plus et sur SAVE.
 
@@ -62,7 +55,22 @@ Puis on clique sur insert block any dans les inputs de #Any :
 
 ![images]({{site.images_path | relative_url }}at-any-in-input.png)
 
-L'intent #Any sert à stocker une valeur quelconque donnée par l'utilisateur dans une variable accessible avec le bouton {% MaterialIcon icon :"assignment" %} ,insert variable assignment. On va presser ce bouton et écrire *phonenbr=* * à l'intérieur du cadre.
+On clique sur le + bleu et sur SAVE ; 
+
+Nous allons nous intéresser au sujet des variables.
+
+Une variable peut être gérée de deux façons différentes : 
+  * soit elle est discrète c'est-à-dire qu'elle ne s'affiche pas dans la fenêtre du playground ou du publish, c'est le cas si on l'écrit dans un bouton code {% MaterialIcon icon: "code" %} , 
+  * soit elle est explicite et s'affiche dans la fenêtre du playground ou du publish, c'est le cas si on l'écrit dans le bouton output code {% MaterialIcon icon: "assignment" %}. 
+
+La mention @any dans l'intent #Any sert à recueillir des informations non contenues dans les autres intents, en l'occurrence une valeur saisie librement par l'utilisateur. Pour capter cette valeur, et l'enregistrer dans une variable de nom "valeur" par exemple, il faut faire la manipulation suivante : cliquer sur code, {% MaterialIcon icon: "code" %} et remplir le cadre résultant avec la déclaration du nom de la variable, le nom "valeur", et les symboles suivants,  =* , qui veulent dire assigner une valeur à la variable valeur, exemple :
+
+{% OplaAppSample title: "" %}
+  {% Entry type: "Output" %} 
+   {% MaterialIcon icon: "code" %}{% Chip color: "blue", label: "valeur=*" %}
+  {% endEntry %}
+{% endOplaAppSample %}
+
 
 Ensuite on paramètre l'output :
 
@@ -72,32 +80,30 @@ Ensuite on paramètre l'output :
     {% Chip color: "orange", label: "@any" %}
   {% endEntry %}
   {% Entry type: "Output" %} 
-    {% Action label: "confirmphonenbr" %} 
-    {% MaterialIcon icon: "assignment" %}{% Chip color: "green", label: "phonenbr=*" %} est bien votre numéro de téléphone? {% MaterialIcon icon: "category" %}{% Chip color: "red", label: "oui" %}{% MaterialIcon icon: "category" %}{% Chip color: "red", label: "non" %}{% MaterialIcon icon: "code" %}{% Chip color: "blue", label: "action=phonenbrconfirmed" %}
+    {% Action label: "saisirtelephone" %} 
+    {% MaterialIcon icon: "code" %}{% Chip color: "blue", label: "telephone=*" %} Votre numéro est bien le {% MaterialIcon icon: "assignment" %}{% Chip color: "green", label: "telephone" %} ?{% MaterialIcon icon: "category" %}{% Chip color: "red", label: "oui" %}{% MaterialIcon icon: "category" %}{% Chip color: "red", label: "non" %}{% MaterialIcon icon: "code" %}{% Chip color: "blue", label: "action=confirmertelephone" %}
   {% endEntry %}
 {% endOplaAppSample %}
 
 
 
-
-![image]({{site.images_path | relative_url }}any-confirmphonenbr.png)
 
 On clique sur SAVE après avoir modifié l'intent,
 
 {% OplaAppSample title: "Oui" %}
   {% Entry type: "Output" %}
-    {% Action label: "phonenbrconfirmed" %}
-    Quel est votre mail ? {% MaterialIcon icon : "assignment" %}{% Chip color: "green", label: "mail=*" %} {%MaterialIcon icon : "code"%}{% Chip color: "blue", label: "action=confirmmail" %} 
+    {% Action label: "confirmertelephone" %}
+    Quel est votre mail ?     {%MaterialIcon icon : "code"%}{% Chip color: "blue", label: "action=saisirmail" %} 
   {% endEntry %}
 {% endOplaAppSample %}
 
-![image]({{site.images_path | relative_url }}oui-phonenbrconfirmed.png)
+
 
 
 {% OplaAppSample title: "Any" %}
   {% Entry type: "Output" %}
-    {% Action label: "confirmmail" %}
-    {% MaterialIcon icon : "assignment" %}{% Chip color: "green", label: "mail=*" %} est bien votre mail? {%MaterialIcon icon : "category"%}{% Chip color: "red", label: "oui" %} {%MaterialIcon icon : "category"%}{% Chip color: "red", label: "non" %} {%MaterialIcon icon : "code"%}{% Chip color: "blue", label: "action=mailconfirmed" %} 
+    {% Action label: "saisirmail" %}
+    {% MaterialIcon icon : "code" %}{% Chip color: "blue", label: "mail=*" %} votre mail est bien {% MaterialIcon icon : "assignment" %}{% Chip color: "green", label: "mail" %}? {%MaterialIcon icon : "category"%}{% Chip color: "red", label: "oui" %} {%MaterialIcon icon : "category"%}{% Chip color: "red", label: "non" %} {%MaterialIcon icon : "code"%}{% Chip color: "blue", label: "action=confirmermail" %} 
   {% endEntry %}
 {% endOplaAppSample %}
 
@@ -105,7 +111,7 @@ On clique sur SAVE après avoir modifié l'intent,
 
 {% OplaAppSample title: "Oui" %}
   {% Entry type: "Output" %}
-    {% Action label: "mailconfirmed" %}
+    {% Action label: "confirmermail" %}
     Ok, votre contact est enregistré.
   {% endEntry %}
 {% endOplaAppSample %}
@@ -118,32 +124,23 @@ On va s'intéresser à la première branche "Non", qui permet de sauter l'étape
 
 {% OplaAppSample title: "Non" %}
   {% Entry type: "Output" %}
-    {% Action label: "getphoneyesno" %}
-    Quel est votre mail? {% MaterialIcon icon : "assignment" %}{% Chip color: "green", label: "mail=*" %}  {%MaterialIcon icon : "code"%}{% Chip color: "blue", label: "action=confirmmail2" %} 
+    {% Action label: "saisirtelephoneouinon" %}
+    Quel est votre mail? {%MaterialIcon icon : "code"%}{% Chip color: "blue", label: "action=saisirmail" %} 
   {% endEntry %}
 {% endOplaAppSample %}
 
 
 
-
-On est obligé de réécrire l'étape pour reprendre le mail. On ajoute un indice, 2, pour faire la différence avec la première branche.
-
-
 {% OplaAppSample title: "Any" %}
   {% Entry type: "Output" %}
-    {% Action label: "confirmmail2" %}
-    {% MaterialIcon icon : "assignment" %}{% Chip color: "green", label: "mail=*" %} est bien votre mail? {%MaterialIcon icon : "category"%}{% Chip color: "red", label: "oui" %} {%MaterialIcon icon : "category"%}{% Chip color: "red", label: "non" %} {%MaterialIcon icon : "code"%}{% Chip color: "blue", label: "action=mailconfirmed2" %} 
+    {% Action label: "saisirmail" %}
+    {% MaterialIcon icon : "code" %}{% Chip color: "blue", label: "mail=*" %} Votre mail est bien {% MaterialIcon icon : "assignment" %}{% Chip color: "green", label: "mail" %} ? {%MaterialIcon icon : "category"%}{% Chip color: "red", label: "oui" %} {%MaterialIcon icon : "category"%}{% Chip color: "red", label: "non" %} {%MaterialIcon icon : "code"%}{% Chip color: "blue", label: "action=confirmermail" %} 
   {% endEntry %}
 {% endOplaAppSample %}
 
 <br>
 
-{% OplaAppSample title: "Oui" %}
-  {% Entry type: "Output" %}
-    {% Action label: "mailconfirmed2" %}
-Ok, votre contact est enregistré.
-  {% endEntry %}
-{% endOplaAppSample %}
+
 
 
 
@@ -151,55 +148,41 @@ Ok, votre contact est enregistré.
 
 On va enfin ajouter les deux boucles "Non" : on remarque que la flèche les fait remonter d'une étape : on va donc prendre comme conditionnelle la ligne de code précédente, ce qui va faire reboucler le chatbot sur la question.
 
-(
-<div class="OplaAppSample_loopWraper">
 
-<div class="OplaAppSample">
-<span class="OplaAppSample-title">#Oui</span>
-<b>Input</b> : Oui
-<hr/>
-<b>Output</b> : ... action <b class="u-textColor_red">=</b> confirmphonenbr<br>
-</div>
 
-<div class="OplaAppSample">
-<span class="OplaAppSample-title">#Any</span>
-<b>Output</b> : ... action <b class="u-textColor_red">=</b> confirmphonenbr<br><span class="chip chip_green">phonenbr=*</span> est bien votre numéro de téléphone?
-<span class="chip chip_blue">action=phonenbrconfirmed</span><span class="chip chip_red">oui</span><span class="chip chip_red">non</span>
-</div>
+ On va écrire le "Non" en reprenant et inversant les actions saisirtelephone et confirmertelephone, on va mettre confirmertelephone dans la conditionnelle et saisirtelephone dans le code.
 
-</div>
- ) - *réécrit pour rappel*
+{% OplaAppSample title: "Non" %}
+  {% Entry type: "Output" %}
+    {% Action label: "confirmertelephone" %}
+    Quel est votre numéro de téléphone?  {%MaterialIcon icon : "code"%}{% Chip color: "blue", label: "action=saisirtelephone" %} 
+  {% endEntry %}
+{% endOplaAppSample %}
 
- On va écrire le "Non" en reprenant et inversant les actions phonenbrconfirmed et confirmphonenbr, on va mettre phonenbrconfirmed dans la conditionnelle et confirmphonenbr dans le code.
 
-<div class="OplaAppSample">
-<span class="OplaAppSample-title">#Non</span>
-<b>Output</b> : action <b class="u-textColor_red">=</b> phonenbrconfirmed<br>
-Quel est votre numéro de téléphone? <span class="chip chip_green">phonenbr=*</span><span class="chip chip_blue">action=confirmphonenbr</span>
-</div>
 
-De même, sur mail on va écrire un "Non" entre mailconfirmed et confirmmail
+De même, sur mail on va écrire un "Non" entre confirmermail et saisirmail
 
-(
-<div class="OplaAppSample_loopWraper">
-
-<div class="OplaAppSample">
-<span class="OplaAppSample-title">#Any</span>
-<b>Output</b> : action <b class="u-textColor_red">=</b> confirmmail<br><span class="chip chip_green">mail=*</span> est bien votre mail?
-<span class="chip chip_blue">action=mailconfirmed</span><span class="chip chip_red">oui</span><span class="chip chip_red">non</span>
-</div>
-
-</div>
-)
 
 {% OplaAppSample title: "Non" %}
   {% Entry type : "Input" %}
     non
   {% endEntry %}
   {% Entry type: "Output" %}
-    {% Action label: "mailconfirmed" %}
-    Quel est votre mail ? {% Chip color: "green", label: "mail=*" %} est bien votre mail ? {% Chip color: "blue", label: "action=confirmmail" %} 
+    {% Action label: "confirmermail" %}
+    Quel est votre mail ? {%MaterialIcon icon : "code"%}{% Chip color: "blue", label: "action=saisirmail" %} 
   {% endEntry %}
 {% endOplaAppSample %}
 
 Nous avons dorénavant fini de paramétrer le schéma 2!
+
+
+## 3. Vue générale de l'exercice dans le bot :
+
+Voici une capture d'écran des quatre intents :
+
+
+![image]({{site.images_path | relative_url }}contact-contact.png)
+![image]({{site.images_path | relative_url }}contact-oui.png)
+![image]({{site.images_path | relative_url }}contact-any.png)
+![image]({{site.images_path | relative_url }}contact-non-fr.png)

@@ -28,6 +28,3 @@ Il se divise en trois parties :
 1. les Inputs et les Outputs, propres à chaque Intent, qui sont les réponses .(output) que donne le robot à chaque entrée (Input). C'est véritablement dans les Outputs que va se passer 80% de du paramétrage de la conversation.
 
 
-Dans les Outputs se trouve un menu avec des items cliquables qui permettent de paramétrer l'interface : nous allons en expliquer quelques-uns :
-
-![image]({{site.images_path | relative_url }}output-options.png)

@@ -35,33 +35,33 @@ In the intent one must write the following
     Hello
   {% endEntry %}
   {% Entry type: "Output" %}
-    Would you like a sweet pizza? {%MaterialIcon icon : "category" %} {% Chip color: "red", label: "Yes" %} {%MaterialIcon icon : "category" %} {% Chip color: "red", label: "No" %} {% MaterialIcon icon :"code" %}{% Chip color: "blue", label: "action=sweetyesno" %} 
+    What kind of vehicle would you like to rent ? {%MaterialIcon icon : "category" %} {% Chip color: "red", label: "a car" %} {%MaterialIcon icon : "category" %} {% Chip color: "red", label: "a commercial vehicle" %} {% MaterialIcon icon :"code" %}{% Chip color: "blue", label: "action=getvehicletype" %} 
   {% endEntry %}
 {% endOplaAppSample %}
 
+which on screen shows 
 
+![image]({{site.images_path | relative_url }}rent-a-car-hello.png)
 
-which on screen shows :
+Click the blue plus end of line of the output to save the parametering
 
-
-![image]({{site.images_path | relative_url }}would-you-like-a-sweet-pizza-total.png)
-
-
-One must click on the plus end of line and on SAVE top of page to save the changes.
-
-![image]({{site.images_path | relative_url }}would-you-like-a-sweet-pizza-saved.png)
+Do not forget to save the intent clicking on SAVE to the right of the intent's name
 
 
 
 ![image]({{site.images_path | relative_url }}hello-save.png)
 
+the action=getvehicletype text must be copied in the conditionnal following in the intent coming after Hello
+
+as it happens, two intents are concerned : 
+
+  * intent #A Car
+
+  * intent #A commercial vehicle
 
 
 
-
-
-
-To add the Yes intent (#Yes), click on the grey/blue plus sign on the right in intents column
+To add the "a car" intent (#A car), click on the grey/blue plus sign on the right in intents column
 
 
 ![image]({{site.images_path | relative_url }}add--an-intent-hello.png)
@@ -72,25 +72,21 @@ To modify the name of the intent, one must click the pencil on the right of the 
 
 Then type in the new name
 
-![image]({{site.images_path | relative_url }}rename-intent-yes.png)
+![image]({{site.images_path | relative_url }}rename-intent-a-car.png)
 
-Then enter Yes in the line of inputs and delete the default outputs present clicking on the minus of the line and SAVE on top of page.
-
-
-
-![image]({{site.images_path | relative_url }}suppress-inputs-and-outputs.png)
+Then enter A car in the line of inputs and delete the default outputs present clicking on the minus of the line and SAVE on top of page.
 
 
-Then we will enter the text of the Yes intent's output :<br>
+Then we will enter the text of the A car intent's output :<br>
 
 
-{% OplaAppSample title: "Yes" %}
+{% OplaAppSample title: "A car" %}
   {% Entry type : "Input" %}
-    yes
+    A car
   {% endEntry %}
   {% Entry type: "Output" %}
-  {% Action label : "sweetyesno" %}
-    Would you like apples on it? {%MaterialIcon icon : "category" %} {% Chip color: "red", label: "Yes" %} {%MaterialIcon icon : "category" %} {% Chip color: "red", label: "No" %} {%MaterialIcon icon : "code" %}{% Chip color: "blue", label: "action=applesyesno" %} 
+  {% Action label : "getvehicletype" %}
+   Must it be longer than 4m? {%MaterialIcon icon : "category" %} {% Chip color: "red", label: "Yes" %} {%MaterialIcon icon : "category" %} {% Chip color: "red", label: "No" %} {%MaterialIcon icon : "code" %}{% Chip color: "blue", label: "action=lengthsup4myesno" %} 
   {% endEntry %}
 {% endOplaAppSample %}
 
@@ -98,21 +94,15 @@ Then we will enter the text of the Yes intent's output :<br>
 
 
 
-action=sweetyesno must be entered clicking on the three pointed star called conditional or insert condition
+action=getvehicletype must be entered clicking on the three pointed star called conditional or insert condition
 
 ![image]({{site.images_path | relative_url }}insert-condition.png)
 
-![image]({{site.images_path | relative_url }}action-eg-sweetyesno.png)
-![image]({{site.images_path | relative_url }}save-applesyesno.png)
-
 Never forget to click on the plus sign end of line and on SAVE on top each time an intent is modified.
 
-![image]({{site.images_path | relative_url }}yes-save.png)
+And for the second intent, which is at the end of the chain 
 
-
-Add the second output, ending the all-yes side of the diagram.
-
- 
+We will create a #yes intent, with as input yes and outputs multiple possibilities, but which for now will contain : 
 
 
 {% OplaAppSample title: "Yes" %}
@@ -120,24 +110,15 @@ Add the second output, ending the all-yes side of the diagram.
     yes
   {% endEntry %}
   {% Entry type: "Output" %}
-  {% Action label : "applesyesno" %}
-    There goes an apple-chocolate pizza!
+  {% Action label : "lengthsup4myesno" %}
+    You would like to rent an estate car
   {% endEntry %}
 {% endOplaAppSample %}
 
 
 
 
-![image]({{site.images_path | relative_url }}yes-applechocolatepizza.png)
 
 
-After having clicked SAVE, we can test out the conversation in the playground to see if the dialogue unfolds correctly.
 
-The conversation should look something like this :
-
-![image]({{site.images_path | relative_url }}playground-sweet-pizza.png)
-
-![image]({{site.images_path | relative_url }}playground-apple-chocolate-pizza.png)
-
-
-Congratulations, you have written your first branch of conversation! Now we will add the intent No to complete the diagram.
+Congratulations, you have written your first branch of conversation! Now we will add the intent No which leads to "You would like to rent a city car"

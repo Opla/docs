@@ -15,14 +15,14 @@ Dans cette documentation seront indiqués les boutons sur lesquels il faut appuy
 
 {% OplaAppSample title: "Bonjour" %}
   {% Entry type : "Input" %}
-    Bonjour <br> bjr <br>
+    Bonjour 
   {% endEntry %}
   {% Entry type: "Output" %}  
-    Voulez-vous une pizza sucrée? {% MaterialIcon icon: "category" %}{% Chip color: "red", label: "Oui" %}{% MaterialIcon icon: "category" %}{% Chip color: "red", label: "Non" %}{% MaterialIcon icon: "code" %}{% Chip color: "blue", label: "action=sweetyesno" %}
+    Ceci est un exemple {% MaterialIcon icon: "category" %}{% Chip color: "red", label: "Oui" %}{% MaterialIcon icon: "category" %}{% Chip color: "red", label: "Non" %}{% MaterialIcon icon: "code" %}{% Chip color: "blue", label: "action=exemple" %}
   {% endEntry %}
 {% endOplaAppSample %}
 
 
 Donne à l'écran :
 
-![image]({{site.images_path | relative_url }}voulez-vous-une-pizza-sucree-total.png)
+![image]({{site.images_path | relative_url }}ceci-est-un-exemple.png)
