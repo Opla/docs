@@ -23,6 +23,7 @@
 
     <ul class="NavigationSidebar-list">
       {% assign pageUrlWithoutStep = page.url | split: "step_" %}
+      {% assign pageUrWithSiteUrl = site.baseurl | append: page.url %}
       {% for item in include.nav[page.lang] %}
       <li class="NavigationSidebar-listItem">
         <a class="NavigationSidebar-link{% if item.url contains pageUrlWithoutStep[0] %} NavigationSidebar-link_isActive{% endif %}"
@@ -30,6 +31,19 @@
           {{item.title}}
         </a>
       </li>
+      {% if page.url contains 'parametering_examples' or page.url contains 'exemple_parametrages' %}
+        <ul class="NavigationSidebar-subList">
+          {% for entry in item.parameteringExamples %}
+          <li class="NavigationSidebar-subListItem">
+            <a class="NavigationSidebar-subLink{% if entry.url == pageUrWithSiteUrl %} NavigationSidebar-subLink_isActive{% endif %}"
+              href="{{ entry.url }}">
+              {{ entry.title }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+
       {% endfor %}
     </ul>
     {% if page.url contains 'parametering_examples' or page.url contains 'exemple_parametrages' %}

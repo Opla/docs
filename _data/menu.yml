@@ -11,6 +11,21 @@ fr:
     url: /docs/glossaire
   - title: Exemples de paramétrages
     url: /docs/exemple_parametrages/step_0
+    parameteringExamples:
+      - title: Étape 1
+        url: /docs/exemple_parametrages/step_1
+      - title: Étape 2
+        url: /docs/exemple_parametrages/step_2
+      - title: Étape 3
+        url: /docs/exemple_parametrages/step_3
+      - title: Étape 4
+        url: /docs/exemple_parametrages/step_4
+      - title: Étape 5
+        url: /docs/exemple_parametrages/step_5
+      - title: Étape 6
+        url: /docs/exemple_parametrages/step_6
+      - title: Étape 7
+        url: /docs/exemple_parametrages/step_7
 en:
   - title: Introduction
     url: /docs/index
@@ -24,3 +39,20 @@ en:
     url: /docs/glossary
   - title: Parametering examples
     url: /docs/parametering_examples/step_0
+    parameteringExamples:
+      - title: Step 1
+        url: /docs/parametering_examples/step_1
+      - title: Step 2
+        url: /docs/parametering_examples/step_2
+      - title: Step 3
+        url: /docs/parametering_examples/step_3
+      - title: Step 4
+        url: /docs/parametering_examples/step_4
+      - title: Step 5
+        url: /docs/parametering_examples/step_5
+      - title: Step 6
+        url: /docs/parametering_examples/step_6
+      - title: Step 7
+        url: /docs/parametering_examples/step_7
+
+
