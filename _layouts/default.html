@@ -1,15 +1,15 @@
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>{{ page.title }}</title>
 
-    {% assign faviconUrl = 'favicon.png' | prepend: site.images_path | relative_url %}
-    <link href="{{faviconUrl}}" rel="shortcut icon" />
-    <link rel="stylesheet"
-      href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
-    <link rel="stylesheet" href="{{ 'assets/css/styles.css' | relative_url }}">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{ page.title }}</title>
+
+  {% assign faviconUrl = 'favicon.png' | prepend: site.images_path | relative_url %}
+  <link href="{{faviconUrl}}" rel="shortcut icon" />
+  <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+  <link rel="stylesheet" href="{{ 'assets/css/styles.css' | relative_url }}">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <body class="Layout Layout_topBarFixedAndSidebarLeftFixed">
   {% include header.html %}
@@ -18,7 +18,7 @@
     {{ content }}
   </main>
 
-  <script  src="{{ '/assets/js/main.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 </body>
 
 </html>
