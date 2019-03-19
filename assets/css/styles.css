@@ -625,14 +625,17 @@ main {
       transition: cubic-bezier(0, 0, 0.2, 1) 0.25s;
       box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); } }
 
-.NavigationSidebar-list {
+.NavigationSidebar-list,
+.NavigationSidebar-subList {
   list-style-type: none;
   padding: 0 0 0 10px; }
 
-.NavigationSidebar-listItem {
+.NavigationSidebar-listItem,
+.NavigationSidebar-subListItem {
   margin: 0; }
 
-.NavigationSidebar-link {
+.NavigationSidebar-link,
+.NavigationSidebar-subLink {
   text-decoration: none;
   color: #A9B4BD;
   font-size: 18px;
@@ -642,26 +645,46 @@ main {
   padding: 10px;
   cursor: pointer;
   transition: cubic-bezier(0, 0, 0.2, 1) 0.25s; }
-  .NavigationSidebar-link:before {
+  .NavigationSidebar-link:before,
+  .NavigationSidebar-subLink:before {
     transition: cubic-bezier(0, 0, 0.2, 1) 0.25s;
     font-family: "oplaicons";
     content: "\ea3c";
     position: absolute;
     left: -20px;
     opacity: 0; }
-  .NavigationSidebar-link:hover {
+  .NavigationSidebar-link:hover,
+  .NavigationSidebar-subLink:hover {
     text-decoration: none;
     transform: translateX(20px); }
-    .NavigationSidebar-link:hover:before {
+    .NavigationSidebar-link:hover:before,
+    .NavigationSidebar-subLink:hover:before {
       opacity: 1; }
 
-.NavigationSidebar-link_isActive {
+.NavigationSidebar-subLink {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 20px;
+  padding: 5px; }
+  .NavigationSidebar-subLink:before {
+    content: none; }
+  .NavigationSidebar-subLink:hover {
+    text-decoration: none;
+    transform: translateX(15px); }
+
+.NavigationSidebar-link_isActive,
+.NavigationSidebar-subLink_isActive {
   color: #4f81e7;
   transform: translateX(20px); }
-  .NavigationSidebar-link_isActive:before {
+  .NavigationSidebar-link_isActive:before,
+  .NavigationSidebar-subLink_isActive:before {
     opacity: 1; }
-  .NavigationSidebar-link_isActive:hover {
+  .NavigationSidebar-link_isActive:hover,
+  .NavigationSidebar-subLink_isActive:hover {
     opacity: 0.7; }
+
+.NavigationSidebar-subLink_isActive {
+  transform: translateX(10px); }
 
 @media screen and (max-width: 1020px) {
   .NavigationSidebar-scrim {
