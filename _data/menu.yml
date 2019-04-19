@@ -12,20 +12,22 @@ fr:
   - title: Exemples de paramétrages
     url: /docs/exemple_parametrages/step_0
     parameteringExamples:
-      - title: Étape 1
+      - title: Les boutons des outputs
         url: /docs/exemple_parametrages/step_1
-      - title: Étape 2
+      - title: Conventions de documentation
         url: /docs/exemple_parametrages/step_2
-      - title: Étape 3
+      - title: Schéma 1 location de voiture 1/3
         url: /docs/exemple_parametrages/step_3
-      - title: Étape 4
+      - title: Location de voiture 2/3
         url: /docs/exemple_parametrages/step_4
-      - title: Étape 5
+      - title: Location de voiture 3/3
         url: /docs/exemple_parametrages/step_5
-      - title: Étape 6
+      - title: Schéma 2 Contact 1/2
         url: /docs/exemple_parametrages/step_6
-      - title: Étape 7
+      - title: Contact 2/2
         url: /docs/exemple_parametrages/step_7
+      - title: Stocker et restituer une valeur
+        url: /docs/exemple_parametrages/step_8
 en:
   - title: Introduction
     url: /docs/index
@@ -40,19 +42,21 @@ en:
   - title: Parametering examples
     url: /docs/parametering_examples/step_0
     parameteringExamples:
-      - title: Step 1
+      - title: Output buttons
         url: /docs/parametering_examples/step_1
-      - title: Step 2
+      - title: Documentation conventions
         url: /docs/parametering_examples/step_2
-      - title: Step 3
+      - title: Scheme 1 Car Rental 1/3
         url: /docs/parametering_examples/step_3
-      - title: Step 4
+      - title: Car Rental 2/3
         url: /docs/parametering_examples/step_4
-      - title: Step 5
+      - title: Car Rental 3/3
         url: /docs/parametering_examples/step_5
-      - title: Step 6
+      - title: Scheme 2 Contact 1/2
         url: /docs/parametering_examples/step_6
-      - title: Step 7
+      - title: Contact 2/2
         url: /docs/parametering_examples/step_7
+      - title: How to stock and restitute a value
+        url: /docs/parametering_examples/step_8
 
 
