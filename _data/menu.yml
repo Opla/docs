@@ -28,6 +28,10 @@ fr:
         url: /docs/exemple_parametrages/step_7
       - title: Stocker et restituer une valeur
         url: /docs/exemple_parametrages/step_8
+      - title: Importer et exporter des données JSON
+        url: /docs/exemple_parametrages/step_9
+      - title: Exemple pour intégrer la gestion d'emails par les entities
+        url: /docs/exemple_parametrages/step_10
 en:
   - title: Introduction
     url: /docs/index
@@ -58,5 +62,8 @@ en:
         url: /docs/parametering_examples/step_7
       - title: How to stock and restitute a value
         url: /docs/parametering_examples/step_8
-
+      - title: Import and export JSON data
+        url: /docs/parametering_examples/step_9
+      - title: Case study for handling e-mail entity
+        url: /docs/parametering_examples/step_10
 
