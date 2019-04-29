@@ -30,8 +30,12 @@ fr:
         url: /docs/exemple_parametrages/step_8
       - title: Importer et exporter des données JSON
         url: /docs/exemple_parametrages/step_9
-      - title: Exemple pour intégrer la gestion d'emails par les entities
+      - title: Présentation des entities
         url: /docs/exemple_parametrages/step_10
+      - title: Exemple pour intégrer la gestion d'emails par les entities
+        url: /docs/exemple_parametrages/step_11
+      - title: Insérer un lien, des images, un mailto
+        url: /docs/exemple_parametrages/step_12
 en:
   - title: Introduction
     url: /docs/index
@@ -64,6 +68,10 @@ en:
         url: /docs/parametering_examples/step_8
       - title: Import and export JSON data
         url: /docs/parametering_examples/step_9
-      - title: Case study for handling e-mail entity
+      - title: Presentation of entities
         url: /docs/parametering_examples/step_10
+      - title: Case study for handling e-mail entity
+        url: /docs/parametering_examples/step_11
+      - title: How to insert links, images, mailto
+        url: /docs/parametering_examples/step_12
 
