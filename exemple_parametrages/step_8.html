@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Fr6</title>
+  <title>Fr8</title>
 
   
   <link href="/docs/assets/images/favicon.png" rel="shortcut icon" />
@@ -40,11 +40,11 @@
       <div class="Dropdown-content">
         
         
-        <a href="/docs/parametering_examples/step_6" class="Dropdown-item">en</a>
+        <a href="/docs/parametering_examples/step_8" class="Dropdown-item">en</a>
         
         
         
-        <a href="/docs/exemple_parametrages/step_6" class="Dropdown-item">fr</a>
+        <a href="/docs/exemple_parametrages/step_8" class="Dropdown-item">fr</a>
         
         
       </div>
@@ -164,7 +164,7 @@
           </li>
           
           <li class="NavigationSidebar-subListItem">
-            <a class="NavigationSidebar-subLink NavigationSidebar-subLink_isActive"
+            <a class="NavigationSidebar-subLink"
               href="/docs/exemple_parametrages/step_6">
               Schéma 2 Contact 1/2
             </a>
@@ -178,7 +178,7 @@
           </li>
           
           <li class="NavigationSidebar-subListItem">
-            <a class="NavigationSidebar-subLink"
+            <a class="NavigationSidebar-subLink NavigationSidebar-subLink_isActive"
               href="/docs/exemple_parametrages/step_8">
               Stocker et restituer une valeur
             </a>
@@ -225,18 +225,18 @@
     <ul class="Pagination">
       <li class="Pagination-item Pagination-item_link Pagination-item_previous">
         
-        <a href="step_5" disabled=>
+        <a href="step_7" disabled=>
           <span class="icon icon-caret-left"></span>
           Previous
         </a>
         
       </li>
       <li class="Pagination-item Pagination-item_state">
-        7/13
+        9/13
       </li>
       <li class="Pagination-item Pagination-item_link Pagination-item_next">
 
-         <a href="step_7">
+         <a href="step_9">
 
           Next
           <span class="icon icon-caret-right" />
@@ -252,11 +252,25 @@
 
 </div>
   <main class="LayoutItem LayoutItem_scrollable">
-    <h2 id="schéma-2--contact">Schéma 2 : Contact</h2>
+    <h2 id="stocker-et-restituer-une-valeur-plus-loin-dans-le-process">Stocker et restituer une valeur plus loin dans le process</h2>
 
-<p>Ce schéma met en pratique la saisie et l’exploitation de variables données par l’utilisateur. Aux questions “Quel est votre numéro de téléphone?” et “Quel est votre mail”? On va associer une variable qui va traiter l’info pour permettre au chatbot de la restituer aux étapes ultérieures.</p>
+<p>Pour insérer un texte spécifique au lieu du bouton, on peut créer une variable qui va stocker une valeur fixée, puis restituer cette valeur une ou plusieurs étapes plus loin.</p>
 
-<p><img src="/docs/assets/images/schema-contact-fr.png" alt="image" /></p>
+<p>Exemple :</p>
+
+<p><img src="/docs/assets/images/client-projet.png" alt="image" /></p>
+
+<p>donne à l’écran :</p>
+
+<p><img src="/docs/assets/images/client-projet-bonjour.png" alt="image" /></p>
+
+<p><img src="/docs/assets/images/client-projet-oui.png" alt="image" /></p>
+
+<p><img src="/docs/assets/images/client-projet-non.png" alt="image" /></p>
+
+<p><img src="/docs/assets/images/client-projet-etape-suivante.png" alt="image" /></p>
+
+<p>On voit qu’on emploie bien  <i class="MaterialIcons">code</i> pour stocker la valeur du texte que l’on veut afficher à la fin avec le bouton  <i class="MaterialIcons">assignment</i></p>
 
   </main>
 

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Fr6</title>
+  <title>Fr10</title>
 
   
   <link href="/docs/assets/images/favicon.png" rel="shortcut icon" />
@@ -40,11 +40,11 @@
       <div class="Dropdown-content">
         
         
-        <a href="/docs/parametering_examples/step_6" class="Dropdown-item">en</a>
+        <a href="/docs/parametering_examples/step_10" class="Dropdown-item">en</a>
         
         
         
-        <a href="/docs/exemple_parametrages/step_6" class="Dropdown-item">fr</a>
+        <a href="/docs/exemple_parametrages/step_10" class="Dropdown-item">fr</a>
         
         
       </div>
@@ -164,7 +164,7 @@
           </li>
           
           <li class="NavigationSidebar-subListItem">
-            <a class="NavigationSidebar-subLink NavigationSidebar-subLink_isActive"
+            <a class="NavigationSidebar-subLink"
               href="/docs/exemple_parametrages/step_6">
               Schéma 2 Contact 1/2
             </a>
@@ -192,7 +192,7 @@
           </li>
           
           <li class="NavigationSidebar-subListItem">
-            <a class="NavigationSidebar-subLink"
+            <a class="NavigationSidebar-subLink NavigationSidebar-subLink_isActive"
               href="/docs/exemple_parametrages/step_10">
               Présentation des entities
             </a>
@@ -225,18 +225,18 @@
     <ul class="Pagination">
       <li class="Pagination-item Pagination-item_link Pagination-item_previous">
         
-        <a href="step_5" disabled=>
+        <a href="step_9" disabled=>
           <span class="icon icon-caret-left"></span>
           Previous
         </a>
         
       </li>
       <li class="Pagination-item Pagination-item_state">
-        7/13
+        11/13
       </li>
       <li class="Pagination-item Pagination-item_link Pagination-item_next">
 
-         <a href="step_7">
+         <a href="step_11">
 
           Next
           <span class="icon icon-caret-right" />
@@ -252,11 +252,45 @@
 
 </div>
   <main class="LayoutItem LayoutItem_scrollable">
-    <h2 id="schéma-2--contact">Schéma 2 : Contact</h2>
+    <h1 id="lister-les-entités-">Lister les entités :</h1>
 
-<p>Ce schéma met en pratique la saisie et l’exploitation de variables données par l’utilisateur. Aux questions “Quel est votre numéro de téléphone?” et “Quel est votre mail”? On va associer une variable qui va traiter l’info pour permettre au chatbot de la restituer aux étapes ultérieures.</p>
+<p>Les entités sont des programmes qui reconnaissent les données au format texte.</p>
 
-<p><img src="/docs/assets/images/schema-contact-fr.png" alt="image" /></p>
+<p>Il existe plusieurs types d’entités, nous en verrons quatre ici, répartis en deux types : les entités du builder, 
+et les entités globales.</p>
+
+<h2 id="les-entités-du-builder">Les entités du builder</h2>
+
+<p>Elles sont au nombre de 3 : email, url et quantity.</p>
+
+<h3 id="email">Email</h3>
+
+<p><img src="/docs/assets/images/e-mail-entities-builder.png" alt="image" /></p>
+
+<h3 id="url">URL</h3>
+
+<p><img src="/docs/assets/images/URL-entities-builder.png" alt="image" /></p>
+
+<h3 id="quantity">Quantity</h3>
+
+<p><img src="/docs/assets/images/Quantity-entities-builder.png" alt="image" /></p>
+
+<h2 id="les-entités-globales">Les entités globales</h2>
+
+<p>Les entités globales doivent être rédigées dans deux panneaux différents : dans le panneau entities @global pour être gérées, 
+et dans le builder pour être exploitées.</p>
+
+<h3 id="dans-entities-global">Dans Entities @global</h3>
+
+<p>On va insérer une liste d’animaux : chien, chat, zèbre, dodo. 
+Libre à vous de la compléter en ne les intercalant qu’avec une virgule et pas d’espace.
+(insérer chien,chat,zèbre,dodo dans la colonne Values)</p>
+
+<p><img src="/docs/assets/images/animal-entity-global.png" alt="image" /></p>
+
+<p><img src="/docs/assets/images/animal-entity-builder.png" alt="image" /></p>
+
+<p>Si l’on veut gérer d’autres noms d’animaux, il faut les ajouter dans la liste en cliquant sur le bouton crayon dans le panneau entities global.</p>
 
   </main>
 
