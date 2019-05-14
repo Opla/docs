@@ -5,12 +5,12 @@ ref : 2
 permalink: /exemple_parametrages/step_2
 ---
 
-#Conventions de documentation
+# Conventions de documentation
 
 Dans cette documentation seront indiqués les boutons sur lesquels il faut appuyer juste avant la boîte dans laquelle il faudra écrire le code.
 
 
-#### Exemple :
+### Exemple :
 
 
 {% OplaAppSample title: "Bonjour" %}

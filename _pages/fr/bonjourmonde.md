@@ -29,4 +29,4 @@ Ecrire "Hello" dans le playground et appuyer sur Entrée.
 
 ![image]({{site.images_path | relative_url }}playground-hello-world.png)
 
-Et voilà, nous avons créé notre premier bot, qui retourne un simple "Hello World"! C'est un bot tout simple, qui va nous permettre de mieux comprendre comment paramétrer deux autres schémas de conversation, qui sont les schémas "Pizza", qui va montrer comment se gèrent des entrées oui/non et "Contact", qui va nous permettre de gérer des entrées plus complexes telles que la saisie d'une adresse e-mail ou d'un numéro de téléphone. Nous verrons ceci dans les exemples de paramétrage.
+Et voilà, nous avons créé notre premier bot, qui retourne un simple "Hello World"!
