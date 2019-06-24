@@ -1,12 +1,8 @@
 fr:
   - title: Introduction
-    url: /docs/index
-  - title: Pour commencer
-    url: /docs/start
-  - title: Votre premier chatbot
-    url: /docs/first-chatbot
-  - title: Bonjour monde
-    url: /docs/bonjourmonde
+    url: /docs/indexfr
+  - title: Hello World
+    url: /docs/HelloWorldfr
   - title: Glossaire
     url: /docs/glossaire
   - title: Exemples de paramétrages
@@ -36,13 +32,12 @@ fr:
         url: /docs/exemple_parametrages/step_11
       - title: Insérer un lien, des images, un mailto
         url: /docs/exemple_parametrages/step_12
+      - title: Un formulaire de contact simplifié qui envoie des emails
+        url: /docs/exemple_parametrages/step_13
+      
 en:
   - title: Introduction
     url: /docs/index
-  - title: Getting started
-    url: /docs/start
-  - title: Your first chatbot
-    url: /docs/first-chatbot
   - title: Hello world
     url: /docs/helloworld
   - title: Glossary
@@ -72,6 +67,6 @@ en:
         url: /docs/parametering_examples/step_10
       - title: Case study for handling e-mail entity
         url: /docs/parametering_examples/step_11
-      - title: How to insert links, images, mailto
-        url: /docs/parametering_examples/step_12
+      - title: A simple email sending contact form
+        url: /docs/parametering_examples/step_13
 
