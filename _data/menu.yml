@@ -1,10 +1,10 @@
 fr:
   - title: Introduction
     url: /docs/indexfr
-  - title: Hello World
-    url: /docs/HelloWorldfr
   - title: Glossaire
     url: /docs/glossaire
+  - title: Hello World
+    url: /docs/HelloWorldfr
   - title: Exemples de paramétrages
     url: /docs/exemple_parametrages/step_0
     parameteringExamples:
@@ -38,10 +38,10 @@ fr:
 en:
   - title: Introduction
     url: /docs/index
-  - title: Hello world
-    url: /docs/helloworld
   - title: Glossary
     url: /docs/glossary
+  - title: Hello world
+    url: /docs/helloworld
   - title: Parametering examples
     url: /docs/parametering_examples/step_0
     parameteringExamples:
