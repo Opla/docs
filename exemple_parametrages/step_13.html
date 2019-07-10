@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Fr11</title>
+  <title>Fr13</title>
 
   
   <link href="/docs/assets/images/favicon.png" rel="shortcut icon" />
@@ -40,11 +40,11 @@
       <div class="Dropdown-content">
         
         
-        <a href="/docs/parametering_examples/step_11" class="Dropdown-item">en</a>
+        <a href="/docs/parametering_examples/step_13" class="Dropdown-item">en</a>
         
         
         
-        <a href="/docs/exemple_parametrages/step_11" class="Dropdown-item">fr</a>
+        <a href="/docs/exemple_parametrages/step_13" class="Dropdown-item">fr</a>
         
         
       </div>
@@ -173,7 +173,7 @@
           </li>
           
           <li class="NavigationSidebar-subListItem">
-            <a class="NavigationSidebar-subLink NavigationSidebar-subLink_isActive"
+            <a class="NavigationSidebar-subLink"
               href="/docs/exemple_parametrages/step_11">
               Exemple pour intégrer la gestion d'emails par les entities
             </a>
@@ -187,7 +187,7 @@
           </li>
           
           <li class="NavigationSidebar-subListItem">
-            <a class="NavigationSidebar-subLink"
+            <a class="NavigationSidebar-subLink NavigationSidebar-subLink_isActive"
               href="/docs/exemple_parametrages/step_13">
               Un formulaire de contact simplifié qui envoie des emails
             </a>
@@ -206,23 +206,18 @@
     <ul class="Pagination">
       <li class="Pagination-item Pagination-item_link Pagination-item_previous">
         
-        <a href="step_10" disabled=>
+        <a href="step_12" disabled=>
           <span class="icon icon-caret-left"></span>
           Previous
         </a>
         
       </li>
       <li class="Pagination-item Pagination-item_state">
-        12/13
+        14/13
       </li>
       <li class="Pagination-item Pagination-item_link Pagination-item_next">
 
-         <a href="step_12">
-
-          Next
-          <span class="icon icon-caret-right" />
-          </a>
-          
+        
       </li>
     </ul>
     
@@ -233,14 +228,34 @@
 
 </div>
   <main class="LayoutItem LayoutItem_scrollable">
-    <h1 id="comment-demander-un-e-mail-et-filtrer-les-mauvaises-réponses">Comment demander un e-mail et filtrer les mauvaises réponses:</h1>
+    <h1 id="un-formulaire-de-contact-simplifié-qui-envoie-un-email">Un formulaire de contact simplifié qui envoie un email</h1>
 
-<p>Les entités sont des programmes qui reconnaissent les données au format texte.
-Avec l’entité e-mail, nous pouvons détecter si les informations saisies sont ou non un e-mail et, si ce n’est pas le cas, reboucler la question pour demander à nouveau une adresse e-mail valide. Voici un exemple de ce qui peut être fait:</p>
+<p>Nous allons construire un formulaire de contact simple qui envoie un email</p>
 
-<p><img src="/docs/assets/images/hello-entities-fr.png" alt="image" />
-<img src="/docs/assets/images/e-mail-entities-fr.png" alt="image" />
-<img src="/docs/assets/images/any-entities-fr.png" alt="image" /></p>
+<p><img src="/docs/assets/images/hello-simpleform-fr.png" alt="image" />
+<img src="/docs/assets/images/email-simpleform-fr.png" alt="image" />
+<img src="/docs/assets/images/any-simpleform-fr.png" alt="image" /></p>
+
+<h3 id="syntaxe-de-lenvoi-de-mails">Syntaxe de l’envoi de mails</h3>
+
+<p>La syntaxe est la suivante :</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>system.sendMail(email du destinataire, objet du mail, contenu du mail)
+</code></pre></div></div>
+
+<p>Dans notre exemple nous utilisons cette formulation :</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>system.sendMail(emilie@opla.ai, `Message de contact` , Contact : {$var_name}  {$var_email}    Message : {$message} )
+</code></pre></div></div>
+<p>il faut spécifier le destinataire du mail comme premier argument dans le sendmail, puis l’objet du mail - qui chez nous est “Message de contact”, puis le corps du mail avec les variables définies dans le bot exprimées par la syntaxe {$ }.</p>
+
+<p>Dans le playground, cela donne :</p>
+
+<p><img src="/docs/assets/images/playground-simpleform-fr.png" alt="image" /></p>
+
+<p>et l’e-mail reçu ressemble à ceci :</p>
+
+<p><img src="/docs/assets/images/received-simpleform-fr.png" alt="image" /></p>
 
   </main>
 

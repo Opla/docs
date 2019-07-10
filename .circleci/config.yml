@@ -14,12 +14,10 @@ jobs:
     steps:
       - checkout
       - run: mkdir -p workspace
-      - run: |
-          echo 'export BUNDLER_VERSION=$(cat Gemfile.lock | tail -1 | tr -d " ")' >> $BASH_ENV
-          source $BASH_ENV
-          gem install bundler
-      - run: bundle install
-      - run: bundle exec jekyll build
+      - run: echo | sudo gem uninstall bundler 
+      - run: sudo gem install bundler -v $(cat Gemfile.lock | tail -1 | tr -d " ")
+      - run: sudo bundle install
+      - run: sudo bundle exec jekyll build
       - run: cp -R _site workspace/publish
       - run: cp -R .circleci workspace/publish/circleci
       - persist_to_workspace:
