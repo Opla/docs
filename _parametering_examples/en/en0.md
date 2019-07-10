@@ -30,6 +30,6 @@ It is divided into three parts :
 
 1. The Playground, where the bot is tested
 1. The Intents, which are the keywords used by user or computer to establish the conversation. Intents are preceded by a sharp key.
-1. Inputs and Outputs, specific to each Intent, which are the resposes (Output) that the robot gives to each entered data (Input). It's really in Outputs that 80% of the conversation is set.
+1. Inputs and Outputs, specific to each Intent, which are the responses (Output) that the robot gives to each entered data (Input). It's really in Outputs that 80% of the conversation is set.
 
 

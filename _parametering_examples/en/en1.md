@@ -26,11 +26,14 @@ This button corresponds to a mode of treatment of a variable ; a variable's valu
 </div>
     2. Insert code :
 
-There are two uses for this insert code button
+You'll need to click the button to enter focus inside of it. There are two uses for this insert code button :
 
-It can be used to store the value of a variable without showing it on screen, as opposed to output code, 
+- It can be used to store the value of a variable without showing it on screen, as opposed to output code, 
 
-or it can guide the bot through a conversation. The syntax of the action code to be entered will be &#60;action = name_of_action&#62;. This is the line of code that will allow the bot to follow the thread of a conversation. 
+- Or it can guide the bot through a conversation. The syntax of the action code to be entered will be : 
+{% Chip color: "blue", label: "action=name_of_action" %}
+This is the line of code that will allow the bot to follow the thread of a conversation. The user can freely decide of the name of the action code, like  
+{% Chip color: "blue", label: "action=startbot" %} for instance.
 
 
 

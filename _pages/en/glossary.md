@@ -34,3 +34,9 @@ This is a code that calls conversation bits, which links an Output to the next I
 
 ## Any
 It is the intent that handles manual entries of variables entered by the user, such as entering a phone number, an email address, or any other value to use in the conversation.
+
+## Variables
+Variables are pieces of code which are used to store the outcome of a conversation, or a conditional action code.
+
+##Entities
+Entities are pieces of code which can help detect formatted values, such as quantity, e-mail, phone number, or any builder defined value.

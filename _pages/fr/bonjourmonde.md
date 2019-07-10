@@ -2,7 +2,7 @@
 layout: default
 lang: fr
 ref : hw
-permalink: /bonjourmonde
+permalink: /HelloWorldfr
 ---
 Nous allons d'abord créer un bot qui retourne un "Hello World"
 

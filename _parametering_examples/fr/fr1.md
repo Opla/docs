@@ -34,7 +34,7 @@ Ce bouton correspond à un mode de traitement d'une variable, qui va afficher la
 
 * premièrement pour écrire un code d'action ; La syntaxe du code d'action à saisir sera, en écrivant à l'intérieur du cadre qui apparaît lorsqu'on presse le bouton    :
  {% Chip color: "blue", label: "action=name_of_action" %} 
-  Il s'agit de la ligne de code d'action qui va permettre au bot de suivre le fil d'une conversation. On va mettre l'action dans un premier output d'intent, et la même syntaxe dans la conditionnelle de l'output d'intent suivant, ce qui va permettre de créer un chemin conversationnel.
+  Il s'agit de la ligne de code d'action qui va permettre au bot de suivre le fil d'une conversation. On va mettre l'action dans un premier output d'intent, et la même syntaxe dans la conditionnelle de l'output d'intent suivant, ce qui va permettre de créer un chemin conversationnel. On peut choisir librement tout code d'action.
 * deuxièmement pour capter une valeur tapée par l'utilisateur, avec la syntaxe 
 {% Chip color: "blue", label: "valeur=*" %} 
 qui permet de stocker une donnée quelconque dans la variable valeur.

@@ -35,3 +35,11 @@ C'est un code qui sert d'appel de conversation, qui lie un Output à l'Input sui
 
 ## Any
 C'est l'intent qui gère les saisies manuelles de variables entrées par l'utilisateur, telles que la saisie d'un numéro de téléphone, d'une adresse mail, ou de toute autre valeur à exploiter dans la conversation.
+
+
+## Variables
+Les variables sont des mots-clés utilisés pour stocker le résultat d'une conversation, ou pour stocker un code d'action.
+
+##Entities
+
+Les entités sont des portions de programme qui aident à détecter des valeurs mises en forme, telles que des quantités, un e-mail, un numéro de téléphone, ou toute valeur prédéfinie dans le builder.
